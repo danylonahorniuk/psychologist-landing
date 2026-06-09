@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const PHOTO_URL =
-  "https://images.pexels.com/photos/33867557/pexels-photo-33867557.jpeg?auto=compress&cs=tinysrgb&w=900&h=1200";
+  "https://images.unsplash.com/photo-1612872513575-7e7666b96ff3?w=900&q=85&fit=crop";
 
 export default function Hero() {
   return (

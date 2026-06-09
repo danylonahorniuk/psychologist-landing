@@ -1,3 +1,8 @@
+import Image from "next/image";
+
+const PHOTO_URL =
+  "https://images.unsplash.com/photo-1582896911227-c966f6e7fb93?w=900&q=85&fit=crop&crop=faces,top";
+
 const creds = [
   "Диплом практичного психолога, Київський національний університет",
   "Сертифікація КПТ, Інститут когнітивно-поведінкової терапії",
@@ -11,9 +16,15 @@ export default function About() {
       <div className="max-w-[1280px] mx-auto grid grid-cols-[1fr_1.25fr] gap-24 items-center">
         {/* Photo */}
         <div className="relative">
-          <div className="w-full aspect-[3/4] bg-gradient-to-br from-bg-warm to-sand rounded-[220px_220px_180px_180px] flex items-center justify-center text-[88px] opacity-35 relative overflow-hidden">
-            🌿
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[rgba(212,197,176,0.35)]" />
+          <div className="w-full aspect-[3/4] rounded-[220px_220px_180px_180px] relative overflow-hidden">
+            <Image
+              src={PHOTO_URL}
+              alt="Ірина Коваленко — психолог і коуч"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center top" }}
+              sizes="500px"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[rgba(212,197,176,0.25)]" />
           </div>
           <div className="absolute bottom-[-16px] right-[-16px] bg-sage text-white rounded-full w-[118px] h-[118px] flex flex-col items-center justify-center text-[11.5px] font-medium text-center leading-[1.3]">
             <strong className="font-serif text-[24px] font-medium block">7+</strong>

@@ -1,3 +1,8 @@
+import Image from "next/image";
+
+const PHOTO_URL =
+  "https://images.unsplash.com/photo-1582896911227-c966f6e7fb93?w=900&q=85&fit=crop&crop=faces,top";
+
 export default function Hero() {
   return (
     <section
@@ -157,26 +162,14 @@ export default function Hero() {
             boxShadow: "0 32px 80px rgba(44,44,44,0.12)",
           }}
         >
-          <span style={{ fontSize: "76px", opacity: 0.22 }}>🌿</span>
-          <div
-            style={{
-              position: "absolute",
-              bottom: "28px",
-              left: "50%",
-              transform: "translateX(-50%)",
-              fontSize: "11px",
-              fontWeight: 500,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              color: "var(--muted)",
-              background: "rgba(250,248,245,0.82)",
-              padding: "7px 18px",
-              borderRadius: "20px",
-              whiteSpace: "nowrap",
-            }}
-          >
-            Ірина Коваленко
-          </div>
+          <Image
+            src={PHOTO_URL}
+            alt="Ірина Коваленко — психолог і коуч"
+            fill
+            style={{ objectFit: "cover", objectPosition: "center top" }}
+            sizes="340px"
+            priority
+          />
         </div>
 
         {/* Badge: years */}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const PHOTO_URL =
-  "https://images.pexels.com/photos/27086757/pexels-photo-27086757.jpeg?auto=compress&cs=tinysrgb&w=900&h=1200";
+  "https://images.pexels.com/photos/33867556/pexels-photo-33867556.jpeg?auto=compress&cs=tinysrgb&w=900&h=1200";
 
 const creds = [
   "Диплом практичного психолога, Київський національний університет",

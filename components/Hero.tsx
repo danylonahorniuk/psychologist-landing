@@ -7,83 +7,57 @@ export default function Hero() {
     <section
       id="hero"
       style={{
-        height: "100vh",
-        minHeight: "640px",
+        minHeight: "100vh",
         paddingTop: "88px",
         display: "grid",
-        gridTemplateColumns: "42fr 58fr",
-        overflow: "hidden",
+        gridTemplateColumns: "55fr 45fr",
+        alignItems: "center",
         background: "var(--bg)",
+        overflow: "hidden",
       }}
     >
-      {/* ── LEFT: Photo ── */}
-      <div
-        style={{
-          padding: "36px 20px 36px 48px",
-          overflow: "hidden",
-        }}
-      >
-        <div
-          className="animate-scale-in"
-          style={{
-            position: "relative",
-            height: "100%",
-            borderRadius: "12px",
-            overflow: "hidden",
-            background: "var(--sand)",
-          }}
-        >
-          <Image
-            src={PHOTO_URL}
-            alt="Ірина Коваленко — психолог і коуч"
-            fill
-            style={{ objectFit: "cover", objectPosition: "50% 15%" }}
-            sizes="42vw"
-            priority
-          />
-        </div>
-      </div>
-
-      {/* ── RIGHT: Content ── */}
+      {/* ── LEFT: Text ── */}
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "flex-start",
-          padding: "52px 80px 40px 56px",
+          justifyContent: "center",
+          padding: "80px 64px 80px 80px",
         }}
       >
-        {/* Tiny label — no pill, no dot */}
+        {/* Eyebrow */}
         <p
           className="animate-fade-up-1"
           style={{
             fontSize: "11px",
-            letterSpacing: "0.18em",
+            letterSpacing: "0.2em",
             textTransform: "uppercase",
-            color: "var(--muted)",
-            marginBottom: "20px",
-            fontWeight: 400,
+            color: "var(--sage)",
+            marginBottom: "24px",
+            fontWeight: 500,
           }}
         >
-          Психолог та коуч
+          Ірина Коваленко · Психолог та коуч
         </p>
 
-        {/* Name — the hero element */}
+        {/* Main heading — tagline as h1 */}
         <h1
           className="animate-fade-up-2"
           style={{
             fontFamily: "var(--font-playfair), serif",
-            fontSize: "clamp(52px, 5.8vw, 82px)",
+            fontSize: "clamp(44px, 5vw, 72px)",
             fontWeight: 500,
-            lineHeight: 1.04,
+            lineHeight: 1.1,
             letterSpacing: "-0.025em",
             color: "var(--text)",
-            marginBottom: "24px",
+            marginBottom: "28px",
           }}
         >
-          Ірина
+          Знайди себе.
           <br />
-          Коваленко
+          <em style={{ fontStyle: "italic", color: "var(--slate)" }}>
+            Живи з сенсом.
+          </em>
         </h1>
 
         {/* Sage rule */}
@@ -97,35 +71,16 @@ export default function Hero() {
           }}
         />
 
-        {/* Italic tagline — like handwritten feel in reference */}
-        <p
-          className="animate-fade-up-3"
-          style={{
-            fontFamily: "var(--font-playfair), serif",
-            fontStyle: "italic",
-            fontSize: "clamp(18px, 2vw, 26px)",
-            color: "var(--slate)",
-            lineHeight: 1.45,
-            marginBottom: "20px",
-            fontWeight: 400,
-            letterSpacing: "-0.01em",
-          }}
-        >
-          Знайди себе.
-          <br />
-          Живи з сенсом.
-        </p>
-
         {/* Body text */}
         <p
           className="animate-fade-up-3"
           style={{
-            fontSize: "15px",
+            fontSize: "15.5px",
             color: "var(--muted)",
             lineHeight: 1.76,
             fontWeight: 300,
             marginBottom: "44px",
-            maxWidth: "400px",
+            maxWidth: "420px",
           }}
         >
           Разом ми розберемося з тим, що тебе гальмує, відновимо внутрішній
@@ -133,22 +88,20 @@ export default function Hero() {
         </p>
 
         {/* CTAs */}
-        <div className="animate-fade-up-4">
+        <div className="animate-fade-up-4" style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "16px" }}>
           <a
             href="#contact"
             style={{
-              display: "block",
-              background: "var(--text)",
+              display: "inline-block",
+              background: "var(--sage)",
               color: "#fff",
-              padding: "18px 32px",
+              padding: "16px 40px",
               borderRadius: "8px",
-              fontSize: "12.5px",
+              fontSize: "13px",
               fontWeight: 500,
-              letterSpacing: "0.08em",
+              letterSpacing: "0.06em",
               textTransform: "uppercase",
               textDecoration: "none",
-              textAlign: "center",
-              marginBottom: "20px",
             }}
           >
             Записатись на сесію
@@ -167,6 +120,41 @@ export default function Hero() {
             Дізнатись більше
             <span className="animate-bob" style={{ display: "inline-block" }}>↓</span>
           </a>
+        </div>
+      </div>
+
+      {/* ── RIGHT: Photo in container ── */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100%",
+          padding: "40px 64px 40px 24px",
+          background: "var(--bg)",
+        }}
+      >
+        <div
+          className="animate-scale-in"
+          style={{
+            position: "relative",
+            width: "100%",
+            maxWidth: "400px",
+            aspectRatio: "3/4",
+            borderRadius: "200px 200px 120px 120px",
+            overflow: "hidden",
+            background: "var(--sand)",
+            boxShadow: "0 32px 80px rgba(44,44,44,0.12)",
+          }}
+        >
+          <Image
+            src={PHOTO_URL}
+            alt="Ірина Коваленко — психолог і коуч"
+            fill
+            style={{ objectFit: "cover", objectPosition: "50% 10%" }}
+            sizes="40vw"
+            priority
+          />
         </div>
       </div>
     </section>

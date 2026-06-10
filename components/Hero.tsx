@@ -37,7 +37,7 @@ export default function Hero() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "96px 80px",
+          padding: "96px 120px 96px 80px",
           position: "relative",
           zIndex: 1,
         }}
@@ -130,11 +130,11 @@ export default function Hero() {
         style={{
           position: "relative",
           display: "flex",
-          alignItems: "center",
+          alignItems: "flex-start",
           justifyContent: "center",
           height: "100%",
           minHeight: "700px",
-          padding: "40px 64px 40px 0",
+          padding: "0 64px 0 0",
           zIndex: 1,
         }}
       >
@@ -144,8 +144,8 @@ export default function Hero() {
           style={{
             position: "relative",
             width: "min(420px, 42vw)",
-            height: "min(680px, calc(100vh - 120px))",
-            borderRadius: "240px 240px 200px 200px",
+            height: "min(700px, calc(100vh - 88px))",
+            borderRadius: "0 0 200px 200px",
             background: "linear-gradient(145deg, #F0EBE3 0%, #D4C5B0 100%)",
             overflow: "hidden",
             boxShadow: "0 40px 100px rgba(44,44,44,0.15), 0 8px 24px rgba(44,44,44,0.06)",
@@ -159,74 +159,7 @@ export default function Hero() {
             sizes="(max-width: 1280px) 40vw, 420px"
             priority
           />
-          {/* Soft warm overlay at bottom */}
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 60%, rgba(212,197,176,0.2) 100%)", pointerEvents: "none" }} />
-        </div>
-
-        {/* Badge: years */}
-        <div
-          className="animate-badge-1"
-          style={{
-            position: "absolute",
-            bottom: "18%",
-            left: "0%",
-            background: "var(--sage)",
-            color: "#fff",
-            borderRadius: "20px",
-            padding: "16px 24px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "3px",
-            boxShadow: "0 8px 32px rgba(143,168,135,0.4)",
-          }}
-        >
-          <strong style={{ fontFamily: "var(--font-playfair), serif", fontSize: "28px", fontWeight: 500, lineHeight: 1 }}>7+</strong>
-          <span style={{ fontSize: "11px", opacity: 0.9, letterSpacing: "0.03em" }}>років практики</span>
-        </div>
-
-        {/* Badge: clients */}
-        <div
-          className="animate-badge-2"
-          style={{
-            position: "absolute",
-            top: "14%",
-            right: "4%",
-            background: "#fff",
-            borderRadius: "16px",
-            padding: "14px 20px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "3px",
-            boxShadow: "0 8px 28px rgba(44,44,44,0.1)",
-            border: "1px solid var(--border)",
-          }}
-        >
-          <strong style={{ fontFamily: "var(--font-playfair), serif", fontSize: "24px", fontWeight: 500, lineHeight: 1 }}>200+</strong>
-          <span style={{ fontSize: "11px", color: "var(--muted)", letterSpacing: "0.03em" }}>клієнтів</span>
-        </div>
-
-        {/* Pill: sessions */}
-        <div
-          className="animate-badge-3"
-          style={{
-            position: "absolute",
-            top: "52%",
-            right: "2%",
-            background: "var(--bg-warm)",
-            borderRadius: "50px",
-            padding: "10px 18px",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            fontSize: "12px",
-            fontWeight: 500,
-            color: "var(--muted)",
-            border: "1px solid var(--border)",
-            boxShadow: "0 4px 16px rgba(44,44,44,0.07)",
-          }}
-        >
-          <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--sage)", flexShrink: 0, display: "inline-block" }} />
-          1500+ сесій
         </div>
       </div>
     </section>

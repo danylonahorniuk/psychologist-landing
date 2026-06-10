@@ -133,33 +133,22 @@ export default function Hero() {
           alignItems: "center",
           justifyContent: "center",
           height: "100%",
-          minHeight: "620px",
-          padding: "60px 80px 60px 20px",
+          minHeight: "700px",
+          padding: "40px 64px 40px 0",
           zIndex: 1,
         }}
       >
-        {/* Rings */}
-        <div style={{ position: "absolute", width: "460px", height: "460px", borderRadius: "50%", border: "1px solid var(--sand)", opacity: 0.5, top: "50%", left: "50%", transform: "translate(-50%, -50%)", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", width: "340px", height: "340px", borderRadius: "50%", border: "1px dashed var(--border)", opacity: 0.6, top: "50%", left: "50%", transform: "translate(-50%, -50%)", pointerEvents: "none" }} />
-
-        {/* Dots */}
-        <div className="animate-badge-1" style={{ position: "absolute", width: "13px", height: "13px", borderRadius: "50%", background: "var(--sage)", opacity: 0.5, top: "22%", right: "12%" }} />
-        <div className="animate-badge-2" style={{ position: "absolute", width: "8px", height: "8px", borderRadius: "50%", background: "var(--sand)", bottom: "28%", left: "8%" }} />
-
-        {/* Photo pill */}
+        {/* Photo — large organic shape */}
         <div
           className="animate-scale-in"
           style={{
             position: "relative",
-            width: "320px",
-            height: "460px",
-            borderRadius: "200px",
+            width: "min(420px, 42vw)",
+            height: "min(680px, calc(100vh - 120px))",
+            borderRadius: "240px 240px 200px 200px",
             background: "linear-gradient(145deg, #F0EBE3 0%, #D4C5B0 100%)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
             overflow: "hidden",
-            boxShadow: "0 32px 80px rgba(44,44,44,0.12)",
+            boxShadow: "0 40px 100px rgba(44,44,44,0.15), 0 8px 24px rgba(44,44,44,0.06)",
           }}
         >
           <Image
@@ -167,9 +156,11 @@ export default function Hero() {
             alt="Ірина Коваленко — психолог і коуч"
             fill
             style={{ objectFit: "cover", objectPosition: "center top" }}
-            sizes="340px"
+            sizes="(max-width: 1280px) 40vw, 420px"
             priority
           />
+          {/* Soft warm overlay at bottom */}
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 60%, rgba(212,197,176,0.2) 100%)", pointerEvents: "none" }} />
         </div>
 
         {/* Badge: years */}
@@ -177,20 +168,20 @@ export default function Hero() {
           className="animate-badge-1"
           style={{
             position: "absolute",
-            bottom: "22%",
-            left: "2%",
+            bottom: "18%",
+            left: "0%",
             background: "var(--sage)",
             color: "#fff",
             borderRadius: "20px",
-            padding: "14px 22px",
+            padding: "16px 24px",
             display: "flex",
             flexDirection: "column",
             gap: "3px",
-            boxShadow: "0 8px 32px rgba(143,168,135,0.38)",
+            boxShadow: "0 8px 32px rgba(143,168,135,0.4)",
           }}
         >
-          <strong style={{ fontFamily: "var(--font-playfair), serif", fontSize: "26px", fontWeight: 500, lineHeight: 1 }}>7+</strong>
-          <span style={{ fontSize: "11px", opacity: 0.88, letterSpacing: "0.03em" }}>років практики</span>
+          <strong style={{ fontFamily: "var(--font-playfair), serif", fontSize: "28px", fontWeight: 500, lineHeight: 1 }}>7+</strong>
+          <span style={{ fontSize: "11px", opacity: 0.9, letterSpacing: "0.03em" }}>років практики</span>
         </div>
 
         {/* Badge: clients */}
@@ -198,15 +189,15 @@ export default function Hero() {
           className="animate-badge-2"
           style={{
             position: "absolute",
-            top: "18%",
-            right: "3%",
+            top: "14%",
+            right: "4%",
             background: "#fff",
             borderRadius: "16px",
             padding: "14px 20px",
             display: "flex",
             flexDirection: "column",
             gap: "3px",
-            boxShadow: "0 8px 28px rgba(44,44,44,0.09)",
+            boxShadow: "0 8px 28px rgba(44,44,44,0.1)",
             border: "1px solid var(--border)",
           }}
         >
@@ -219,11 +210,11 @@ export default function Hero() {
           className="animate-badge-3"
           style={{
             position: "absolute",
-            top: "54%",
-            right: "1%",
+            top: "52%",
+            right: "2%",
             background: "var(--bg-warm)",
             borderRadius: "50px",
-            padding: "9px 16px",
+            padding: "10px 18px",
             display: "flex",
             alignItems: "center",
             gap: "8px",
@@ -231,6 +222,7 @@ export default function Hero() {
             fontWeight: 500,
             color: "var(--muted)",
             border: "1px solid var(--border)",
+            boxShadow: "0 4px 16px rgba(44,44,44,0.07)",
           }}
         >
           <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--sage)", flexShrink: 0, display: "inline-block" }} />

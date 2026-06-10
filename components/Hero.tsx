@@ -141,7 +141,7 @@ export default function Hero() {
             width: "100%",
             maxWidth: "400px",
             aspectRatio: "3/4",
-            borderRadius: "200px 200px 120px 120px",
+            borderRadius: "20px",
             overflow: "hidden",
             background: "var(--sand)",
             boxShadow: "0 32px 80px rgba(44,44,44,0.12)",

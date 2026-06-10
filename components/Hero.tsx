@@ -22,7 +22,7 @@ export default function Hero() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "80px 64px 80px 80px",
+          padding: "80px 64px 80px 140px",
         }}
       >
         {/* Main heading — tagline as h1 */}

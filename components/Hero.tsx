@@ -129,7 +129,7 @@ export default function Hero() {
           alignItems: "center",
           justifyContent: "center",
           height: "100%",
-          padding: "40px 64px 40px 24px",
+          padding: "40px 32px 40px 0px",
           background: "var(--bg)",
         }}
       >

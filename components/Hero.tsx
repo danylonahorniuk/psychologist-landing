@@ -50,8 +50,8 @@ export default function Hero() {
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
-          padding: "60px 80px 60px 56px",
+          justifyContent: "flex-start",
+          padding: "52px 80px 40px 56px",
         }}
       >
         {/* Tiny label — no pill, no dot */}

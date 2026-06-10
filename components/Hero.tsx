@@ -25,24 +25,9 @@ export default function Hero() {
           padding: "80px 64px 80px 80px",
         }}
       >
-        {/* Eyebrow */}
-        <p
-          className="animate-fade-up-1"
-          style={{
-            fontSize: "11px",
-            letterSpacing: "0.2em",
-            textTransform: "uppercase",
-            color: "var(--sage)",
-            marginBottom: "24px",
-            fontWeight: 500,
-          }}
-        >
-          Ірина Коваленко · Психолог та коуч
-        </p>
-
         {/* Main heading — tagline as h1 */}
         <h1
-          className="animate-fade-up-2"
+          className="animate-fade-up-1"
           style={{
             fontFamily: "var(--font-playfair), serif",
             fontSize: "clamp(44px, 5vw, 72px)",
@@ -50,7 +35,7 @@ export default function Hero() {
             lineHeight: 1.1,
             letterSpacing: "-0.025em",
             color: "var(--text)",
-            marginBottom: "28px",
+            marginBottom: "20px",
           }}
         >
           Знайди себе.
@@ -59,6 +44,20 @@ export default function Hero() {
             Живи з сенсом.
           </em>
         </h1>
+
+        {/* Name + profession */}
+        <p
+          className="animate-fade-up-2"
+          style={{
+            fontSize: "15px",
+            color: "var(--muted)",
+            fontWeight: 400,
+            marginBottom: "28px",
+          }}
+        >
+          Ірина Коваленко —{" "}
+          <span style={{ color: "var(--sage)" }}>психолог та коуч</span>
+        </p>
 
         {/* Sage rule */}
         <div

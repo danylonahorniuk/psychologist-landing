@@ -69,6 +69,7 @@ export default function Hero() {
         >
           <a
             href="#contact"
+            className="btn-sage"
             style={{
               display: "inline-block",
               background: "var(--sage)",
@@ -85,6 +86,7 @@ export default function Hero() {
           </a>
           <a
             href="#about"
+            className="btn-ghost-circle"
             style={{
               display: "flex",
               alignItems: "center",
@@ -93,9 +95,11 @@ export default function Hero() {
               color: "var(--muted)",
               textDecoration: "none",
               fontWeight: 400,
+              opacity: 0.85,
             }}
           >
             <span
+              className="circle-icon"
               style={{
                 width: "36px",
                 height: "36px",

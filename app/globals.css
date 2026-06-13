@@ -116,3 +116,34 @@ body {
   transition: opacity 0.25s;
 }
 .btn-primary:hover { opacity: 0.78; }
+
+/* ── SAGE PILL BUTTON (hero + nav) ────────────────── */
+.btn-sage {
+  transition: background 0.22s ease, transform 0.18s ease, box-shadow 0.22s ease;
+}
+.btn-sage:hover {
+  background: var(--sage-dark) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(143, 168, 135, 0.38);
+}
+.btn-sage:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ── GHOST CIRCLE LINK (secondary hero) ──────────── */
+.btn-ghost-circle {
+  transition: opacity 0.2s ease;
+}
+.btn-ghost-circle:hover {
+  opacity: 1 !important;
+}
+.btn-ghost-circle .circle-icon {
+  transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+}
+.btn-ghost-circle:hover .circle-icon {
+  background: var(--sage);
+  border-color: var(--sage);
+  color: #fff;
+  transform: scale(1.12);
+}

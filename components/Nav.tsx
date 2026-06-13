@@ -78,6 +78,7 @@ export default function Nav() {
       {/* CTA */}
       <a
         href="#contact"
+        className="btn-sage"
         style={{
           display: "inline-block",
           background: "var(--sage)",

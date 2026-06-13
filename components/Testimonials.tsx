@@ -57,7 +57,7 @@ const QuoteIcon = () => (
 
 export default function Testimonials() {
   return (
-    <section id="reviews" style={{ position: "relative", padding: "100px 80px 80px", background: "var(--bg-warm)" }}>
+    <section id="reviews" style={{ position: "relative", padding: "100px 80px 220px", background: "var(--bg-warm)" }}>
       <style>{`
         .testimonial-card {
           transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -75,7 +75,7 @@ export default function Testimonials() {
       </div>
 
       {/* Candle — bottom-right, aligned with the bottom card row */}
-      <div style={{ position: "absolute", bottom: "120px", right: "0", width: "220px", height: "220px", pointerEvents: "none", zIndex: 10, opacity: 0.75, mixBlendMode: "multiply" }}>
+      <div style={{ position: "absolute", bottom: "0", right: "0", width: "220px", height: "220px", pointerEvents: "none", zIndex: 10, opacity: 0.75, mixBlendMode: "multiply" }}>
         <Image src="/candle.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="220px" />
       </div>
 
@@ -112,7 +112,6 @@ export default function Testimonials() {
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
           gap: "20px",
-          marginBottom: "60px",
         }}>
           {testimonials.map((t) => (
             <div

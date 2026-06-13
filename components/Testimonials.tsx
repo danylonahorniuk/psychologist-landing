@@ -59,6 +59,16 @@ export default function Testimonials() {
   return (
     <section id="reviews" style={{ position: "relative", padding: "100px 80px 80px", background: "var(--bg-warm)" }}>
 
+      {/* Herb — fixed to section top-right, above the cards, in front of everything */}
+      <div style={{ position: "absolute", top: "180px", right: "0", width: "340px", height: "310px", pointerEvents: "none", zIndex: 10 }}>
+        <Image src="/herb.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="340px" />
+      </div>
+
+      {/* Candle — fixed to section bottom-right, peeking below the grid */}
+      <div style={{ position: "absolute", bottom: "40px", right: "0", width: "220px", height: "220px", pointerEvents: "none", zIndex: 10 }}>
+        <Image src="/candle.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="220px" />
+      </div>
+
       <div style={{ position: "relative", zIndex: 1, maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Header */}
@@ -88,26 +98,12 @@ export default function Testimonials() {
         </div>
 
         {/* 3×2 cards grid */}
-        <div style={{ position: "relative" }}>
-
-          {/* Herb — top-right, overlapping top-right card */}
-          <div style={{ position: "absolute", top: "-80px", right: "-60px", width: "300px", height: "280px", pointerEvents: "none", zIndex: 0 }}>
-            <Image src="/herb.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="300px" />
-          </div>
-
-          {/* Candle — bottom-right, overlapping below bottom-right card */}
-          <div style={{ position: "absolute", bottom: "-80px", right: "-50px", width: "220px", height: "220px", pointerEvents: "none", zIndex: 2 }}>
-            <Image src="/candle.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="220px" />
-          </div>
-
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "20px",
-            marginBottom: "60px",
-            position: "relative",
-            zIndex: 1,
-          }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: "20px",
+          marginBottom: "60px",
+        }}>
           {testimonials.map((t) => (
             <div
               key={t.name + t.age}
@@ -163,7 +159,6 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
-          </div>
         </div>
 
         {/* Stats bar */}

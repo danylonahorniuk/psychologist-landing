@@ -80,23 +80,13 @@ export default function Testimonials() {
             Відгуки
           </h2>
 
-          {/* Dot + leaf divider */}
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", marginBottom: "20px" }}>
-            <div style={{ width: "40px", height: "1px", background: "var(--sand)" }} />
-            <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "var(--sage)" }} />
-            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" aria-hidden="true">
-              <path d="M10 14C10 14 2 10 2 5C2 2.8 3.8 1 6 1C7.4 1 8.7 1.7 9.4 2.8C9.5 2.9 9.6 3.1 9.6 3.1C9.6 3.1 9.4 1.5 10 1C10.6 1.5 10.4 3.1 10.4 3.1C10.4 3.1 10.5 2.9 10.6 2.8C11.3 1.7 12.6 1 14 1C16.2 1 18 2.8 18 5C18 10 10 14 10 14Z" stroke="var(--sage)" strokeWidth="1" fill="none"/>
-            </svg>
-            <div style={{ width: "40px", height: "1px", background: "var(--sand)" }} />
-          </div>
-
           <p style={{
             fontSize: "16px",
             color: "var(--muted)",
             lineHeight: 1.7,
             fontWeight: 300,
             maxWidth: "500px",
-            margin: "0 auto",
+            margin: "16px auto 0",
           }}>
             Реальні слова від людей, які вже пройшли свій шлях і знайшли підтримку та зміни.
           </p>

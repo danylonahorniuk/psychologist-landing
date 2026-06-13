@@ -1,168 +1,237 @@
+import Image from "next/image";
+
 const testimonials = [
   {
-    quote: "Після 3 місяців роботи з Іриною я нарешті почала розуміти, звідки береться моя тривога. Це змінило все — стосунки, роботу, відчуття себе.",
-    name: "Марія, 31 рік",
-    role: "Маркетинг-менеджер",
-    initial: "М",
+    quote: "З першої зустрічі відчула безпеку й прийняття. Тут можна говорити про все без страху осуду. З часом стало легше розуміти себе і свої почуття.",
+    name: "Олена",
+    age: 32,
+    avatar: null,
   },
   {
-    quote: "Прийшов із вигоранням і відчуттям, що все безглуздо. Через 4 місяці змінив роботу, налагодив стосунки з родиною і нарешті сплю нормально.",
-    name: "Олег, 38 років",
-    role: "IT-підприємець",
-    initial: "О",
+    quote: "Довго не наважувався звернутися по допомогу. Радий, що зробив цей крок. Поступово знайшов опору всередині себе і навчився справлятися з тривогою.",
+    name: "Андрій",
+    age: 28,
+    avatar: null,
   },
   {
-    quote: "Ірина — один із тих терапевтів, де відчуваєш себе почутим з першої хвилини. Безпечно, без засуджень, з реальними змінами.",
-    name: "Катерина, 26 років",
-    role: "Дизайнерка-фрилансер",
-    initial: "К",
+    quote: "Терапія допомогла мені відновити впевненість у собі та встановити здорові межі. Це було не просто, але результат вартий кожної зустрічі.",
+    name: "Марія",
+    age: 37,
+    avatar: null,
   },
   {
-    quote: "Я довго відкладала терапію, думала — впораюсь сама. Але саме з Іриною я зрозуміла: просити допомоги — це сила, а не слабкість.",
-    name: "Соломія, 29 років",
-    role: "Лікарка",
-    initial: "С",
+    quote: "Особливо ціную підтримку між сесіями та увагу до деталей. Відчуваю, що мене дійсно чують і допомагають глибше розібратися у собі.",
+    name: "Юлія",
+    age: 24,
+    avatar: null,
   },
   {
-    quote: "Працювали над моєю самооцінкою і стосунками з батьками. Вперше в житті я відчуваю, що маю право на власні кордони.",
-    name: "Андрій, 34 роки",
-    role: "Архітектор",
-    initial: "А",
+    quote: "Завдяки нашій роботі я навчилася справлятися з емоціями, відпускати минуле і жити в гармонії із собою. Дуже вдячна за цей шлях.",
+    name: "Ірина",
+    age: 41,
+    avatar: null,
   },
   {
-    quote: "Після розлучення здавалось, що все скінчилось. Ірина допомогла мені побачити це як початок — і я їй дуже вдячна за це.",
-    name: "Тетяна, 42 роки",
-    role: "Підприємиця",
-    initial: "Т",
+    quote: "Сподобалася глибина і делікатність підходу. На сесіях завжди спокійно, структуровано і по суті. Відчуваю реальні зміни у своєму житті.",
+    name: "Тарас",
+    age: 35,
+    avatar: null,
   },
 ];
 
+const Stars = () => (
+  <div style={{ display: "flex", gap: "3px" }}>
+    {[...Array(5)].map((_, i) => (
+      <svg key={i} width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M8 1.5L9.545 5.915H14.18L10.318 8.67L11.863 13.085L8 10.33L4.137 13.085L5.682 8.67L1.82 5.915H6.455L8 1.5Z" fill="#C8A96E" />
+      </svg>
+    ))}
+  </div>
+);
+
+const QuoteIcon = () => (
+  <svg width="32" height="28" viewBox="0 0 32 28" fill="none" aria-hidden="true" style={{ opacity: 0.35 }}>
+    <path d="M0 28V17.2C0 13.067 0.933 9.6 2.8 6.8C4.667 4 7.333 1.867 10.8 0.4L13.2 4C11.067 5.067 9.4 6.467 8.2 8.2C7.067 9.933 6.5 12 6.5 14.4H13V28H0ZM19 28V17.2C19 13.067 19.933 9.6 21.8 6.8C23.667 4 26.333 1.867 29.8 0.4L32.2 4C30.067 5.067 28.4 6.467 27.2 8.2C26.067 9.933 25.5 12 25.5 14.4H32V28H19Z" fill="var(--sage)" />
+  </svg>
+);
+
 export default function Testimonials() {
-  const [featured, ...rest] = testimonials;
-  const cards = rest.slice(0, 3);
-
   return (
-    <section id="reviews" style={{ padding: "100px 80px", background: "var(--bg-warm)" }}>
-      <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+    <section id="reviews" style={{ position: "relative", padding: "100px 80px 80px", background: "var(--bg-warm)", overflow: "hidden" }}>
 
-        {/* Section header */}
-        <div style={{ marginBottom: "64px" }}>
-          <span style={{ fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "var(--sage)", fontWeight: 500 }}>
-            Відгуки
-          </span>
-          <div style={{ width: "32px", height: "2px", background: "var(--sage)", marginTop: "12px", marginBottom: "20px", borderRadius: "1px" }} />
+      {/* Herb top-right */}
+      <div style={{ position: "absolute", top: 0, right: 0, width: "280px", height: "260px", pointerEvents: "none", zIndex: 0 }}>
+        <Image src="/herb.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="280px" />
+      </div>
+
+      <div style={{ position: "relative", zIndex: 1, maxWidth: "1280px", margin: "0 auto" }}>
+
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: "64px" }}>
           <h2 style={{
             fontFamily: "var(--font-playfair), serif",
-            fontSize: "clamp(36px, 3.5vw, 52px)",
+            fontSize: "clamp(44px, 5vw, 68px)",
             fontWeight: 500,
-            lineHeight: 1.1,
-            letterSpacing: "-0.015em",
+            lineHeight: 1.05,
+            letterSpacing: "-0.02em",
             color: "var(--text)",
+            marginBottom: "16px",
           }}>
-            Що кажуть<br /><em style={{ fontStyle: "italic", color: "var(--sage)" }}>клієнти</em>
+            Відгуки
           </h2>
-        </div>
 
-        {/* Featured testimonial */}
-        <div style={{
-          background: "var(--sage)",
-          borderRadius: "28px",
-          padding: "60px 72px",
-          marginBottom: "20px",
-          display: "grid",
-          gridTemplateColumns: "1fr auto",
-          gap: "60px",
-          alignItems: "center",
-        }}>
-          <div>
-            <div style={{ fontFamily: "var(--font-playfair), serif", fontSize: "64px", color: "rgba(255,255,255,0.22)", lineHeight: 0.8, marginBottom: "20px" }}>
-              "
-            </div>
-            <p style={{
-              fontFamily: "var(--font-playfair), serif",
-              fontStyle: "italic",
-              fontSize: "clamp(18px, 1.8vw, 24px)",
-              color: "#fff",
-              lineHeight: 1.55,
-              fontWeight: 400,
-              marginBottom: "28px",
-            }}>
-              {featured.quote}
-            </p>
-            <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-              <div style={{
-                width: "44px", height: "44px", borderRadius: "50%",
-                background: "rgba(255,255,255,0.18)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                color: "#fff",
-                fontFamily: "var(--font-playfair), serif",
-                fontSize: "18px", fontWeight: 500,
-              }}>
-                {featured.initial}
-              </div>
-              <div>
-                <div style={{ fontSize: "13px", fontWeight: 600, color: "#fff" }}>{featured.name}</div>
-                <div style={{ fontSize: "12px", color: "rgba(255,255,255,0.6)", marginTop: "2px" }}>{featured.role}</div>
-              </div>
-            </div>
+          {/* Dot + leaf divider */}
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", marginBottom: "20px" }}>
+            <div style={{ width: "40px", height: "1px", background: "var(--sand)" }} />
+            <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "var(--sage)" }} />
+            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" aria-hidden="true">
+              <path d="M10 14C10 14 2 10 2 5C2 2.8 3.8 1 6 1C7.4 1 8.7 1.7 9.4 2.8C9.5 2.9 9.6 3.1 9.6 3.1C9.6 3.1 9.4 1.5 10 1C10.6 1.5 10.4 3.1 10.4 3.1C10.4 3.1 10.5 2.9 10.6 2.8C11.3 1.7 12.6 1 14 1C16.2 1 18 2.8 18 5C18 10 10 14 10 14Z" stroke="var(--sage)" strokeWidth="1" fill="none"/>
+            </svg>
+            <div style={{ width: "40px", height: "1px", background: "var(--sand)" }} />
           </div>
-          {/* Decorative circle */}
-          <div style={{
-            width: "180px",
-            height: "180px",
-            borderRadius: "50%",
-            border: "1px solid rgba(255,255,255,0.18)",
-            flexShrink: 0,
-          }} />
+
+          <p style={{
+            fontSize: "16px",
+            color: "var(--muted)",
+            lineHeight: 1.7,
+            fontWeight: 300,
+            maxWidth: "500px",
+            margin: "0 auto",
+          }}>
+            Реальні слова від людей, які вже пройшли свій шлях і знайшли підтримку та зміни.
+          </p>
         </div>
 
-        {/* 3 smaller cards */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
-          {cards.map((t) => (
+        {/* 3×2 cards grid */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: "20px",
+          marginBottom: "60px",
+        }}>
+          {testimonials.map((t) => (
             <div
-              key={t.name}
-              className="card-hover"
+              key={t.name + t.age}
               style={{
                 background: "var(--bg)",
-                borderRadius: "24px",
-                padding: "36px 32px",
+                borderRadius: "20px",
+                padding: "28px 28px 24px",
                 border: "1px solid var(--border)",
                 display: "flex",
                 flexDirection: "column",
+                gap: "16px",
               }}
             >
+              {/* Top row: stars + quote icon */}
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                <Stars />
+                <QuoteIcon />
+              </div>
+
+              {/* Review text */}
               <p style={{
-                fontSize: "15px",
+                fontSize: "14px",
                 color: "var(--text)",
-                lineHeight: 1.7,
-                fontStyle: "italic",
+                lineHeight: 1.72,
                 fontWeight: 300,
                 flex: 1,
-                marginBottom: "24px",
               }}>
-                &ldquo;{t.quote}&rdquo;
+                {t.quote}
               </p>
-              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+
+              {/* Author */}
+              <div style={{ display: "flex", alignItems: "center", gap: "12px", paddingTop: "4px" }}>
                 <div style={{
-                  width: "36px", height: "36px", borderRadius: "50%",
-                  background: "var(--sage)",
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  color: "#fff",
-                  fontFamily: "var(--font-playfair), serif",
-                  fontSize: "15px", fontWeight: 500, flexShrink: 0,
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "50%",
+                  background: "var(--bg-warm)",
+                  border: "1px solid var(--border)",
+                  flexShrink: 0,
+                  overflow: "hidden",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}>
-                  {t.initial}
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+                    <circle cx="11" cy="8" r="3.5" stroke="var(--muted)" strokeWidth="1.2"/>
+                    <path d="M4 19C4 15.7 7.1 13 11 13C14.9 13 18 15.7 18 19" stroke="var(--muted)" strokeWidth="1.2" strokeLinecap="round"/>
+                  </svg>
                 </div>
-                <div>
-                  <div style={{ fontSize: "13px", fontWeight: 600, color: "var(--text)" }}>{t.name}</div>
-                  <div style={{ fontSize: "12px", color: "var(--muted)", marginTop: "1px" }}>{t.role}</div>
-                </div>
+                <span style={{ fontSize: "13.5px", fontWeight: 500, color: "var(--text)", letterSpacing: "-0.01em" }}>
+                  {t.name}, {t.age}
+                </span>
               </div>
             </div>
           ))}
         </div>
 
+        {/* Stats bar */}
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "0",
+          background: "var(--bg)",
+          borderRadius: "60px",
+          padding: "18px 40px",
+          border: "1px solid var(--border)",
+          maxWidth: "680px",
+          margin: "0 auto",
+        }}>
+          {/* Heart icon */}
+          <div style={{
+            width: "44px",
+            height: "44px",
+            borderRadius: "50%",
+            background: "var(--sage)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexShrink: 0,
+            marginRight: "28px",
+          }}>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M9 15C9 15 2.5 10.5 2.5 6C2.5 3.8 4.3 2 6.5 2C7.7 2 8.8 2.6 9.5 3.5C10.2 2.6 11.3 2 12.5 2C14.7 2 16.5 3.8 16.5 6C16.5 10.5 9 15 9 15Z" fill="white"/>
+            </svg>
+          </div>
+
+          <div style={{ display: "flex", alignItems: "center", gap: "0", flex: 1 }}>
+            {[
+              { value: "6+", label: "років практики" },
+              { value: "100+", label: "клієнтів" },
+              { value: "Тисячі", label: "годин підтримки та довіри" },
+            ].map((stat, i) => (
+              <div key={stat.label} style={{ display: "flex", alignItems: "center", flex: 1 }}>
+                <div style={{ textAlign: "center", flex: 1 }}>
+                  <span style={{
+                    fontFamily: "var(--font-playfair), serif",
+                    fontSize: "18px",
+                    fontWeight: 500,
+                    color: "var(--text)",
+                    letterSpacing: "-0.01em",
+                  }}>
+                    {stat.value}{" "}
+                  </span>
+                  <span style={{ fontSize: "13px", color: "var(--muted)", fontWeight: 300 }}>
+                    {stat.label}
+                  </span>
+                </div>
+                {i < 2 && (
+                  <div style={{ width: "1px", height: "28px", background: "var(--border)", flexShrink: 0 }} />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
+
+      {/* Candle + herb bottom-right */}
+      <div style={{ position: "absolute", bottom: 0, right: 0, width: "220px", height: "200px", pointerEvents: "none", zIndex: 0 }}>
+        <Image src="/candle.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="220px" />
+      </div>
+
     </section>
   );
 }

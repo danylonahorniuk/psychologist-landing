@@ -59,8 +59,8 @@ export default function Testimonials() {
   return (
     <section id="reviews" style={{ position: "relative", padding: "100px 80px 80px", background: "var(--bg-warm)" }}>
 
-      {/* Herb — top-right, behind the cards */}
-      <div style={{ position: "absolute", top: "180px", right: "0", width: "340px", height: "310px", pointerEvents: "none", zIndex: 1 }}>
+      {/* Herb — top-right, above cards, in front of background */}
+      <div style={{ position: "absolute", top: "20px", right: "0", width: "340px", height: "310px", pointerEvents: "none", zIndex: 10 }}>
         <Image src="/herb.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="340px" />
       </div>
 

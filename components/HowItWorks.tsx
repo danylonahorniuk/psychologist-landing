@@ -110,7 +110,7 @@ export default function HowItWorks() {
               color: "var(--text)",
               marginBottom: "24px",
             }}>
-              Як ми<br />працюємо разом
+              Як я<br />працюю з вами
             </h2>
 
             <p style={{

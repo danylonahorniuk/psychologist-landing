@@ -57,12 +57,7 @@ const QuoteIcon = () => (
 
 export default function Testimonials() {
   return (
-    <section id="reviews" style={{ position: "relative", padding: "100px 80px 80px", background: "var(--bg-warm)", overflow: "hidden" }}>
-
-      {/* Herb top-right */}
-      <div style={{ position: "absolute", top: 0, right: 0, width: "280px", height: "260px", pointerEvents: "none", zIndex: 0 }}>
-        <Image src="/herb.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="280px" />
-      </div>
+    <section id="reviews" style={{ position: "relative", padding: "100px 80px 80px", background: "var(--bg-warm)" }}>
 
       <div style={{ position: "relative", zIndex: 1, maxWidth: "1280px", margin: "0 auto" }}>
 
@@ -93,12 +88,26 @@ export default function Testimonials() {
         </div>
 
         {/* 3×2 cards grid */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "20px",
-          marginBottom: "60px",
-        }}>
+        <div style={{ position: "relative" }}>
+
+          {/* Herb — top-right, overlapping top-right card */}
+          <div style={{ position: "absolute", top: "-80px", right: "-60px", width: "300px", height: "280px", pointerEvents: "none", zIndex: 0 }}>
+            <Image src="/herb.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="300px" />
+          </div>
+
+          {/* Candle — bottom-right, overlapping below bottom-right card */}
+          <div style={{ position: "absolute", bottom: "-80px", right: "-50px", width: "220px", height: "220px", pointerEvents: "none", zIndex: 2 }}>
+            <Image src="/candle.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="220px" />
+          </div>
+
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "20px",
+            marginBottom: "60px",
+            position: "relative",
+            zIndex: 1,
+          }}>
           {testimonials.map((t) => (
             <div
               key={t.name + t.age}
@@ -154,6 +163,7 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
+          </div>
         </div>
 
         {/* Stats bar */}
@@ -215,11 +225,6 @@ export default function Testimonials() {
           </div>
         </div>
 
-      </div>
-
-      {/* Candle + herb bottom-right */}
-      <div style={{ position: "absolute", bottom: 0, right: 0, width: "220px", height: "200px", pointerEvents: "none", zIndex: 0 }}>
-        <Image src="/candle.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="220px" />
       </div>
 
     </section>

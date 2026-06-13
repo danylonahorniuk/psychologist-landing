@@ -57,7 +57,7 @@ const QuoteIcon = () => (
 
 export default function Testimonials() {
   return (
-    <section id="reviews" style={{ position: "relative", padding: "100px 80px 220px", background: "var(--bg-warm)" }}>
+    <section id="reviews" style={{ position: "relative", padding: "100px 80px 80px", background: "var(--bg-warm)" }}>
       <style>{`
         .testimonial-card {
           transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;

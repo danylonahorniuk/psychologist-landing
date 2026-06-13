@@ -109,15 +109,7 @@ export default function HowItWorks() {
             }}>
               Як проходить терапія
             </span>
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", margin: "14px 0 28px" }}>
-              <div style={{ width: "32px", height: "1px", background: "var(--sand)" }} />
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M8 1C8 1 5 5 5 8C5 9.7 6.3 11 8 11C9.7 11 11 9.7 11 8C11 5 8 1 8 1Z" stroke="var(--sage)" strokeWidth="1.2" fill="none"/>
-                <path d="M8 11V15" stroke="var(--sage)" strokeWidth="1.2" strokeLinecap="round"/>
-                <path d="M6 13H10" stroke="var(--sage)" strokeWidth="1.2" strokeLinecap="round"/>
-              </svg>
-              <div style={{ width: "32px", height: "1px", background: "var(--sand)" }} />
-            </div>
+            <div style={{ margin: "14px 0 28px" }} />
 
             <h2 style={{
               fontFamily: "var(--font-playfair), serif",

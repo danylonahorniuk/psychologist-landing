@@ -91,7 +91,7 @@ export default function HowItWorks() {
           zIndex: 1,
           maxWidth: "1280px",
           margin: "0 auto",
-          padding: "24px 80px 80px",
+          padding: "55px 80px 80px",
           display: "grid",
           gridTemplateColumns: "1fr 1.1fr",
           gap: "80px",

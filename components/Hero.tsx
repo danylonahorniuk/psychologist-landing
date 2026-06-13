@@ -72,14 +72,11 @@ export default function Hero() {
             className="btn-sage"
             style={{
               display: "inline-block",
-              background: "var(--sage)",
-              color: "#fff",
               padding: "15px 36px",
               borderRadius: "48px",
               fontSize: "14px",
               fontWeight: 500,
               letterSpacing: "0.02em",
-              textDecoration: "none",
             }}
           >
             Записатись на сесію
@@ -95,7 +92,6 @@ export default function Hero() {
               color: "var(--muted)",
               textDecoration: "none",
               fontWeight: 400,
-              opacity: 0.85,
             }}
           >
             <span

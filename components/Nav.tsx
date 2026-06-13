@@ -81,13 +81,10 @@ export default function Nav() {
         className="btn-sage"
         style={{
           display: "inline-block",
-          background: "var(--sage)",
-          color: "#fff",
           padding: "11px 24px",
           borderRadius: "48px",
           fontSize: "13px",
           fontWeight: 500,
-          textDecoration: "none",
           letterSpacing: "0.01em",
           whiteSpace: "nowrap",
         }}

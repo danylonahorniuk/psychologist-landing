@@ -1,21 +1,21 @@
 const steps = [
   {
-    num: "1",
+    num: "01",
     title: "Перший контакт",
     text: "Ти пишеш або телефонуєш. Ми коротко знайомимось і домовляємось про зручний час для першої сесії.",
   },
   {
-    num: "2",
+    num: "02",
     title: "Діагностична сесія",
     text: "На першій зустрічі я слухаю твою ситуацію і разом ми визначаємо запит та цілі подальшої роботи.",
   },
   {
-    num: "3",
+    num: "03",
     title: "Регулярна робота",
     text: "Ми зустрічаємось 1–2 рази на тиждень. Кожна сесія будується на твоїх потребах тут і зараз.",
   },
   {
-    num: "4",
+    num: "04",
     title: "Результат",
     text: "Відчутні зміни, нові стратегії поведінки і підтримка на шляху до стабільного внутрішнього добробуту.",
   },
@@ -23,30 +23,71 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how" className="py-[120px] px-20 bg-bg">
-      <div className="max-w-[1280px] mx-auto">
-        {/* Header */}
-        <div className="text-center mb-[88px]">
-          <h2 className="font-serif text-[48px] font-medium leading-[1.12] tracking-[-0.01em]">
-            Чотири кроки до змін
+    <section id="how" style={{ padding: "100px 80px", background: "var(--bg)" }}>
+      <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+
+        {/* Section header */}
+        <div style={{ marginBottom: "64px" }}>
+          <span style={{ fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "var(--sage)", fontWeight: 500 }}>
+            Процес
+          </span>
+          <div style={{ width: "32px", height: "2px", background: "var(--sage)", marginTop: "12px", marginBottom: "20px", borderRadius: "1px" }} />
+          <h2 style={{
+            fontFamily: "var(--font-playfair), serif",
+            fontSize: "clamp(36px, 3.5vw, 52px)",
+            fontWeight: 500,
+            lineHeight: 1.1,
+            letterSpacing: "-0.015em",
+            color: "var(--text)",
+          }}>
+            Як відбувається
+            <br />
+            <em style={{ fontStyle: "italic", color: "var(--sage)" }}>терапія</em>
           </h2>
         </div>
 
-        {/* Steps */}
-        <div className="grid grid-cols-4 relative">
-          {/* Connector line */}
-          <div className="absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-sand to-transparent" />
-
-          {steps.map((s) => (
-            <div key={s.num} className="px-7 text-center group">
-              <div className="w-20 h-20 rounded-full bg-bg-warm flex items-center justify-center font-serif text-[28px] font-medium mx-auto mb-7 relative z-10 border-4 border-bg transition-all duration-300 group-hover:bg-sage group-hover:text-white group-hover:border-sage">
+        {/* Steps: 4-column grid with border separators */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid var(--border)" }}>
+          {steps.map((s, i) => (
+            <div
+              key={s.num}
+              style={{
+                padding: "40px 40px 48px",
+                borderRight: i < steps.length - 1 ? "1px solid var(--border)" : "none",
+              }}
+            >
+              <div style={{
+                fontFamily: "var(--font-playfair), serif",
+                fontSize: "52px",
+                fontWeight: 400,
+                color: "var(--sand)",
+                lineHeight: 1,
+                marginBottom: "28px",
+              }}>
                 {s.num}
               </div>
-              <h3 className="font-serif text-[18px] font-medium mb-2.5">{s.title}</h3>
-              <p className="text-[13px] text-muted leading-[1.68] font-light">{s.text}</p>
+              <h3 style={{
+                fontFamily: "var(--font-playfair), serif",
+                fontSize: "19px",
+                fontWeight: 500,
+                marginBottom: "12px",
+                color: "var(--text)",
+                lineHeight: 1.3,
+              }}>
+                {s.title}
+              </h3>
+              <p style={{
+                fontSize: "14px",
+                color: "var(--muted)",
+                lineHeight: 1.7,
+                fontWeight: 300,
+              }}>
+                {s.text}
+              </p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

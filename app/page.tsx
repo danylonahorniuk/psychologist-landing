@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Manifesto from "@/components/Manifesto";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
+import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
@@ -22,6 +23,7 @@ export default function Home() {
         <Manifesto />
         <Services />
         <HowItWorks />
+        <Gallery />
         <Testimonials />
         <Pricing />
         <FAQ />

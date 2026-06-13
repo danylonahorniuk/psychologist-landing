@@ -42,81 +42,126 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-[120px] px-20 bg-bg-warm">
-      <div className="max-w-[1280px] mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-[48px] font-medium leading-[1.12] tracking-[-0.01em]">
-            Оберіть свій<br />формат роботи
+    <section id="pricing" style={{ padding: "100px 80px", background: "var(--bg)" }}>
+      <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+
+        {/* Section header */}
+        <div style={{ marginBottom: "64px" }}>
+          <span style={{ fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "var(--sage)", fontWeight: 500 }}>
+            Ціни
+          </span>
+          <div style={{ width: "32px", height: "2px", background: "var(--sage)", marginTop: "12px", marginBottom: "20px", borderRadius: "1px" }} />
+          <h2 style={{
+            fontFamily: "var(--font-playfair), serif",
+            fontSize: "clamp(36px, 3.5vw, 52px)",
+            fontWeight: 500,
+            lineHeight: 1.1,
+            letterSpacing: "-0.015em",
+            color: "var(--text)",
+          }}>
+            Оберіть свій<br /><em style={{ fontStyle: "italic", color: "var(--sage)" }}>формат</em>
           </h2>
         </div>
 
-        <div className="grid grid-cols-3 gap-6 items-center">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", alignItems: "start" }}>
           {plans.map((p) => (
             <div
               key={p.name}
-              className={`relative rounded-3xl px-10 py-[52px] border transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(0,0,0,0.08)] ${
-                p.featured
-                  ? "bg-ink text-bg border-transparent scale-[1.03]"
-                  : "bg-bg border-transparent hover:border-sand"
-              }`}
+              className="card-hover"
+              style={{
+                position: "relative",
+                borderRadius: "24px",
+                padding: "48px 44px",
+                background: p.featured ? "var(--sage)" : "var(--bg-warm)",
+                border: p.featured ? "none" : "1px solid var(--border)",
+                display: "flex",
+                flexDirection: "column",
+              }}
             >
               {p.badge && (
-                <span className="absolute -top-[14px] left-1/2 -translate-x-1/2 bg-sage text-white text-[10px] font-bold tracking-[0.1em] uppercase px-5 py-1.5 rounded-full whitespace-nowrap">
+                <span style={{
+                  position: "absolute",
+                  top: "-14px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  background: "var(--text)",
+                  color: "#fff",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase" as const,
+                  padding: "6px 20px",
+                  borderRadius: "20px",
+                  whiteSpace: "nowrap" as const,
+                }}>
                   {p.badge}
                 </span>
               )}
 
-              <div
-                className={`text-[12px] font-semibold tracking-[0.1em] uppercase mb-4 ${
-                  p.featured ? "text-[rgba(250,248,245,0.45)]" : "text-muted"
-                }`}
-              >
+              <div style={{
+                fontSize: "11px",
+                letterSpacing: "0.14em",
+                textTransform: "uppercase" as const,
+                fontWeight: 600,
+                color: p.featured ? "rgba(255,255,255,0.55)" : "var(--muted)",
+                marginBottom: "16px",
+              }}>
                 {p.name}
               </div>
 
-              <div
-                className={`font-serif text-[52px] font-medium leading-none mb-1.5 ${
-                  p.featured ? "text-bg" : "text-ink"
-                }`}
-              >
+              <div style={{
+                fontFamily: "var(--font-playfair), serif",
+                fontSize: "48px",
+                fontWeight: 500,
+                lineHeight: 1,
+                color: p.featured ? "#fff" : "var(--text)",
+                marginBottom: "6px",
+              }}>
                 {p.price}
               </div>
 
-              <div
-                className={`text-[13px] mb-8 ${
-                  p.featured ? "text-[rgba(250,248,245,0.45)]" : "text-muted"
-                }`}
-              >
+              <div style={{
+                fontSize: "13px",
+                color: p.featured ? "rgba(255,255,255,0.55)" : "var(--muted)",
+                marginBottom: "32px",
+              }}>
                 {p.period}
               </div>
 
-              <ul className="flex flex-col gap-3 mb-10">
+              <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "12px", margin: "0 0 36px 0", padding: 0, flex: 1 }}>
                 {p.features.map((f) => (
-                  <li
-                    key={f}
-                    className={`text-[14px] flex items-start gap-2.5 leading-[1.5] ${
-                      p.featured ? "text-[rgba(250,248,245,0.68)]" : "text-muted"
-                    }`}
-                  >
-                    <span className="text-sage text-[12px] mt-px flex-shrink-0">✓</span>
+                  <li key={f} style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "10px",
+                    fontSize: "14px",
+                    color: p.featured ? "rgba(255,255,255,0.78)" : "var(--muted)",
+                    lineHeight: 1.5,
+                  }}>
+                    <span style={{ color: p.featured ? "rgba(255,255,255,0.55)" : "var(--sage)", fontSize: "12px", marginTop: "2px", flexShrink: 0 }}>✓</span>
                     {f}
                   </li>
                 ))}
               </ul>
 
-              <a
-                href="#contact"
-                className={`block text-center px-8 py-3.5 rounded-full text-[14px] font-medium no-underline transition-all duration-300 ${
-                  p.featured
-                    ? "bg-bg text-ink hover:bg-bg-warm"
-                    : "border-[1.5px] border-sand text-ink hover:border-ink"
-                }`}
-              >
+              <a href="#contact" style={{
+                display: "block",
+                textAlign: "center" as const,
+                padding: "14px 32px",
+                borderRadius: "8px",
+                fontSize: "14px",
+                fontWeight: 500,
+                textDecoration: "none",
+                background: p.featured ? "#fff" : "transparent",
+                color: p.featured ? "var(--sage)" : "var(--text)",
+                border: p.featured ? "none" : "1.5px solid var(--border)",
+              }}>
                 Записатись
               </a>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

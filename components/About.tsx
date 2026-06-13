@@ -2,8 +2,21 @@ import Image from "next/image";
 
 const features = [
   {
+    title: "7+ років практики",
+    text: "Сім років роботи з клієнтами різного віку та запитів — від тривоги до кризових станів.",
+    stat: "7+",
+    icon: null,
+  },
+  {
+    title: "200+ клієнтів",
+    text: "Понад двісті людей, які пройшли шлях від розгубленості до внутрішньої опори.",
+    stat: "200+",
+    icon: null,
+  },
+  {
     title: "Індивідуальний підхід",
     text: "Немає двох однакових людей і двох однакових терапій. Темп, методи та формат роботи я завжди підбираю під вас.",
+    stat: null,
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <circle cx="10" cy="7" r="3" stroke="currentColor" strokeWidth="1.3"/>
@@ -14,6 +27,7 @@ const features = [
   {
     title: "Конфіденційність та довіра",
     text: "Все, що відбувається між нами — залишається між нами. Це не просто правило, це основа нашої роботи.",
+    stat: null,
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <path d="M10 2L4 5V10C4 13.3 6.7 16.5 10 17.5C13.3 16.5 16 13.3 16 10V5L10 2Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
@@ -24,6 +38,7 @@ const features = [
   {
     title: "Власна терапія та супервізія",
     text: "Регулярно проходжу супервізії та власну терапію — щоб бути для вас максимально присутньою і ресурсною.",
+    stat: null,
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <path d="M10 3L12.5 8H18L13.5 11.5L15.5 17L10 13.5L4.5 17L6.5 11.5L2 8H7.5L10 3Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
@@ -72,38 +87,9 @@ export default function About() {
           <p style={{ fontSize: "15px", color: "var(--muted)", lineHeight: 1.78, fontWeight: 300, marginBottom: "16px" }}>
             Я обрала психологію, бо сама знаю, що таке — шукати відповіді всередині себе і не знаходити. Сьогодні я допомагаю іншим пройти цей шлях — не наодинці, а поруч із людиною, яка справді слухає.
           </p>
-          <p style={{ fontSize: "15px", color: "var(--muted)", lineHeight: 1.78, fontWeight: 300, marginBottom: "44px" }}>
+          <p style={{ fontSize: "15px", color: "var(--muted)", lineHeight: 1.78, fontWeight: 300, marginBottom: "36px" }}>
             В основі моєї роботи — гештальт-підхід та елементи КПТ. Я не даю готових відповідей, але допомагаю почути себе, розібратися в тому, що відбувається, і знайти власне рішення.
           </p>
-
-          {/* Stats row */}
-          <div style={{ display: "flex", gap: "0", marginBottom: "36px", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
-            {[
-              { value: "7+", label: "років практики" },
-              { value: "200+", label: "клієнтів" },
-            ].map((s, i) => (
-              <div key={s.label} style={{
-                flex: 1,
-                padding: "20px 0",
-                paddingLeft: i === 0 ? 0 : "32px",
-                borderLeft: i === 0 ? "none" : "1px solid var(--border)",
-              }}>
-                <div style={{
-                  fontFamily: "var(--font-playfair), serif",
-                  fontSize: "36px",
-                  fontWeight: 500,
-                  color: "var(--sage)",
-                  lineHeight: 1,
-                  marginBottom: "4px",
-                }}>
-                  {s.value}
-                </div>
-                <div style={{ fontSize: "12px", color: "var(--muted)", fontWeight: 300, letterSpacing: "0.04em" }}>
-                  {s.label}
-                </div>
-              </div>
-            ))}
-          </div>
 
           {/* Features */}
           <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
@@ -114,14 +100,16 @@ export default function About() {
                   height: "44px",
                   borderRadius: "50%",
                   border: "1.5px solid var(--border)",
-                  background: "var(--bg-warm)",
+                  background: f.stat ? "var(--sage)" : "var(--bg-warm)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "var(--sage)",
+                  color: f.stat ? "#fff" : "var(--sage)",
                   flexShrink: 0,
                 }}>
-                  {f.icon}
+                  {f.stat ? (
+                    <span style={{ fontFamily: "var(--font-playfair), serif", fontSize: "13px", fontWeight: 600, letterSpacing: "-0.02em" }}>{f.stat}</span>
+                  ) : f.icon}
                 </div>
                 <div>
                   <div style={{ fontSize: "15px", fontWeight: 600, color: "var(--text)", marginBottom: "5px", letterSpacing: "-0.01em" }}>

@@ -1,14 +1,23 @@
 import Image from "next/image";
 
-const stats = [
-  { value: "7+", label: "років практики" },
-  { value: "200+", label: "клієнтів" },
-];
-
 const features = [
+  {
+    title: null,
+    text: null,
+    stats: [
+      { value: "7+", label: "років практики" },
+      { value: "200+", label: "клієнтів" },
+    ],
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M3 15V10M7 15V7M11 15V9M15 15V5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
   {
     title: "Індивідуальний підхід",
     text: "Немає двох однакових людей і двох однакових терапій. Темп, методи та формат роботи я завжди підбираю під вас.",
+    stats: null,
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <circle cx="10" cy="6.5" r="2.8" stroke="currentColor" strokeWidth="1.3"/>
@@ -20,6 +29,7 @@ const features = [
   {
     title: "Конфіденційність та довіра",
     text: "Все, що відбувається між нами — залишається між нами. Це не просто правило, це основа нашої роботи.",
+    stats: null,
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <rect x="5.5" y="9" width="9" height="7.5" rx="1.8" stroke="currentColor" strokeWidth="1.3"/>
@@ -32,6 +42,7 @@ const features = [
   {
     title: "Власна терапія та супервізія",
     text: "Регулярно проходжу супервізії та власну терапію — щоб бути для вас максимально присутньою і ресурсною.",
+    stats: null,
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <path d="M16 5v4h-4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
@@ -50,12 +61,7 @@ export default function About() {
 
         {/* ── LEFT: Photo ── */}
         <div style={{ position: "relative" }}>
-          <div style={{
-            borderRadius: "20px",
-            overflow: "hidden",
-            aspectRatio: "4/5",
-            position: "relative",
-          }}>
+          <div style={{ borderRadius: "20px", overflow: "hidden", aspectRatio: "4/5", position: "relative" }}>
             <Image
               src="/about2.png"
               alt="Ірина Коваленко — психолог"
@@ -83,49 +89,14 @@ export default function About() {
           <p style={{ fontSize: "15px", color: "var(--muted)", lineHeight: 1.78, fontWeight: 300, marginBottom: "16px" }}>
             Я обрала психологію, бо сама знаю, що таке — шукати відповіді всередині себе і не знаходити. Сьогодні я допомагаю іншим пройти цей шлях — не наодинці, а поруч із людиною, яка справді слухає.
           </p>
-          <p style={{ fontSize: "15px", color: "var(--muted)", lineHeight: 1.78, fontWeight: 300, marginBottom: "32px" }}>
+          <p style={{ fontSize: "15px", color: "var(--muted)", lineHeight: 1.78, fontWeight: 300, marginBottom: "36px" }}>
             В основі моєї роботи — гештальт-підхід та елементи КПТ. Я не даю готових відповідей, але допомагаю почути себе, розібратися в тому, що відбувається, і знайти власне рішення.
           </p>
 
-          {/* Stats row — один рядок з обома показниками */}
-          <div style={{
-            display: "flex",
-            gap: "0",
-            marginBottom: "36px",
-            borderTop: "1px solid var(--border)",
-            borderBottom: "1px solid var(--border)",
-          }}>
-            {stats.map((s, i) => (
-              <div key={s.label} style={{
-                flex: 1,
-                display: "flex",
-                alignItems: "center",
-                gap: "14px",
-                padding: "18px 0",
-                paddingLeft: i === 0 ? 0 : "28px",
-                borderLeft: i === 0 ? "none" : "1px solid var(--border)",
-              }}>
-                <span style={{
-                  fontFamily: "var(--font-playfair), serif",
-                  fontSize: "34px",
-                  fontWeight: 500,
-                  color: "var(--sage)",
-                  lineHeight: 1,
-                  letterSpacing: "-0.02em",
-                }}>
-                  {s.value}
-                </span>
-                <span style={{ fontSize: "12.5px", color: "var(--muted)", fontWeight: 300, letterSpacing: "0.02em", lineHeight: 1.4 }}>
-                  {s.label}
-                </span>
-              </div>
-            ))}
-          </div>
-
           {/* Features */}
           <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-            {features.map((f) => (
-              <div key={f.title} style={{ display: "flex", gap: "18px", alignItems: "flex-start" }}>
+            {features.map((f, i) => (
+              <div key={i} style={{ display: "flex", gap: "18px", alignItems: "flex-start" }}>
                 <div style={{
                   width: "42px",
                   height: "42px",
@@ -140,13 +111,40 @@ export default function About() {
                 }}>
                   {f.icon}
                 </div>
-                <div>
-                  <div style={{ fontSize: "15px", fontWeight: 600, color: "var(--text)", marginBottom: "5px", letterSpacing: "-0.01em" }}>
-                    {f.title}
-                  </div>
-                  <div style={{ fontSize: "13.5px", color: "var(--muted)", lineHeight: 1.65, fontWeight: 300 }}>
-                    {f.text}
-                  </div>
+                <div style={{ flex: 1 }}>
+                  {f.stats ? (
+                    /* Stats item */
+                    <div style={{ display: "flex", gap: "32px" }}>
+                      {f.stats.map((s) => (
+                        <div key={s.label}>
+                          <div style={{
+                            fontFamily: "var(--font-playfair), serif",
+                            fontSize: "28px",
+                            fontWeight: 500,
+                            color: "var(--sage)",
+                            lineHeight: 1,
+                            letterSpacing: "-0.02em",
+                            marginBottom: "4px",
+                          }}>
+                            {s.value}
+                          </div>
+                          <div style={{ fontSize: "12.5px", color: "var(--muted)", fontWeight: 300, letterSpacing: "0.02em" }}>
+                            {s.label}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    /* Regular feature item */
+                    <>
+                      <div style={{ fontSize: "15px", fontWeight: 600, color: "var(--text)", marginBottom: "5px", letterSpacing: "-0.01em" }}>
+                        {f.title}
+                      </div>
+                      <div style={{ fontSize: "13.5px", color: "var(--muted)", lineHeight: 1.65, fontWeight: 300 }}>
+                        {f.text}
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             ))}

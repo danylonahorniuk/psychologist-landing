@@ -177,7 +177,7 @@ export default function Hero() {
           aria-hidden="true"
         >
           <path
-            d="M0,100 L0,55 C480,100 960,100 1440,55 L1440,100 Z"
+            d="M0,100 L0,25 C360,5 720,90 1440,78 L1440,100 Z"
             fill="var(--bg)"
           />
         </svg>

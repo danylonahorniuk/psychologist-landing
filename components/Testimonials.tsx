@@ -57,7 +57,7 @@ const QuoteIcon = () => (
 
 export default function Testimonials() {
   return (
-    <section id="reviews" style={{ position: "relative", padding: "100px 80px 80px", background: "var(--bg-warm)" }}>
+    <section id="reviews" style={{ position: "relative", padding: "100px 80px 160px", background: "var(--bg-warm)" }}>
       <style>{`
         .testimonial-card {
           transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -74,8 +74,8 @@ export default function Testimonials() {
         <Image src="/herb.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="340px" />
       </div>
 
-      {/* Candle — bottom-right, sits below cards via lower zIndex */}
-      <div style={{ position: "absolute", bottom: "0", right: "0", width: "240px", height: "240px", pointerEvents: "none", zIndex: 1 }}>
+      {/* Candle — bottom-right */}
+      <div style={{ position: "absolute", bottom: "0", right: "0", width: "240px", height: "220px", pointerEvents: "none", zIndex: 10 }}>
         <Image src="/candle.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="220px" />
       </div>
 

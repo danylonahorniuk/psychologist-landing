@@ -151,4 +151,26 @@ body {
     color: #fff !important;
     transform: scale(1.12);
   }
+
+  .nav-link {
+    position: relative;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--sage);
+    transition: width 0.25s ease;
+  }
+  .nav-link:hover {
+    opacity: 1;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
 }

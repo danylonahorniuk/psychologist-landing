@@ -60,13 +60,13 @@ export default function Nav() {
           <li key={l.href}>
             <a
               href={l.href}
+              className="nav-link"
               style={{
                 fontSize: "13px",
                 color: "var(--text)",
                 textDecoration: "none",
                 letterSpacing: "0.01em",
                 fontWeight: 400,
-                opacity: 0.75,
               }}
             >
               {l.label}

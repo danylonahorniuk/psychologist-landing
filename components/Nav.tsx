@@ -28,7 +28,7 @@ export default function Nav() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "18px 80px",
+        padding: "18px 80px 18px 140px",
         background: scrolled ? "rgba(250,248,245,0.94)" : "transparent",
         backdropFilter: scrolled ? "blur(14px)" : "none",
         borderBottom: scrolled ? "1px solid var(--border)" : "none",
@@ -38,8 +38,8 @@ export default function Nav() {
       {/* Logo — circular sage badge */}
       <a href="#" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
         <div style={{
-          width: "36px",
-          height: "36px",
+          width: "48px",
+          height: "48px",
           borderRadius: "50%",
           background: "var(--sage)",
           display: "flex",

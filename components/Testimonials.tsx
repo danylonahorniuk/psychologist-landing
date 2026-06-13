@@ -172,67 +172,6 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Stats bar */}
-        <div style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "var(--bg)",
-          borderRadius: "60px",
-          padding: "20px 36px",
-          border: "1px solid var(--border)",
-          maxWidth: "820px",
-          margin: "0 auto",
-          boxShadow: "0 4px 24px rgba(44,44,44,0.05)",
-          gap: "0",
-          whiteSpace: "nowrap",
-        }}>
-          {/* Heart icon */}
-          <div style={{
-            width: "44px",
-            height: "44px",
-            borderRadius: "50%",
-            background: "var(--sage)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexShrink: 0,
-            marginRight: "32px",
-          }}>
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-              <path d="M9 15C9 15 2.5 10.5 2.5 6C2.5 3.8 4.3 2 6.5 2C7.7 2 8.8 2.6 9.5 3.5C10.2 2.6 11.3 2 12.5 2C14.7 2 16.5 3.8 16.5 6C16.5 10.5 9 15 9 15Z" fill="white"/>
-            </svg>
-          </div>
-
-          <div style={{ display: "flex", alignItems: "center", flex: 1 }}>
-            {[
-              { value: "7+", label: "років практики" },
-              { value: "200+", label: "клієнтів" },
-              { value: "Тисячі", label: "годин підтримки та довіри" },
-            ].map((stat, i) => (
-              <div key={stat.label} style={{ display: "flex", alignItems: "center", flex: 1 }}>
-                <div style={{ textAlign: "center", flex: 1, whiteSpace: "nowrap" }}>
-                  <span style={{
-                    fontFamily: "var(--font-playfair), serif",
-                    fontSize: "19px",
-                    fontWeight: 500,
-                    color: "var(--text)",
-                    letterSpacing: "-0.01em",
-                  }}>
-                    {stat.value}{" "}
-                  </span>
-                  <span style={{ fontSize: "13px", color: "var(--muted)", fontWeight: 300 }}>
-                    {stat.label}
-                  </span>
-                </div>
-                {i < 2 && (
-                  <div style={{ width: "1px", height: "28px", background: "var(--border)", flexShrink: 0 }} />
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-
       </div>
 
     </section>

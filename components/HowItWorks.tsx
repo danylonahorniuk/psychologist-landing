@@ -91,15 +91,15 @@ export default function HowItWorks() {
           zIndex: 1,
           maxWidth: "1280px",
           margin: "0 auto",
-          padding: "55px 80px 80px",
+          padding: "60px 80px 80px",
           display: "grid",
           gridTemplateColumns: "1fr 1.1fr",
           gap: "80px",
-          alignItems: "flex-start",
+          alignItems: "center",
         }}>
 
           {/* LEFT: heading */}
-          <div style={{ paddingTop: "40px" }}>
+          <div style={{ paddingBottom: "40px" }}>
 
             <h2 style={{
               fontFamily: "var(--font-playfair), serif",

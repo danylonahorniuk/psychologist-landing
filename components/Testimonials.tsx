@@ -74,8 +74,8 @@ export default function Testimonials() {
         <Image src="/herb.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="340px" />
       </div>
 
-      {/* Candle — bottom-right, aligned with the bottom card row */}
-      <div style={{ position: "absolute", bottom: "0", right: "0", width: "220px", height: "220px", pointerEvents: "none", zIndex: 10, opacity: 0.75, mixBlendMode: "multiply" }}>
+      {/* Candle — bottom-right, sits below cards via lower zIndex */}
+      <div style={{ position: "absolute", bottom: "0", right: "0", width: "240px", height: "240px", pointerEvents: "none", zIndex: 1 }}>
         <Image src="/candle.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="220px" />
       </div>
 

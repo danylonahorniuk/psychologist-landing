@@ -8,7 +8,6 @@ export default function Hero() {
       id="hero"
       style={{
         minHeight: "100vh",
-        paddingTop: "88px",
         position: "relative",
         background: "var(--bg-warm)",
         overflow: "hidden",
@@ -17,13 +16,13 @@ export default function Hero() {
         alignItems: "center",
       }}
     >
-      {/* ── LEFT: Text ── */}
+      {/* ── LEFT: Text — paddingTop accounts for transparent nav ── */}
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "80px 64px 140px 140px",
+          padding: "160px 64px 140px 140px",
         }}
       >
         {/* Eyebrow */}
@@ -131,20 +130,20 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── RIGHT: Photo — no card, fills column ── */}
+      {/* ── RIGHT: Photo — fills full viewport height to touch nav ── */}
       <div
         className="animate-scale-in"
         style={{
           position: "relative",
-          height: "100%",
-          minHeight: "calc(100vh - 88px)",
+          height: "100vh",
+          alignSelf: "stretch",
         }}
       >
         <Image
           src={PHOTO_URL}
           alt="Ірина Коваленко — психолог і коуч"
           fill
-          style={{ objectFit: "cover", objectPosition: "center 15%" }}
+          style={{ objectFit: "cover", objectPosition: "65% 5%" }}
           sizes="45vw"
           priority
         />
@@ -154,7 +153,7 @@ export default function Hero() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to right, var(--bg-warm) 0%, transparent 28%)",
+              "linear-gradient(to right, var(--bg-warm) 0%, transparent 32%)",
             pointerEvents: "none",
           }}
         />

@@ -100,16 +100,7 @@ export default function HowItWorks() {
 
           {/* LEFT: heading */}
           <div>
-            <span style={{
-              fontSize: "10px",
-              letterSpacing: "0.22em",
-              textTransform: "uppercase" as const,
-              color: "var(--sage)",
-              fontWeight: 600,
-            }}>
-              Як проходить терапія
-            </span>
-            <div style={{ margin: "14px 0 28px" }} />
+            <div style={{ margin: "0 0 28px" }} />
 
             <h2 style={{
               fontFamily: "var(--font-playfair), serif",

@@ -65,7 +65,7 @@ export default function Testimonials() {
       </div>
 
       {/* Candle — bottom-right, aligned with the bottom card row */}
-      <div style={{ position: "absolute", bottom: "160px", right: "0", width: "220px", height: "220px", pointerEvents: "none", zIndex: 10 }}>
+      <div style={{ position: "absolute", bottom: "160px", right: "0", width: "220px", height: "220px", pointerEvents: "none", zIndex: 10, opacity: 0.75, mixBlendMode: "multiply" }}>
         <Image src="/candle.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="220px" />
       </div>
 

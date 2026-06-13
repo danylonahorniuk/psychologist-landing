@@ -2,8 +2,6 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Topics from "@/components/Topics";
 import About from "@/components/About";
-import Manifesto from "@/components/Manifesto";
-import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
@@ -20,8 +18,6 @@ export default function Home() {
         <Hero />
         <Topics />
         <About />
-        <Manifesto />
-        <Services />
         <HowItWorks />
         <Gallery />
         <Testimonials />

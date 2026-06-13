@@ -25,24 +25,9 @@ export default function Hero() {
           padding: "160px 64px 140px 140px",
         }}
       >
-        {/* Eyebrow */}
-        <p
-          className="animate-fade-up-1"
-          style={{
-            fontSize: "14px",
-            color: "var(--muted)",
-            fontStyle: "italic",
-            marginBottom: "20px",
-            fontWeight: 300,
-            letterSpacing: "0.01em",
-          }}
-        >
-          Психологічна підтримка та глибокі зміни
-        </p>
-
         {/* H1 */}
         <h1
-          className="animate-fade-up-2"
+          className="animate-fade-up-1"
           style={{
             fontFamily: "var(--font-playfair), serif",
             fontSize: "clamp(44px, 5.2vw, 80px)",
@@ -56,7 +41,7 @@ export default function Hero() {
           Знайди себе.
           <br />
           <em style={{ fontStyle: "italic", color: "var(--slate)" }}>
-            Живи з сенсом.
+            Живи повніше.
           </em>
         </h1>
 
@@ -72,13 +57,14 @@ export default function Hero() {
             maxWidth: "400px",
           }}
         >
-          Разом ми розберемося з тим, що тебе гальмує, відновимо внутрішній
-          ресурс і знайдемо шлях до життя, яким ти хочеш жити.
+          Мене звуть Ірина Коваленко — я психолог та гештальт-терапевт
+          з 7-річним досвідом. Допомагаю знайти внутрішню опору,
+          розібратися в собі та побудувати стосунки, які наповнюють.
         </p>
 
         {/* CTAs */}
         <div
-          className="animate-fade-up-4"
+          className="animate-fade-up-3"
           style={{ display: "flex", alignItems: "center", gap: "20px" }}
         >
           <a

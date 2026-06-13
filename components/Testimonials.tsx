@@ -177,13 +177,15 @@ export default function Testimonials() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: "0",
           background: "var(--bg)",
           borderRadius: "60px",
-          padding: "18px 40px",
+          padding: "20px 36px",
           border: "1px solid var(--border)",
-          maxWidth: "680px",
+          maxWidth: "820px",
           margin: "0 auto",
+          boxShadow: "0 4px 24px rgba(44,44,44,0.05)",
+          gap: "0",
+          whiteSpace: "nowrap",
         }}>
           {/* Heart icon */}
           <div style={{
@@ -195,24 +197,24 @@ export default function Testimonials() {
             alignItems: "center",
             justifyContent: "center",
             flexShrink: 0,
-            marginRight: "28px",
+            marginRight: "32px",
           }}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
               <path d="M9 15C9 15 2.5 10.5 2.5 6C2.5 3.8 4.3 2 6.5 2C7.7 2 8.8 2.6 9.5 3.5C10.2 2.6 11.3 2 12.5 2C14.7 2 16.5 3.8 16.5 6C16.5 10.5 9 15 9 15Z" fill="white"/>
             </svg>
           </div>
 
-          <div style={{ display: "flex", alignItems: "center", gap: "0", flex: 1 }}>
+          <div style={{ display: "flex", alignItems: "center", flex: 1 }}>
             {[
-              { value: "6+", label: "років практики" },
-              { value: "100+", label: "клієнтів" },
+              { value: "7+", label: "років практики" },
+              { value: "200+", label: "клієнтів" },
               { value: "Тисячі", label: "годин підтримки та довіри" },
             ].map((stat, i) => (
               <div key={stat.label} style={{ display: "flex", alignItems: "center", flex: 1 }}>
-                <div style={{ textAlign: "center", flex: 1 }}>
+                <div style={{ textAlign: "center", flex: 1, whiteSpace: "nowrap" }}>
                   <span style={{
                     fontFamily: "var(--font-playfair), serif",
-                    fontSize: "18px",
+                    fontSize: "19px",
                     fontWeight: 500,
                     color: "var(--text)",
                     letterSpacing: "-0.01em",

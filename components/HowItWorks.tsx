@@ -177,24 +177,28 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      {/* CTA bar */}
-      <section style={{
-        background: "var(--bg-warm)",
-        padding: "48px 80px 56px",
-      }}>
+      {/* CTA card */}
+      <section style={{ background: "var(--bg-warm)", padding: "0 80px 64px" }}>
         <div style={{
           maxWidth: "1280px",
           margin: "0 auto",
+          background: "var(--bg)",
+          borderRadius: "24px",
+          padding: "36px 48px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           gap: "40px",
+          border: "1px solid var(--border)",
         }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "28px" }}>
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-              <path d="M24 6C24 6 14 18 14 26C14 31.5 18.5 36 24 36C29.5 36 34 31.5 34 26C34 18 24 6 24 6Z" stroke="var(--sage)" strokeWidth="1.5" fill="none"/>
-              <path d="M24 36V44" stroke="var(--sage)" strokeWidth="1.5" strokeLinecap="round"/>
-              <path d="M18 41H30" stroke="var(--sage)" strokeWidth="1.5" strokeLinecap="round"/>
+          <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
+            {/* Decorative botanical illustration */}
+            <svg width="72" height="88" viewBox="0 0 72 88" fill="none" aria-hidden="true" style={{ flexShrink: 0, opacity: 0.85 }}>
+              <path d="M36 82V30" stroke="var(--sage)" strokeWidth="1.5" strokeLinecap="round"/>
+              <path d="M36 55C36 55 22 46 18 32C28 30 38 38 36 55Z" fill="var(--sage)" fillOpacity="0.18" stroke="var(--sage)" strokeWidth="1.3"/>
+              <path d="M36 45C36 45 50 36 54 22C44 20 34 28 36 45Z" fill="var(--sage)" fillOpacity="0.25" stroke="var(--sage)" strokeWidth="1.3"/>
+              <path d="M36 68C36 68 24 60 20 48C30 46 40 54 36 68Z" fill="var(--sage)" fillOpacity="0.13" stroke="var(--sage)" strokeWidth="1.3"/>
+              <path d="M36 72C36 72 46 64 50 52C40 50 30 58 36 72Z" fill="var(--sage)" fillOpacity="0.1" stroke="var(--sage)" strokeWidth="1.3"/>
             </svg>
             <div>
               <div style={{
@@ -202,12 +206,12 @@ export default function HowItWorks() {
                 fontSize: "22px",
                 fontWeight: 500,
                 color: "var(--text)",
-                marginBottom: "6px",
+                marginBottom: "8px",
                 letterSpacing: "-0.01em",
               }}>
                 Не знаєте, з чого почати?
               </div>
-              <div style={{ fontSize: "14px", color: "var(--muted)", fontWeight: 300, lineHeight: 1.6 }}>
+              <div style={{ fontSize: "14px", color: "var(--muted)", fontWeight: 300, lineHeight: 1.65, maxWidth: "480px" }}>
                 Запишіться на першу консультацію — разом ми визначимо ваш запит і знайдемо найкращий шлях до змін.
               </div>
             </div>

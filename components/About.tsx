@@ -2,12 +2,9 @@ import Image from "next/image";
 
 const features = [
   {
-    title: null,
-    text: null,
-    stats: [
-      { value: "7+", label: "років практики" },
-      { value: "200+", label: "клієнтів" },
-    ],
+    title: "7+ років практики, 200+ клієнтів",
+    text: "Працюю з людьми різного віку та запитів — від тривоги й самооцінки до стосункових криз і пошуку себе.",
+    stats: null,
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <path d="M3 15V10M7 15V7M11 15V9M15 15V5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>

@@ -55,7 +55,7 @@ export default function Nav() {
       </a>
 
       {/* Nav links — centered */}
-      <ul style={{ display: "flex", alignItems: "center", gap: "28px", listStyle: "none", margin: 0, padding: 0 }}>
+      <ul style={{ display: "flex", alignItems: "center", gap: "40px", listStyle: "none", margin: 0, padding: 0 }}>
         {links.map((l) => (
           <li key={l.href}>
             <a

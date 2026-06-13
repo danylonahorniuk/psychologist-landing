@@ -37,7 +37,7 @@ export default function About() {
     <section id="about" style={{ padding: "110px 80px", background: "var(--bg)" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.15fr", gap: "80px", alignItems: "center" }}>
 
-        {/* ── LEFT: Photo + stats ── */}
+        {/* ── LEFT: Photo ── */}
         <div style={{ position: "relative" }}>
           <div style={{
             borderRadius: "20px",
@@ -52,49 +52,6 @@ export default function About() {
               style={{ objectFit: "cover", objectPosition: "center top" }}
               sizes="560px"
             />
-          </div>
-
-          {/* Stats card */}
-          <div style={{
-            position: "absolute",
-            bottom: "32px",
-            left: "-20px",
-            background: "var(--sage)",
-            borderRadius: "16px",
-            padding: "28px 32px",
-            color: "#fff",
-            minWidth: "180px",
-            boxShadow: "0 16px 40px rgba(143,168,135,0.35)",
-          }}>
-            <div style={{ marginBottom: "18px" }}>
-              <div style={{
-                fontFamily: "var(--font-playfair), serif",
-                fontSize: "32px",
-                fontWeight: 500,
-                lineHeight: 1,
-                marginBottom: "4px",
-              }}>
-                7+
-              </div>
-              <div style={{ fontSize: "12px", opacity: 0.78, fontWeight: 300, letterSpacing: "0.02em" }}>
-                років практики
-              </div>
-            </div>
-            <div style={{ width: "100%", height: "1px", background: "rgba(255,255,255,0.2)", marginBottom: "18px" }} />
-            <div>
-              <div style={{
-                fontFamily: "var(--font-playfair), serif",
-                fontSize: "32px",
-                fontWeight: 500,
-                lineHeight: 1,
-                marginBottom: "4px",
-              }}>
-                200+
-              </div>
-              <div style={{ fontSize: "12px", opacity: 0.78, fontWeight: 300, letterSpacing: "0.02em" }}>
-                клієнтів
-              </div>
-            </div>
           </div>
         </div>
 
@@ -118,6 +75,35 @@ export default function About() {
           <p style={{ fontSize: "15px", color: "var(--muted)", lineHeight: 1.78, fontWeight: 300, marginBottom: "44px" }}>
             В основі моєї роботи — гештальт-підхід та елементи КПТ. Я не даю готових відповідей, але допомагаю почути себе, розібратися в тому, що відбувається, і знайти власне рішення.
           </p>
+
+          {/* Stats row */}
+          <div style={{ display: "flex", gap: "0", marginBottom: "36px", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
+            {[
+              { value: "7+", label: "років практики" },
+              { value: "200+", label: "клієнтів" },
+            ].map((s, i) => (
+              <div key={s.label} style={{
+                flex: 1,
+                padding: "20px 0",
+                paddingLeft: i === 0 ? 0 : "32px",
+                borderLeft: i === 0 ? "none" : "1px solid var(--border)",
+              }}>
+                <div style={{
+                  fontFamily: "var(--font-playfair), serif",
+                  fontSize: "36px",
+                  fontWeight: 500,
+                  color: "var(--sage)",
+                  lineHeight: 1,
+                  marginBottom: "4px",
+                }}>
+                  {s.value}
+                </div>
+                <div style={{ fontSize: "12px", color: "var(--muted)", fontWeight: 300, letterSpacing: "0.04em" }}>
+                  {s.label}
+                </div>
+              </div>
+            ))}
+          </div>
 
           {/* Features */}
           <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>

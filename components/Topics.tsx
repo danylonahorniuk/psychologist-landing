@@ -1,27 +1,65 @@
 const topics = [
   {
-    num: "01",
-    title: "Тривога і стрес",
-    text: "Допоможу розібратися з причинами тривоги, навчитися регулювати стан і повернути відчуття спокою та контролю над своїм життям.",
-    accent: true,
+    title: "Тривожність і стрес",
+    text: "Допомагаю впоратися з тривогою, напруженням і нав'язливими думками",
+    icon: (
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+        <path d="M19 33C19 19 9 10 5 8C5 8 19 8 27 16C35 24 33 33 19 33Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+        <path d="M19 33L19 20" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+        <path d="M19 20C16 17 12 15 9 14" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+      </svg>
+    ),
   },
   {
-    num: "02",
+    title: "Самооцінка та впевненість",
+    text: "Працюємо над прийняттям себе та формуванням здорової самооцінки",
+    icon: (
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+        <circle cx="19" cy="19" r="6.5" stroke="currentColor" strokeWidth="1.4"/>
+        <path d="M19 5V8.5M19 29.5V33M5 19H8.5M29.5 19H33M9.2 9.2L11.7 11.7M26.3 26.3L28.8 28.8M28.8 9.2L26.3 11.7M11.7 26.3L9.2 28.8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
     title: "Стосунки та комунікація",
-    text: "Вихід із токсичних патернів, побудова здорових кордонів, покращення комунікації з партнером, родиною чи колегами.",
-    accent: false,
+    text: "Допомагаю будувати гармонійні стосунки та вирішувати конфлікти",
+    icon: (
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+        <path d="M7 9C7 7.3 8.3 6 10 6H24C25.7 6 27 7.3 27 9V18C27 19.7 25.7 21 24 21H15L9 26V21H10C8.3 21 7 19.7 7 18V9Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+        <path d="M27 13H29C30.7 13 32 14.3 32 16V22C32 23.7 30.7 25 29 25H27V29L22 25H18" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+      </svg>
+    ),
   },
   {
-    num: "03",
-    title: "Самооцінка і впевненість",
-    text: "Робота з внутрішнім критиком, синдромом самозванця, страхом оцінки — щоб ти міг/-ла спиратися на себе, а не шукати схвалення ззовні.",
-    accent: false,
+    title: "Емоційні труднощі",
+    text: "Робота з образами, провиною, страхами та іншими емоціями",
+    icon: (
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+        <path d="M19 31C19 31 5 22 5 13C5 9.1 8.1 6 12 6C14.8 6 17.3 7.6 19 10C20.7 7.6 23.2 6 26 6C29.9 6 33 9.1 33 13C33 22 19 31 19 31Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+      </svg>
+    ),
   },
   {
-    num: "04",
-    title: "Кризи і вигорання",
-    text: "Підтримка в моменти втрати сенсу, змін, втоми та емоційного спустошення. Допоможу знайти ресурс і рухатись далі.",
-    accent: true,
+    title: "Життєві кризи та зміни",
+    text: "Підтримка у переходах, втратах, розлученнях та нових етапах",
+    icon: (
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+        <path d="M4 31L15 11L21 22L26 16L34 31H4Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+        <path d="M26 9L28 7L30 9" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M28 7V12" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    title: "Пошук себе та сенсу",
+    text: "Підтримую у пошуку власного шляху, цінностей і призначення",
+    icon: (
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+        <circle cx="19" cy="19" r="12" stroke="currentColor" strokeWidth="1.4"/>
+        <circle cx="19" cy="19" r="4.5" stroke="currentColor" strokeWidth="1.4"/>
+        <path d="M19 7V10M19 28V31M7 19H10M28 19H31" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+      </svg>
+    ),
   },
 ];
 
@@ -30,86 +68,75 @@ export default function Topics() {
     <section style={{ padding: "100px 80px", background: "var(--bg)" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
-        {/* Section header */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", alignItems: "flex-end", marginBottom: "64px" }}>
-          <div>
-            <span style={{ fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "var(--sage)", fontWeight: 500 }}>
-              Напрямки
-            </span>
-            <div style={{ width: "32px", height: "2px", background: "var(--sage)", marginTop: "12px", marginBottom: "20px", borderRadius: "1px" }} />
-            <h2 style={{
-              fontFamily: "var(--font-playfair), serif",
-              fontSize: "clamp(36px, 3.5vw, 52px)",
-              fontWeight: 500,
-              lineHeight: 1.1,
-              letterSpacing: "-0.015em",
-              color: "var(--text)",
-            }}>
-              З чим я можу
-              <br />
-              <em style={{ fontStyle: "italic", color: "var(--sage)" }}>допомогти</em>
-            </h2>
-          </div>
-          <p style={{
-            fontSize: "15px",
-            color: "var(--muted)",
-            lineHeight: 1.72,
-            fontWeight: 300,
-            maxWidth: "380px",
-            marginLeft: "auto",
+        {/* Centered heading */}
+        <div style={{ textAlign: "center", marginBottom: "72px" }}>
+          <h2 style={{
+            fontFamily: "var(--font-playfair), serif",
+            fontSize: "clamp(30px, 3vw, 44px)",
+            fontWeight: 500,
+            lineHeight: 1.15,
+            letterSpacing: "-0.015em",
+            color: "var(--text)",
+            marginBottom: "20px",
           }}>
-            Кожна ситуація унікальна. Нижче — найпоширеніші запити,
-            з якими приходять до мене клієнти.
-          </p>
+            Як я можу вам допомогти
+          </h2>
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "12px",
+          }}>
+            <div style={{ width: "40px", height: "1px", background: "var(--sand)" }} />
+            <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--sage)" }} />
+            <div style={{ width: "40px", height: "1px", background: "var(--sand)" }} />
+          </div>
         </div>
 
-        {/* 2×2 grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "20px" }}>
+        {/* 6-column grid */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(6, 1fr)",
+          gap: "8px",
+        }}>
           {topics.map((t) => (
             <div
-              key={t.num}
-              className="card-hover"
+              key={t.title}
+              className="topic-card"
               style={{
-                background: t.accent ? "var(--sage)" : "var(--bg-warm)",
-                borderRadius: "24px",
-                padding: "52px 56px",
-                border: t.accent ? "none" : "1px solid var(--border)",
-                display: "grid",
-                gridTemplateColumns: "80px 1fr",
-                gap: "32px",
+                display: "flex",
+                flexDirection: "column",
                 alignItems: "flex-start",
+                padding: "28px 20px 32px",
+                borderRadius: "16px",
+                cursor: "default",
               }}
             >
               <div style={{
-                fontFamily: "var(--font-playfair), serif",
-                fontSize: "56px",
-                fontWeight: 400,
-                lineHeight: 1,
-                color: t.accent ? "rgba(255,255,255,0.22)" : "var(--sand)",
-                paddingTop: "4px",
+                color: "var(--sage)",
+                marginBottom: "18px",
+                opacity: 0.85,
               }}>
-                {t.num}
+                {t.icon}
               </div>
-              <div>
-                <h3 style={{
-                  fontFamily: "var(--font-playfair), serif",
-                  fontSize: "22px",
-                  fontWeight: 500,
-                  marginBottom: "14px",
-                  color: t.accent ? "#fff" : "var(--text)",
-                  lineHeight: 1.25,
-                }}>
-                  {t.title}
-                </h3>
-                <p style={{
-                  fontSize: "14.5px",
-                  lineHeight: 1.72,
-                  fontWeight: 300,
-                  color: t.accent ? "rgba(255,255,255,0.78)" : "var(--muted)",
-                }}>
-                  {t.text}
-                </p>
-              </div>
+              <h3 style={{
+                fontSize: "14.5px",
+                fontWeight: 600,
+                color: "var(--text)",
+                lineHeight: 1.35,
+                marginBottom: "10px",
+                letterSpacing: "-0.01em",
+              }}>
+                {t.title}
+              </h3>
+              <p style={{
+                fontSize: "13px",
+                color: "var(--muted)",
+                lineHeight: 1.65,
+                fontWeight: 300,
+              }}>
+                {t.text}
+              </p>
             </div>
           ))}
         </div>

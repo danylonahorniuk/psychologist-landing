@@ -58,6 +58,16 @@ const QuoteIcon = () => (
 export default function Testimonials() {
   return (
     <section id="reviews" style={{ position: "relative", padding: "100px 80px 80px", background: "var(--bg-warm)" }}>
+      <style>{`
+        .testimonial-card {
+          transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .testimonial-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 16px 48px rgba(44, 44, 44, 0.08);
+          border-color: var(--sage) !important;
+        }
+      `}</style>
 
       {/* Herb — top-right, overlapping above the top card row */}
       <div style={{ position: "absolute", top: "80px", right: "0", width: "340px", height: "310px", pointerEvents: "none", zIndex: 10 }}>
@@ -107,6 +117,7 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.name + t.age}
+              className="testimonial-card"
               style={{
                 background: "var(--bg)",
                 borderRadius: "20px",

@@ -70,9 +70,7 @@ export default function Gallery() {
               Простір<br />для змін
             </h2>
 
-            <LeafDivider />
-
-            <p style={{ fontSize: "14.5px", color: "var(--muted)", lineHeight: 1.75, fontWeight: 300, marginBottom: "14px" }}>
+            <p style={{ marginTop: "24px", fontSize: "14.5px", color: "var(--muted)", lineHeight: 1.75, fontWeight: 300, marginBottom: "14px" }}>
               Тут ви можете зупинитися, видихнути та повернутися до себе.
             </p>
             <p style={{ fontSize: "14.5px", color: "var(--muted)", lineHeight: 1.75, fontWeight: 300, marginBottom: "40px" }}>

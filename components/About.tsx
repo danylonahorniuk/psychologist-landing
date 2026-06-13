@@ -1,231 +1,153 @@
 import Image from "next/image";
 
-const PHOTO_URL = "/about.png";
-
-const creds = [
-  "Диплом практичного психолога, Київський національний університет",
-  "Сертифікація КПТ, Інститут когнітивно-поведінкової терапії",
-  "Гештальт-терапія, 4-річна програма МІГТ",
-  "Член Асоціації психологів України",
+const features = [
+  {
+    title: "Індивідуальний підхід",
+    text: "Кожна людина унікальна, тому я підбираю методи роботи, які підходять саме вам.",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <circle cx="10" cy="7" r="3" stroke="currentColor" strokeWidth="1.3"/>
+        <path d="M4 17C4 14.2 6.7 12 10 12C13.3 12 16 14.2 16 17" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    title: "Конфіденційність та довіра",
+    text: "Гарантую повну конфіденційність та безпечну атмосферу наших зустрічей.",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M10 2L4 5V10C4 13.3 6.7 16.5 10 17.5C13.3 16.5 16 13.3 16 10V5L10 2Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
+        <path d="M7 10L9 12L13 8" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+  },
+  {
+    title: "Професійний розвиток",
+    text: "Постійно підвищую кваліфікацію та вдосконалюю свої знання.",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M10 3L12.5 8H18L13.5 11.5L15.5 17L10 13.5L4.5 17L6.5 11.5L2 8H7.5L10 3Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
+      </svg>
+    ),
+  },
 ];
 
 export default function About() {
   return (
-    <section id="about" style={{ padding: "120px 80px 100px", background: "var(--bg-warm)" }}>
-      <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+    <section id="about" style={{ padding: "110px 80px", background: "var(--bg)" }}>
+      <div style={{ maxWidth: "1280px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.15fr", gap: "80px", alignItems: "center" }}>
 
-        {/* Section label */}
-        <div style={{ marginBottom: "72px" }}>
-          <span
-            style={{
-              fontSize: "11px",
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: "var(--muted)",
-              fontWeight: 400,
-            }}
-          >
-            Про мене
-          </span>
-          <div
-            style={{
-              width: "44px",
-              height: "2px",
-              background: "var(--sage)",
-              marginTop: "10px",
-              borderRadius: "1px",
-            }}
-          />
-        </div>
-
-        {/* Main grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1.35fr",
-            gap: "88px",
-            alignItems: "flex-start",
-          }}
-        >
-          {/* ── LEFT: Photo ── */}
-          <div style={{ position: "relative" }}>
-            {/* Rotated photo frame */}
-            <div
-              style={{
-                transform: "rotate(-2.5deg)",
-                transformOrigin: "center bottom",
-                position: "relative",
-                width: "100%",
-                aspectRatio: "3/4",
-                borderRadius: "16px",
-                overflow: "hidden",
-                boxShadow: "0 32px 80px rgba(44,44,44,0.14), 0 8px 20px rgba(44,44,44,0.06)",
-              }}
-            >
-              <Image
-                src={PHOTO_URL}
-                alt="Ірина Коваленко"
-                fill
-                style={{ objectFit: "cover", objectPosition: "center top" }}
-                sizes="500px"
-              />
-            </div>
-
-            {/* Experience badge */}
-            <div
-              style={{
-                position: "absolute",
-                bottom: "-8px",
-                right: "-24px",
-                background: "var(--sage)",
-                color: "#fff",
-                borderRadius: "50%",
-                width: "112px",
-                height: "112px",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "11px",
-                fontWeight: 500,
-                textAlign: "center",
-                lineHeight: 1.3,
-                boxShadow: "0 8px 24px rgba(143,168,135,0.35)",
-              }}
-            >
-              <strong
-                style={{
-                  fontFamily: "var(--font-playfair), serif",
-                  fontSize: "26px",
-                  fontWeight: 500,
-                  display: "block",
-                }}
-              >
-                7+
-              </strong>
-              років
-              <br />
-              досвіду
-            </div>
+        {/* ── LEFT: Photo + stats ── */}
+        <div style={{ position: "relative" }}>
+          <div style={{
+            borderRadius: "20px",
+            overflow: "hidden",
+            aspectRatio: "4/5",
+            position: "relative",
+          }}>
+            <Image
+              src="/about2.png"
+              alt="Ірина Коваленко — психолог"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center top" }}
+              sizes="560px"
+            />
           </div>
 
-          {/* ── RIGHT: Content ── */}
-          <div>
-            {/* Greeting heading */}
-            <h2
-              style={{
+          {/* Stats card */}
+          <div style={{
+            position: "absolute",
+            bottom: "32px",
+            left: "-20px",
+            background: "var(--sage)",
+            borderRadius: "16px",
+            padding: "28px 32px",
+            color: "#fff",
+            minWidth: "180px",
+            boxShadow: "0 16px 40px rgba(143,168,135,0.35)",
+          }}>
+            <div style={{ marginBottom: "18px" }}>
+              <div style={{
                 fontFamily: "var(--font-playfair), serif",
-                fontSize: "clamp(36px, 3.8vw, 54px)",
+                fontSize: "32px",
                 fontWeight: 500,
-                lineHeight: 1.1,
-                letterSpacing: "-0.02em",
-                marginBottom: "28px",
-                color: "var(--text)",
-              }}
-            >
-              Привіт! Мене звуть{" "}
-              <br />
-              <span style={{ color: "var(--sage)" }}>Ірина Коваленко</span>
-            </h2>
-
-            {/* Bio */}
-            <p
-              style={{
-                fontSize: "16px",
-                color: "var(--muted)",
-                lineHeight: 1.78,
-                fontWeight: 300,
-                marginBottom: "20px",
-                maxWidth: "520px",
-              }}
-            >
-              Я психолог і коуч із 7-річним досвідом роботи з дорослими. Допомагаю
-              людям розібратись у собі, позбутися внутрішніх бар&apos;єрів і почати
-              жити більш свідомо та наповнено.
-            </p>
-            <p
-              style={{
-                fontSize: "16px",
-                color: "var(--muted)",
-                lineHeight: 1.78,
-                fontWeight: 300,
-                marginBottom: "40px",
-                maxWidth: "520px",
-              }}
-            >
-              Вірю, що кожна людина має в собі ресурс для змін. Моє завдання —
-              допомогти тобі до нього дістатись. У роботі поєдную
-              когнітивно-поведінкову терапію, гештальт і елементи коучингу.
-            </p>
-
-            {/* Credentials */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-              {creds.map((c) => (
-                <div
-                  key={c}
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "12px",
-                    fontSize: "13.5px",
-                    color: "var(--muted)",
-                    lineHeight: 1.5,
-                  }}
-                >
-                  <span
-                    style={{
-                      width: "6px",
-                      height: "6px",
-                      borderRadius: "50%",
-                      background: "var(--sage)",
-                      flexShrink: 0,
-                      marginTop: "6px",
-                    }}
-                  />
-                  {c}
-                </div>
-              ))}
+                lineHeight: 1,
+                marginBottom: "4px",
+              }}>
+                7+
+              </div>
+              <div style={{ fontSize: "12px", opacity: 0.78, fontWeight: 300, letterSpacing: "0.02em" }}>
+                років практики
+              </div>
+            </div>
+            <div style={{ width: "100%", height: "1px", background: "rgba(255,255,255,0.2)", marginBottom: "18px" }} />
+            <div>
+              <div style={{
+                fontFamily: "var(--font-playfair), serif",
+                fontSize: "32px",
+                fontWeight: 500,
+                lineHeight: 1,
+                marginBottom: "4px",
+              }}>
+                200+
+              </div>
+              <div style={{ fontSize: "12px", opacity: 0.78, fontWeight: 300, letterSpacing: "0.02em" }}>
+                клієнтів
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Mission statement — full-width strip */}
-        <div
-          style={{
-            marginTop: "100px",
-            paddingTop: "56px",
-            borderTop: "1px solid var(--border)",
-            display: "grid",
-            gridTemplateColumns: "1fr 2fr",
-            gap: "48px",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              fontSize: "11px",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              color: "var(--sage)",
-              fontWeight: 500,
-            }}
-          >
-            Моя ціль
-          </div>
-          <p
-            style={{
-              fontFamily: "var(--font-playfair), serif",
-              fontStyle: "italic",
-              fontSize: "clamp(22px, 2.4vw, 32px)",
-              color: "var(--text)",
-              lineHeight: 1.4,
-              letterSpacing: "-0.01em",
-              fontWeight: 400,
-            }}
-          >
-            Допомогти тобі побачити себе ясніше, прийняти своє життя
-            і знайти шлях, який відповідає саме тобі.
+        {/* ── RIGHT: Content ── */}
+        <div>
+          <h2 style={{
+            fontFamily: "var(--font-playfair), serif",
+            fontSize: "clamp(32px, 3.2vw, 46px)",
+            fontWeight: 500,
+            lineHeight: 1.1,
+            letterSpacing: "-0.015em",
+            color: "var(--text)",
+            marginBottom: "24px",
+          }}>
+            Про мене
+          </h2>
+
+          <p style={{ fontSize: "15px", color: "var(--muted)", lineHeight: 1.78, fontWeight: 300, marginBottom: "16px" }}>
+            Я — практикуючий психолог, для якого важливо створити безпечний простір, де можна бути собою. Вірю, що кожна людина має внутрішні ресурси для змін, і моя задача — допомогти їх знайти.
           </p>
+          <p style={{ fontSize: "15px", color: "var(--muted)", lineHeight: 1.78, fontWeight: 300, marginBottom: "44px" }}>
+            У своїй роботі поєдную професійні методи та щире прийняття, щоб ви відчули підтримку і впевненість у собі.
+          </p>
+
+          {/* Features */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+            {features.map((f) => (
+              <div key={f.title} style={{ display: "flex", gap: "18px", alignItems: "flex-start" }}>
+                <div style={{
+                  width: "44px",
+                  height: "44px",
+                  borderRadius: "50%",
+                  border: "1.5px solid var(--border)",
+                  background: "var(--bg-warm)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "var(--sage)",
+                  flexShrink: 0,
+                }}>
+                  {f.icon}
+                </div>
+                <div>
+                  <div style={{ fontSize: "15px", fontWeight: 600, color: "var(--text)", marginBottom: "5px", letterSpacing: "-0.01em" }}>
+                    {f.title}
+                  </div>
+                  <div style={{ fontSize: "13.5px", color: "var(--muted)", lineHeight: 1.65, fontWeight: 300 }}>
+                    {f.text}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>

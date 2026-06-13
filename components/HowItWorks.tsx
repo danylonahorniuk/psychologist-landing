@@ -180,10 +180,17 @@ export default function HowItWorks() {
 
         </div>
 
+        {/* Top wave */}
+        <div style={{ position: "absolute", top: -1, left: 0, right: 0, lineHeight: 0, zIndex: 2 }}>
+          <svg viewBox="0 0 1440 90" preserveAspectRatio="none" style={{ display: "block", width: "100%", height: "90px" }} aria-hidden="true">
+            <path d="M0,0 L0,55 C360,90 900,10 1440,60 L1440,0 Z" fill="var(--bg)" />
+          </svg>
+        </div>
+
         {/* Bottom wave */}
         <div style={{ position: "absolute", bottom: -1, left: 0, right: 0, lineHeight: 0, zIndex: 2 }}>
-          <svg viewBox="0 0 1440 70" preserveAspectRatio="none" style={{ display: "block", width: "100%", height: "70px" }} aria-hidden="true">
-            <path d="M0,70 L0,35 C480,5 960,65 1440,40 L1440,70 Z" fill="var(--bg-warm)" />
+          <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style={{ display: "block", width: "100%", height: "100px" }} aria-hidden="true">
+            <path d="M0,100 L0,45 C300,100 700,10 1440,55 L1440,100 Z" fill="var(--bg-warm)" />
           </svg>
         </div>
       </section>

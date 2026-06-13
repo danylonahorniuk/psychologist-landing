@@ -59,8 +59,8 @@ export default function Testimonials() {
   return (
     <section id="reviews" style={{ position: "relative", padding: "100px 80px 80px", background: "var(--bg-warm)" }}>
 
-      {/* Herb — fixed to section top-right, above the cards, in front of everything */}
-      <div style={{ position: "absolute", top: "180px", right: "0", width: "340px", height: "310px", pointerEvents: "none", zIndex: 10 }}>
+      {/* Herb — top-right, behind the cards */}
+      <div style={{ position: "absolute", top: "180px", right: "0", width: "340px", height: "310px", pointerEvents: "none", zIndex: 1 }}>
         <Image src="/herb.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="340px" />
       </div>
 
@@ -69,7 +69,7 @@ export default function Testimonials() {
         <Image src="/candle.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="220px" />
       </div>
 
-      <div style={{ position: "relative", zIndex: 1, maxWidth: "1280px", margin: "0 auto" }}>
+      <div style={{ position: "relative", zIndex: 2, maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "64px" }}>

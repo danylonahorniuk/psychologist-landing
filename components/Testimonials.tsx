@@ -75,7 +75,7 @@ export default function Testimonials() {
       </div>
 
       {/* Candle — bottom-right */}
-      <div style={{ position: "absolute", bottom: "40px", right: "0", width: "240px", height: "220px", pointerEvents: "none", zIndex: 10 }}>
+      <div style={{ position: "absolute", bottom: "20px", right: "0", width: "240px", height: "220px", pointerEvents: "none", zIndex: 10 }}>
         <Image src="/candle.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="220px" />
       </div>
 

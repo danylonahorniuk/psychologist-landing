@@ -129,7 +129,7 @@ export default function Hero() {
           src={PHOTO_URL}
           alt="Ірина Коваленко — психолог і коуч"
           fill
-          style={{ objectFit: "cover", objectPosition: "50% 15%" }}
+          style={{ objectFit: "cover", objectPosition: "65% 18%" }}
           sizes="(min-width: 1280px) 720px, 50vw"
           priority
         />

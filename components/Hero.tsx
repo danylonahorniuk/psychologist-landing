@@ -12,7 +12,7 @@ export default function Hero() {
         background: "var(--bg-warm)",
         overflow: "hidden",
         display: "grid",
-        gridTemplateColumns: "48fr 52fr",
+        gridTemplateColumns: "55fr 45fr",
         alignItems: "center",
       }}
     >
@@ -129,7 +129,7 @@ export default function Hero() {
           src={PHOTO_URL}
           alt="Ірина Коваленко — психолог і коуч"
           fill
-          style={{ objectFit: "cover", objectPosition: "62% 18%" }}
+          style={{ objectFit: "cover", objectPosition: "72% 22%" }}
           sizes="(min-width: 1280px) 720px, 50vw"
           priority
         />
@@ -139,7 +139,7 @@ export default function Hero() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to right, var(--bg-warm) 0%, var(--bg-warm) 5%, transparent 45%)",
+              "linear-gradient(to right, var(--bg-warm) 0%, transparent 32%)",
             pointerEvents: "none",
           }}
         />
@@ -157,14 +157,17 @@ export default function Hero() {
         }}
       >
         <svg
-          viewBox="0 0 1440 100"
+          viewBox="0 0 1440 60"
           preserveAspectRatio="none"
-          style={{ display: "block", width: "100%", height: "100px" }}
+          style={{ display: "block", width: "100%", height: "60px" }}
           aria-hidden="true"
         >
           <path
-            d="M0,100 L0,40 C360,10 720,85 1440,55 L1440,100 Z"
-            fill="#fff"
+            d="M0,30 C360,5 720,55 1440,25"
+            fill="none"
+            stroke="var(--sand)"
+            strokeWidth="1"
+            strokeOpacity="0.5"
           />
         </svg>
       </div>

@@ -40,16 +40,15 @@ export default function Contact() {
             boxShadow: "0 8px 48px rgba(44,44,44,0.07)",
             padding: "72px 80px 56px",
             textAlign: "center",
-            overflow: "hidden",
           }}>
-            {/* Left branch */}
-            <div style={{ position: "absolute", top: 0, left: 0, width: "160px", height: "100%", pointerEvents: "none" }}>
-              <Image src="/cta-left.png" alt="" fill style={{ objectFit: "contain", objectPosition: "left center" }} sizes="160px" />
+            {/* Left branch — overflows outside card */}
+            <div style={{ position: "absolute", top: 0, left: "-30px", width: "180px", height: "100%", pointerEvents: "none", zIndex: 0 }}>
+              <Image src="/cta-left.png" alt="" fill style={{ objectFit: "contain", objectPosition: "left center" }} sizes="180px" />
             </div>
 
             {/* Right branch */}
-            <div style={{ position: "absolute", top: 0, right: 0, width: "140px", height: "100%", pointerEvents: "none" }}>
-              <Image src="/cta-right.png" alt="" fill style={{ objectFit: "contain", objectPosition: "right center" }} sizes="140px" />
+            <div style={{ position: "absolute", top: 0, right: "-20px", width: "160px", height: "100%", pointerEvents: "none", zIndex: 0 }}>
+              <Image src="/cta-right.png" alt="" fill style={{ objectFit: "contain", objectPosition: "right center" }} sizes="160px" />
             </div>
 
             {/* Content */}

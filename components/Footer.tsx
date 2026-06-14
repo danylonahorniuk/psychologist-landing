@@ -119,7 +119,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <p style={{ fontSize: "12px", color: "var(--muted)", fontWeight: 300 }}>
-            © 2025 · Ірина Коваленко · Психолог і Коуч · Київ, Україна
+            © 2026 · Ірина Коваленко · Психолог і Коуч · Київ, Україна
           </p>
           <a href="#" style={{ fontSize: "12px", color: "var(--muted)", textDecoration: "none", fontWeight: 300, transition: "color 0.2s ease" }}>
             Політика конфіденційності

@@ -163,8 +163,8 @@ export default function Hero() {
           aria-hidden="true"
         >
           <path
-            d="M0,100 L0,30 C360,5 720,85 1440,60 L1440,100 Z"
-            fill="rgba(255,255,255,0.55)"
+            d="M0,100 L0,25 C360,5 720,90 1440,78 L1440,100 Z"
+            fill="var(--bg)"
           />
         </svg>
       </div>

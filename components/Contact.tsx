@@ -62,7 +62,7 @@ export default function Contact() {
                 color: "var(--text)",
                 marginBottom: "20px",
               }}>
-                Готові зробити перший<br />крок до змін?
+                Почніть шлях до себе<br />вже сьогодні
               </h2>
 
               <p style={{
@@ -73,8 +73,8 @@ export default function Contact() {
                 maxWidth: "500px",
                 margin: "0 auto 40px",
               }}>
-                Психотерапія починається з довіри та безпеки.<br />
-                Я створюю простір, де вас почують, зрозуміють і підтримають.
+                Перша розмова — це просто знайомство.<br />
+                Без тиску, без зобов'язань. Тільки ви і ваш запит.
               </p>
 
               {/* Buttons */}
@@ -114,7 +114,7 @@ export default function Contact() {
                   <Image src="/cta-small.png" alt="" fill style={{ objectFit: "contain" }} sizes="48px" />
                 </div>
                 <span style={{ fontSize: "13px", color: "var(--muted)", fontWeight: 300 }}>
-                  Відповім особисто та допоможу обрати зручний формат роботи.
+                  Відповім особисто та підберемо зручний час для першої зустрічі.
                 </span>
               </div>
             </div>

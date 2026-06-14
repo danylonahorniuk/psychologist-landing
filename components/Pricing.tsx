@@ -58,7 +58,7 @@ const plans = [
     branchTop: "/branch-ten-top.png",
     branchBottom: "/branch-ten-bottom.png",
     branchTopCorner: { top: 0, right: 0 },
-    branchBottomCorner: { bottom: "-20px", right: "-16px" },
+    branchBottomCorner: { bottom: "20px", right: "-16px" },
     branchTopSize: 120,
     branchBottomSize: 130,
     branchTopObjPos: "top right",

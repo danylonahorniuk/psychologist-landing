@@ -225,8 +225,7 @@ export default function Contact() {
               <label style={{ display: "flex", alignItems: "flex-start", gap: "10px", cursor: "pointer" }}>
                 <input type="checkbox" style={{ marginTop: "2px", flexShrink: 0, accentColor: "var(--sage)", width: "16px", height: "16px" }} />
                 <span style={{ fontSize: "12px", color: "var(--muted)", lineHeight: 1.6, fontWeight: 300 }}>
-                  Я погоджуюсь на обробку моїх персональних даних відповідно до{" "}
-                  <a href="#" style={{ color: "var(--sage)", textDecoration: "underline" }}>Політики конфіденційності</a>
+                  Погоджуюсь на обробку моїх даних для зв&apos;язку зі мною
                 </span>
               </label>
 

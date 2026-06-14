@@ -197,12 +197,11 @@ export default function Contact() {
               fontSize: "28px",
               fontWeight: 500,
               color: "var(--sage)",
-              marginBottom: "10px",
+              marginBottom: "36px",
               textAlign: "center",
             }}>
               Напишіть мені
             </h3>
-            <div style={{ width: "40px", height: "2px", background: "var(--sand)", borderRadius: "1px", margin: "0 auto 36px" }} />
 
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               <input

@@ -76,6 +76,21 @@ const CheckIcon = ({ featured }: { featured: boolean }) => (
 export default function Pricing() {
   return (
     <section id="pricing" style={{ padding: "100px 80px", background: "var(--bg)" }}>
+      <style>{`
+        .pricing-btn {
+          transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .pricing-btn-default:hover {
+          background: var(--bg-warm) !important;
+          border-color: var(--sage) !important;
+          color: var(--sage) !important;
+        }
+        .pricing-btn-featured:hover {
+          background: var(--bg-warm) !important;
+          color: var(--sage) !important;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+      `}</style>
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Header */}
@@ -238,7 +253,7 @@ export default function Pricing() {
               </ul>
 
               {/* CTA */}
-              <a href="#contact" style={{
+              <a href="#contact" className={`pricing-btn ${p.featured ? "pricing-btn-featured" : "pricing-btn-default"}`} style={{
                 display: "block",
                 textAlign: "center",
                 padding: "14px 32px",

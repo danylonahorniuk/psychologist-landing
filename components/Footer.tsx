@@ -33,28 +33,28 @@ export default function Footer() {
   ];
 
   return (
-    <footer style={{ background: "var(--text)", color: "var(--bg)" }}>
+    <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
       <style>{`
         .footer-nav-link {
           font-size: 13px;
-          color: rgba(250,248,245,0.5);
+          color: var(--muted);
           text-decoration: none;
           transition: color 0.2s ease;
           font-weight: 300;
         }
-        .footer-nav-link:hover { color: rgba(250,248,245,0.9); }
+        .footer-nav-link:hover { color: var(--text); }
         .footer-social {
           width: 40px; height: 40px;
           border-radius: 50%;
-          border: 1px solid rgba(250,248,245,0.15);
+          border: 1px solid var(--border);
           display: flex; align-items: center; justify-content: center;
-          color: rgba(250,248,245,0.5);
+          color: var(--muted);
           text-decoration: none;
           transition: border-color 0.2s ease, color 0.2s ease;
         }
         .footer-social:hover {
-          border-color: rgba(250,248,245,0.45);
-          color: rgba(250,248,245,0.9);
+          border-color: var(--sage);
+          color: var(--sage);
         }
       `}</style>
 
@@ -64,10 +64,10 @@ export default function Footer() {
 
           {/* Col 1 — Brand */}
           <div>
-            <a href="#" style={{ fontFamily: "var(--font-playfair), serif", fontSize: "22px", color: "var(--bg)", textDecoration: "none", fontWeight: 500, letterSpacing: "-0.01em", display: "block", marginBottom: "16px" }}>
+            <a href="#" style={{ fontFamily: "var(--font-playfair), serif", fontSize: "22px", color: "var(--text)", textDecoration: "none", fontWeight: 500, letterSpacing: "-0.01em", display: "block", marginBottom: "16px" }}>
               Ірина Коваленко
             </a>
-            <p style={{ fontSize: "13px", color: "rgba(250,248,245,0.45)", lineHeight: 1.75, fontWeight: 300, maxWidth: "260px", marginBottom: "28px" }}>
+            <p style={{ fontSize: "13px", color: "var(--muted)", lineHeight: 1.75, fontWeight: 300, maxWidth: "260px", marginBottom: "28px" }}>
               Психолог і коуч. Допомагаю знайти опору, ясність і рухатись вперед із внутрішньою свободою.
             </p>
             <div style={{ display: "flex", gap: "10px" }}>
@@ -81,7 +81,7 @@ export default function Footer() {
 
           {/* Col 2 — Navigation */}
           <div>
-            <span style={{ fontSize: "10px", letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(250,248,245,0.3)", fontWeight: 500, display: "block", marginBottom: "20px" }}>
+            <span style={{ fontSize: "10px", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--muted)", fontWeight: 500, display: "block", marginBottom: "20px" }}>
               Навігація
             </span>
             <nav style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
@@ -93,7 +93,7 @@ export default function Footer() {
 
           {/* Col 3 — Contacts */}
           <div>
-            <span style={{ fontSize: "10px", letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(250,248,245,0.3)", fontWeight: 500, display: "block", marginBottom: "20px" }}>
+            <span style={{ fontSize: "10px", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--muted)", fontWeight: 500, display: "block", marginBottom: "20px" }}>
               Контакти
             </span>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
@@ -104,8 +104,8 @@ export default function Footer() {
                 { label: "Графік", value: "Пн–Пт, 10:00–20:00" },
               ].map((c) => (
                 <div key={c.label}>
-                  <div style={{ fontSize: "10px", color: "rgba(250,248,245,0.3)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "2px" }}>{c.label}</div>
-                  <div style={{ fontSize: "13px", color: "rgba(250,248,245,0.6)", fontWeight: 300 }}>{c.value}</div>
+                  <div style={{ fontSize: "10px", color: "var(--muted)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "2px" }}>{c.label}</div>
+                  <div style={{ fontSize: "13px", color: "var(--text)", fontWeight: 300 }}>{c.value}</div>
                 </div>
               ))}
             </div>
@@ -114,14 +114,14 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div style={{ height: "1px", background: "rgba(250,248,245,0.08)", marginBottom: "28px" }} />
+        <div style={{ height: "1px", background: "var(--border)", marginBottom: "28px" }} />
 
         {/* Bottom bar */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <p style={{ fontSize: "12px", color: "rgba(250,248,245,0.25)", fontWeight: 300 }}>
+          <p style={{ fontSize: "12px", color: "var(--muted)", fontWeight: 300 }}>
             © 2025 · Ірина Коваленко · Психолог і Коуч · Київ, Україна
           </p>
-          <a href="#" style={{ fontSize: "12px", color: "rgba(250,248,245,0.25)", textDecoration: "none", fontWeight: 300, transition: "color 0.2s ease" }}>
+          <a href="#" style={{ fontSize: "12px", color: "var(--muted)", textDecoration: "none", fontWeight: 300, transition: "color 0.2s ease" }}>
             Політика конфіденційності
           </a>
         </div>

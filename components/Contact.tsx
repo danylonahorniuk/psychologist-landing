@@ -188,18 +188,6 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Format pill */}
-            <div style={{
-              display: "inline-flex", alignItems: "center", gap: "10px",
-              background: "var(--bg)", border: "1px solid var(--border)",
-              borderRadius: "12px", padding: "12px 20px",
-            }}>
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <path d="M9 2C9 2 6 5 6 9C6 11.5 7.5 13.5 9 14.5C10.5 13.5 12 11.5 12 9C12 5 9 2 9 2Z" stroke="var(--sage)" strokeWidth="1.2" fill="none"/>
-                <path d="M9 14.5V9M6.5 6.5C7.5 7 8.5 7.5 9 9M11.5 6.5C10.5 7 9.5 7.5 9 9" stroke="var(--sage)" strokeWidth="1.2" strokeLinecap="round"/>
-              </svg>
-              <span style={{ fontSize: "14px", color: "var(--sage)", fontWeight: 400 }}>Онлайн та офлайн формат</span>
-            </div>
           </div>
 
           {/* Form */}

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const contactDetails = [
   { label: "Email",            value: "iryna@psychology.ua" },
   { label: "Telegram / Viber", value: "+38 067 000 00 00"   },
@@ -7,60 +9,100 @@ const contactDetails = [
 export default function Contact() {
   return (
     <>
-      {/* Dark CTA band */}
-      <section style={{ padding: "96px 80px", background: "var(--text)", position: "relative", overflow: "hidden" }}>
-        <div style={{
-          position: "absolute",
-          width: "500px", height: "500px",
-          borderRadius: "50%",
-          border: "1px solid rgba(255,255,255,0.05)",
-          top: "50%", right: "5%",
-          transform: "translateY(-50%)",
-          pointerEvents: "none",
-        }} />
-        <div style={{
-          position: "absolute",
-          width: "300px", height: "300px",
-          borderRadius: "50%",
-          border: "1px solid rgba(255,255,255,0.04)",
-          top: "50%", right: "14%",
-          transform: "translateY(-50%)",
-          pointerEvents: "none",
-        }} />
-        <div style={{ maxWidth: "1280px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "40px", flexWrap: "wrap" as const }}>
-          <div>
-            <h2 style={{
-              fontFamily: "var(--font-playfair), serif",
-              fontSize: "clamp(32px, 3.8vw, 54px)",
-              fontWeight: 500,
-              lineHeight: 1.1,
-              letterSpacing: "-0.02em",
-              color: "#FAF8F5",
-              maxWidth: "560px",
-            }}>
-              Готова зробити перший крок
-              <br />
-              <em style={{ fontStyle: "italic", color: "var(--sage)" }}>разом із тобою?</em>
-            </h2>
-            <p style={{ fontSize: "15px", color: "rgba(250,248,245,0.5)", marginTop: "16px", fontWeight: 300 }}>
-              Запишись на безкоштовну 15-хвилинну консультацію.
-            </p>
-          </div>
-          <a href="#contact" style={{
-            display: "inline-block",
-            background: "var(--sage)",
-            color: "#fff",
-            padding: "18px 48px",
-            borderRadius: "8px",
-            fontSize: "13px",
-            fontWeight: 500,
-            letterSpacing: "0.06em",
-            textTransform: "uppercase" as const,
-            textDecoration: "none",
-            flexShrink: 0,
+      {/* CTA card */}
+      <section style={{ padding: "100px 80px", background: "var(--bg)" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+          <div style={{
+            position: "relative",
+            background: "var(--bg-warm)",
+            borderRadius: "24px",
+            border: "1px solid var(--border)",
+            padding: "72px 80px 56px",
+            textAlign: "center",
+            overflow: "hidden",
           }}>
-            Записатись на сесію
-          </a>
+            {/* Left branch */}
+            <div style={{ position: "absolute", top: 0, left: 0, width: "160px", height: "100%", pointerEvents: "none" }}>
+              <Image src="/cta-left.png" alt="" fill style={{ objectFit: "contain", objectPosition: "left center" }} sizes="160px" />
+            </div>
+
+            {/* Right branch */}
+            <div style={{ position: "absolute", top: 0, right: 0, width: "140px", height: "100%", pointerEvents: "none" }}>
+              <Image src="/cta-right.png" alt="" fill style={{ objectFit: "contain", objectPosition: "right center" }} sizes="140px" />
+            </div>
+
+            {/* Content */}
+            <div style={{ position: "relative", zIndex: 1 }}>
+              <h2 style={{
+                fontFamily: "var(--font-playfair), serif",
+                fontSize: "clamp(36px, 4vw, 56px)",
+                fontWeight: 500,
+                lineHeight: 1.15,
+                letterSpacing: "-0.02em",
+                color: "var(--text)",
+                marginBottom: "20px",
+              }}>
+                Готові зробити перший<br />крок до змін?
+              </h2>
+
+              {/* Divider */}
+              <div style={{ width: "48px", height: "1.5px", background: "var(--sand)", borderRadius: "1px", margin: "0 auto 24px" }} />
+
+              <p style={{
+                fontSize: "15px",
+                color: "var(--muted)",
+                lineHeight: 1.7,
+                fontWeight: 300,
+                maxWidth: "500px",
+                margin: "0 auto 40px",
+              }}>
+                Психотерапія починається з довіри та безпеки.<br />
+                Я створюю простір, де вас почують, зрозуміють і підтримають.
+              </p>
+
+              {/* Buttons */}
+              <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" as const, marginBottom: "32px" }}>
+                <a href="#contact" style={{
+                  display: "inline-block",
+                  background: "var(--sage)",
+                  color: "#fff",
+                  padding: "16px 40px",
+                  borderRadius: "10px",
+                  fontSize: "15px",
+                  fontWeight: 400,
+                  textDecoration: "none",
+                  letterSpacing: "0.01em",
+                  transition: "opacity 0.2s ease",
+                }}>
+                  Записатися на консультацію
+                </a>
+                <a href="#faq" style={{
+                  display: "inline-block",
+                  background: "transparent",
+                  color: "var(--text)",
+                  padding: "16px 40px",
+                  borderRadius: "10px",
+                  fontSize: "15px",
+                  fontWeight: 400,
+                  textDecoration: "none",
+                  border: "1px solid var(--sand)",
+                  letterSpacing: "0.01em",
+                }}>
+                  Поставити запитання
+                </a>
+              </div>
+
+              {/* Bottom note */}
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
+                <div style={{ position: "relative", width: "24px", height: "24px", flexShrink: 0 }}>
+                  <Image src="/cta-small.png" alt="" fill style={{ objectFit: "contain" }} sizes="24px" />
+                </div>
+                <span style={{ fontSize: "13px", color: "var(--muted)", fontWeight: 300 }}>
+                  Відповім особисто та допоможу обрати зручний формат роботи.
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

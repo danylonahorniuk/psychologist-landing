@@ -106,48 +106,29 @@ export default function FAQ() {
           </p>
         </div>
 
-        {/* Two-column layout */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "16px",
-          maxWidth: "1100px",
-          margin: "0 auto",
-        }}>
+        {/* Accordion */}
+        <div style={{ maxWidth: "780px", margin: "0 auto" }}>
           {faqs.map((f, i) => (
-            <div key={i} className="faq-item" style={{ alignSelf: "start" }}>
+            <div key={i} style={{ borderBottom: "1px solid var(--border)" }}>
               <button className="faq-btn" onClick={() => setOpen(open === i ? null : i)}>
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "16px" }}>
-                  <span style={{
-                    fontFamily: "var(--font-playfair), serif",
-                    fontSize: "13px",
-                    color: "var(--sage)",
-                    fontWeight: 500,
-                    flexShrink: 0,
-                    marginTop: "2px",
-                    letterSpacing: "0.05em",
-                  }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="faq-q" style={{
-                    fontSize: "15px",
-                    fontWeight: 500,
-                    color: "var(--text)",
-                    lineHeight: 1.5,
-                    transition: "color 0.2s ease",
-                  }}>
-                    {f.q}
-                  </span>
-                </div>
+                <span className="faq-q" style={{
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  color: "var(--text)",
+                  lineHeight: 1.5,
+                  transition: "color 0.2s ease",
+                }}>
+                  {f.q}
+                </span>
                 <span className={`faq-toggle${open === i ? " open" : ""}`}>+</span>
               </button>
 
               {open === i && (
-                <div style={{ padding: "0 28px 24px 28px" }}>
+                <div style={{ padding: "0 0 24px 0" }}>
                   <div style={{
-                    paddingLeft: "29px",
-                    borderLeft: "2px solid var(--border)",
-                    marginLeft: "13px",
+                    paddingLeft: "20px",
+                    borderLeft: "2px solid var(--sage)",
+                    marginLeft: "4px",
                   }}>
                     <p style={{
                       fontSize: "14px",

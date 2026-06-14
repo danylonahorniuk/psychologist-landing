@@ -39,7 +39,7 @@ const plans = [
     branchTopCorner: { top: 0, right: 0 },
     branchBottomCorner: { bottom: 0, left: 0 },
     branchTopSize: 130,
-    branchBottomSize: 120,
+    branchBottomSize: 150,
     branchTopObjPos: "top right",
     branchBottomObjPos: "bottom left",
   },
@@ -141,7 +141,7 @@ export default function Pricing() {
                 width: `${p.branchBottomSize}px`,
                 height: `${p.branchBottomSize}px`,
                 pointerEvents: "none",
-                zIndex: 0,
+                zIndex: 2,
               }}>
                 <Image src={p.branchBottom} alt="" fill style={{ objectFit: "contain", objectPosition: p.branchBottomObjPos }} sizes="120px" />
               </div>

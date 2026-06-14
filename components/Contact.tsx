@@ -14,9 +14,9 @@ export default function Contact() {
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
           <div style={{
             position: "relative",
-            background: "var(--bg-warm)",
+            background: "#E4D9CC",
             borderRadius: "24px",
-            border: "1px solid var(--border)",
+            border: "1px solid var(--sand)",
             padding: "72px 80px 56px",
             textAlign: "center",
             overflow: "hidden",

@@ -29,40 +29,142 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-[120px] px-20 bg-bg-warm">
-      <div className="max-w-[1280px] mx-auto">
-        <div className="text-center mb-0">
-          <h2 className="font-serif text-[48px] font-medium leading-[1.12] tracking-[-0.01em]">
+    <section id="faq" style={{ padding: "100px 80px", background: "var(--bg-warm)" }}>
+      <style>{`
+        .faq-item {
+          background: var(--bg);
+          border-radius: 16px;
+          border: 1px solid var(--border);
+          overflow: hidden;
+          transition: box-shadow 0.25s ease;
+        }
+        .faq-item:hover {
+          box-shadow: 0 4px 24px rgba(44,44,44,0.06);
+        }
+        .faq-btn {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 24px;
+          padding: 24px 28px;
+          text-align: left;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          transition: color 0.2s ease;
+        }
+        .faq-btn:hover .faq-q {
+          color: var(--sage);
+        }
+        .faq-toggle {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          border: 1.5px solid var(--border);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          transition: background 0.25s ease, border-color 0.25s ease, transform 0.3s ease;
+          color: var(--muted);
+          font-size: 20px;
+          line-height: 1;
+        }
+        .faq-toggle.open {
+          background: var(--sage);
+          border-color: var(--sage);
+          color: white;
+          transform: rotate(45deg);
+        }
+      `}</style>
+
+      <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: "60px" }}>
+          <h2 style={{
+            fontFamily: "var(--font-playfair), serif",
+            fontSize: "clamp(40px, 4.5vw, 60px)",
+            fontWeight: 500,
+            lineHeight: 1.1,
+            letterSpacing: "-0.02em",
+            color: "var(--text)",
+            marginBottom: "16px",
+          }}>
             Часті запитання
           </h2>
+          <p style={{
+            fontSize: "15px",
+            color: "var(--muted)",
+            fontWeight: 300,
+            lineHeight: 1.7,
+            maxWidth: "480px",
+            margin: "0 auto",
+          }}>
+            Відповіді на запитання, які виникають найчастіше перед початком терапії.
+          </p>
         </div>
 
-        <div className="max-w-[780px] mx-auto mt-16">
+        {/* Two-column layout */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "16px",
+          maxWidth: "1100px",
+          margin: "0 auto",
+        }}>
           {faqs.map((f, i) => (
-            <div key={i} className="border-b border-border">
-              <button
-                onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex justify-between items-center gap-6 py-6 text-left font-medium text-[16px] text-ink bg-transparent border-none cursor-pointer transition-colors hover:text-sage"
-              >
-                {f.q}
-                <span
-                  className={`w-8 h-8 rounded-full border-[1.5px] flex items-center justify-center text-[18px] text-muted flex-shrink-0 transition-all duration-300 ${
-                    open === i
-                      ? "bg-sage border-sage text-white rotate-45"
-                      : "border-sand"
-                  }`}
-                >
-                  +
-                </span>
+            <div key={i} className="faq-item" style={{ alignSelf: "start" }}>
+              <button className="faq-btn" onClick={() => setOpen(open === i ? null : i)}>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "16px" }}>
+                  <span style={{
+                    fontFamily: "var(--font-playfair), serif",
+                    fontSize: "13px",
+                    color: "var(--sage)",
+                    fontWeight: 500,
+                    flexShrink: 0,
+                    marginTop: "2px",
+                    letterSpacing: "0.05em",
+                  }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="faq-q" style={{
+                    fontSize: "15px",
+                    fontWeight: 500,
+                    color: "var(--text)",
+                    lineHeight: 1.5,
+                    transition: "color 0.2s ease",
+                  }}>
+                    {f.q}
+                  </span>
+                </div>
+                <span className={`faq-toggle${open === i ? " open" : ""}`}>+</span>
               </button>
+
               {open === i && (
-                <p className="text-[15px] text-muted leading-[1.72] font-light pb-6">
-                  {f.a}
-                </p>
+                <div style={{ padding: "0 28px 24px 28px" }}>
+                  <div style={{
+                    paddingLeft: "29px",
+                    borderLeft: "2px solid var(--border)",
+                    marginLeft: "13px",
+                  }}>
+                    <p style={{
+                      fontSize: "14px",
+                      color: "var(--muted)",
+                      lineHeight: 1.75,
+                      fontWeight: 300,
+                      margin: 0,
+                    }}>
+                      {f.a}
+                    </p>
+                  </div>
+                </div>
               )}
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

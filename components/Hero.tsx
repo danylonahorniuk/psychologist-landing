@@ -9,7 +9,7 @@ export default function Hero() {
       style={{
         minHeight: "100vh",
         position: "relative",
-        background: "var(--bg-warm)",
+        background: "var(--bg)",
         overflow: "hidden",
         display: "grid",
         gridTemplateColumns: "55fr 45fr",
@@ -139,7 +139,7 @@ export default function Hero() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to right, var(--bg-warm) 0%, transparent 32%)",
+              "linear-gradient(to right, var(--bg) 0%, transparent 32%)",
             pointerEvents: "none",
           }}
         />

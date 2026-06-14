@@ -27,6 +27,14 @@ export default function Contact() {
           color: var(--sage) !important;
           transform: translateY(-2px);
         }
+        .contact-submit {
+          transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+        }
+        .contact-submit:hover {
+          background: #7a9870 !important;
+          box-shadow: 0 8px 24px rgba(143,168,135,0.3);
+          transform: translateY(-1px);
+        }
       `}</style>
 
       {/* CTA card */}
@@ -141,11 +149,11 @@ export default function Contact() {
               color: "var(--text)",
               marginBottom: "20px",
             }}>
-              Зробимо<br />перший крок
+              Напишіть —<br />я відповім особисто
             </h2>
             <p style={{ fontSize: "15px", color: "var(--muted)", lineHeight: 1.72, fontWeight: 300, marginBottom: "48px" }}>
-              Заповни форму або напиши напряму — я відповідаю протягом 24 годин
-              і ми разом знайдемо зручний час для нашої першої зустрічі.
+              Заповни форму або звернись напряму — я відповідаю впродовж дня
+              і ми разом знайдемо зручний час для першої зустрічі.
             </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
@@ -185,7 +193,7 @@ export default function Contact() {
               marginBottom: "32px",
               color: "var(--text)",
             }}>
-              Записатись на сесію
+              Залиш заявку
             </h3>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
@@ -227,21 +235,21 @@ export default function Contact() {
                 />
               </div>
 
-              <button style={{
+              <button className="contact-submit" style={{
                 width: "100%",
                 padding: "16px",
-                background: "var(--text)",
+                background: "var(--sage)",
                 color: "#fff",
                 border: "none",
                 borderRadius: "10px",
                 fontSize: "15px",
-                fontWeight: 500,
+                fontWeight: 400,
                 letterSpacing: "0.02em",
                 cursor: "pointer",
                 fontFamily: "inherit",
                 marginTop: "4px",
               }}>
-                Надіслати заявку →
+                Надіслати заявку
               </button>
             </div>
           </div>

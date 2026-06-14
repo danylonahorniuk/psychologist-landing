@@ -107,9 +107,17 @@ export default function FAQ() {
         </div>
 
         {/* Accordion */}
-        <div style={{ maxWidth: "780px", margin: "0 auto" }}>
+        <div style={{
+          maxWidth: "780px",
+          margin: "0 auto",
+          background: "var(--bg)",
+          borderRadius: "20px",
+          border: "1px solid var(--border)",
+          padding: "0 40px",
+          boxShadow: "0 4px 32px rgba(44,44,44,0.05)",
+        }}>
           {faqs.map((f, i) => (
-            <div key={i} style={{ borderBottom: "1px solid var(--border)" }}>
+            <div key={i} style={{ borderBottom: i < faqs.length - 1 ? "1px solid var(--border)" : "none" }}>
               <button className="faq-btn" onClick={() => setOpen(open === i ? null : i)}>
                 <span className="faq-q" style={{
                   fontSize: "16px",

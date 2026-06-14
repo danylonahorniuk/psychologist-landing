@@ -109,8 +109,8 @@ export default function Contact() {
               </div>
 
               {/* Bottom note */}
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "2px" }}>
-                <div style={{ position: "relative", width: "48px", height: "48px", flexShrink: 0 }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0px" }}>
+                <div style={{ position: "relative", width: "48px", height: "48px", flexShrink: 0, marginTop: "4px" }}>
                   <Image src="/cta-small.png" alt="" fill style={{ objectFit: "contain" }} sizes="48px" />
                 </div>
                 <span style={{ fontSize: "13px", color: "var(--muted)", fontWeight: 300 }}>

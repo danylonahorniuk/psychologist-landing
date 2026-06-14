@@ -14,8 +14,12 @@ const plans = [
     featured: false,
     branchTop: "/branch-single-top.png",
     branchBottom: "/branch-single-bottom.png",
-    branchTopPos: { top: 0, right: 0, width: 120, height: 120 },
-    branchBottomPos: { bottom: 0, left: 0, width: 110, height: 110 },
+    branchTopCorner: { top: 0, left: 0 },
+    branchBottomCorner: { bottom: 0, right: 0 },
+    branchTopSize: 120,
+    branchBottomSize: 110,
+    branchTopObjPos: "top left",
+    branchBottomObjPos: "bottom right",
   },
   {
     name: "Пакет 5 сесій",
@@ -32,8 +36,12 @@ const plans = [
     featured: true,
     branchTop: "/branch-popular-top.png",
     branchBottom: "/branch-popular-bottom.png",
-    branchTopPos: { top: 0, right: 0, width: 130, height: 130 },
-    branchBottomPos: { bottom: 0, left: 0, width: 120, height: 120 },
+    branchTopCorner: { top: 0, right: 0 },
+    branchBottomCorner: { bottom: 0, left: 0 },
+    branchTopSize: 130,
+    branchBottomSize: 120,
+    branchTopObjPos: "top right",
+    branchBottomObjPos: "bottom left",
   },
   {
     name: "Пакет 10 сесій",
@@ -49,8 +57,12 @@ const plans = [
     featured: false,
     branchTop: "/branch-ten-top.png",
     branchBottom: "/branch-ten-bottom.png",
-    branchTopPos: { top: 0, right: 0, width: 120, height: 120 },
-    branchBottomPos: { bottom: 0, right: 0, width: 110, height: 110 },
+    branchTopCorner: { top: 0, right: 0 },
+    branchBottomCorner: { bottom: 0, right: 0 },
+    branchTopSize: 120,
+    branchBottomSize: 110,
+    branchTopObjPos: "top right",
+    branchBottomObjPos: "bottom right",
   },
 ];
 
@@ -107,41 +119,31 @@ export default function Pricing() {
                 border: p.featured ? "none" : "1px solid var(--border)",
                 display: "flex",
                 flexDirection: "column",
-                overflow: "hidden",
                 boxShadow: p.featured ? "0 20px 60px rgba(143,168,135,0.25)" : "none",
               }}
             >
               {/* Branch top */}
               <div style={{
                 position: "absolute",
-                top: 0,
-                right: 0,
-                width: `${p.branchTopPos.width}px`,
-                height: `${p.branchTopPos.height}px`,
+                ...p.branchTopCorner,
+                width: `${p.branchTopSize}px`,
+                height: `${p.branchTopSize}px`,
                 pointerEvents: "none",
+                zIndex: 0,
               }}>
-                <Image src={p.branchTop} alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="130px" />
+                <Image src={p.branchTop} alt="" fill style={{ objectFit: "contain", objectPosition: p.branchTopObjPos }} sizes="130px" />
               </div>
 
               {/* Branch bottom */}
               <div style={{
                 position: "absolute",
-                bottom: 0,
-                ...(p.name === "Пакет 10 сесій" ? { right: 0 } : { left: 0 }),
-                width: `${p.branchBottomPos.width}px`,
-                height: `${p.branchBottomPos.height}px`,
+                ...p.branchBottomCorner,
+                width: `${p.branchBottomSize}px`,
+                height: `${p.branchBottomSize}px`,
                 pointerEvents: "none",
+                zIndex: 0,
               }}>
-                <Image
-                  src={p.branchBottom}
-                  alt=""
-                  fill
-                  style={{
-                    objectFit: "contain",
-                    objectPosition: p.name === "Пакет 10 сесій" ? "bottom right" : "bottom left",
-                  }}
-                  sizes="120px"
-                />
+                <Image src={p.branchBottom} alt="" fill style={{ objectFit: "contain", objectPosition: p.branchBottomObjPos }} sizes="120px" />
               </div>
 
               {/* Badge */}
@@ -170,6 +172,9 @@ export default function Pricing() {
                 color: p.featured ? "#fff" : "var(--text)",
                 marginBottom: "12px",
                 lineHeight: 1.2,
+                textAlign: "center",
+                position: "relative",
+                zIndex: 1,
               }}>
                 {p.name}
               </div>
@@ -181,6 +186,7 @@ export default function Pricing() {
                 background: p.featured ? "rgba(255,255,255,0.35)" : "var(--sand)",
                 borderRadius: "1px",
                 marginBottom: "20px",
+                alignSelf: "center",
               }} />
 
               {/* Price */}
@@ -192,6 +198,9 @@ export default function Pricing() {
                 color: p.featured ? "#fff" : "var(--text)",
                 marginBottom: "6px",
                 letterSpacing: "-0.01em",
+                textAlign: "center",
+                position: "relative",
+                zIndex: 1,
               }}>
                 {p.price} <span style={{ fontSize: "28px" }}>₴</span>
               </div>
@@ -202,12 +211,15 @@ export default function Pricing() {
                 color: p.featured ? "rgba(255,255,255,0.6)" : "var(--muted)",
                 fontWeight: 300,
                 marginBottom: "28px",
+                textAlign: "center",
+                position: "relative",
+                zIndex: 1,
               }}>
                 {p.period}
               </div>
 
               {/* Features */}
-              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 36px 0", display: "flex", flexDirection: "column", gap: "12px", flex: 1 }}>
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 36px 0", display: "flex", flexDirection: "column", gap: "12px", flex: 1, position: "relative", zIndex: 1 }}>
                 {p.features.map((f) => (
                   <li key={f} style={{
                     display: "flex",

@@ -132,9 +132,9 @@ export default function FAQ() {
               </button>
 
               <div style={{
-                maxHeight: open === i ? "400px" : "0",
+                maxHeight: open === i ? "200px" : "0",
                 overflow: "hidden",
-                transition: "max-height 0.4s ease",
+                transition: "max-height 0.45s ease-in-out",
               }}>
                 <div style={{ padding: "0 0 24px 0" }}>
                   <div style={{

@@ -118,7 +118,7 @@ export default function Testimonials() {
               key={t.name + t.age}
               className="testimonial-card"
               style={{
-                background: "var(--bg)",
+                background: "var(--bg-warm)",
                 borderRadius: "20px",
                 padding: "28px 28px 24px",
                 border: "1px solid var(--border)",

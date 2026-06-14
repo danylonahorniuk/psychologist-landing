@@ -42,12 +42,12 @@ export default function Contact() {
             textAlign: "center",
           }}>
             {/* Left branch — overflows outside card */}
-            <div style={{ position: "absolute", top: 0, left: "-30px", width: "180px", height: "100%", pointerEvents: "none", zIndex: 0 }}>
+            <div style={{ position: "absolute", top: "-40px", left: "-30px", width: "180px", height: "100%", pointerEvents: "none", zIndex: 0 }}>
               <Image src="/cta-left.png" alt="" fill style={{ objectFit: "contain", objectPosition: "left center" }} sizes="180px" />
             </div>
 
             {/* Right branch */}
-            <div style={{ position: "absolute", top: 0, right: "-20px", width: "160px", height: "100%", pointerEvents: "none", zIndex: 0 }}>
+            <div style={{ position: "absolute", top: "40px", right: "-20px", width: "160px", height: "100%", pointerEvents: "none", zIndex: 0 }}>
               <Image src="/cta-right.png" alt="" fill style={{ objectFit: "contain", objectPosition: "right center" }} sizes="160px" />
             </div>
 

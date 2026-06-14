@@ -157,17 +157,14 @@ export default function Hero() {
         }}
       >
         <svg
-          viewBox="0 0 1440 60"
+          viewBox="0 0 1440 100"
           preserveAspectRatio="none"
-          style={{ display: "block", width: "100%", height: "60px" }}
+          style={{ display: "block", width: "100%", height: "100px" }}
           aria-hidden="true"
         >
           <path
-            d="M0,30 C360,5 720,55 1440,25"
-            fill="none"
-            stroke="var(--sand)"
-            strokeWidth="1"
-            strokeOpacity="0.5"
+            d="M0,100 L0,30 C360,5 720,85 1440,60 L1440,100 Z"
+            fill="rgba(255,255,255,0.55)"
           />
         </svg>
       </div>

@@ -164,7 +164,7 @@ export default function Hero() {
         >
           <path
             d="M0,100 L0,25 C360,5 720,90 1440,78 L1440,100 Z"
-            fill="var(--bg)"
+            fill="var(--bg-warm)"
           />
         </svg>
       </div>

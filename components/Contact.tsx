@@ -132,55 +132,73 @@ export default function Contact() {
 
       {/* Contact form section */}
       <section id="contact" style={{ padding: "100px 80px", background: "var(--bg-warm)" }}>
-        <div style={{ maxWidth: "1280px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.25fr", gap: "80px", alignItems: "start" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "80px", alignItems: "start" }}>
 
           {/* Left */}
           <div>
-            <span style={{ fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "var(--sage)", fontWeight: 500 }}>
-              Контакти
-            </span>
-            <div style={{ width: "32px", height: "2px", background: "var(--sage)", marginTop: "12px", marginBottom: "20px", borderRadius: "1px" }} />
             <h2 style={{
               fontFamily: "var(--font-playfair), serif",
-              fontSize: "clamp(32px, 3vw, 46px)",
+              fontSize: "clamp(40px, 4vw, 60px)",
               fontWeight: 500,
               lineHeight: 1.1,
-              letterSpacing: "-0.015em",
+              letterSpacing: "-0.02em",
               color: "var(--text)",
-              marginBottom: "20px",
+              marginBottom: "24px",
             }}>
-              Напишіть —<br />я відповім особисто
+              Зв&apos;язатися<br />зі мною
             </h2>
-            <p style={{ fontSize: "15px", color: "var(--muted)", lineHeight: 1.72, fontWeight: 300, marginBottom: "48px" }}>
-              Заповни форму або звернись напряму — я відповідаю впродовж дня
-              і ми разом знайдемо зручний час для першої зустрічі.
+            <p style={{ fontSize: "15px", color: "var(--muted)", lineHeight: 1.75, fontWeight: 300, marginBottom: "40px" }}>
+              Я з радістю відповім на ваші запитання, розповім більше про підходи та допоможу обрати формат роботи, який підійде саме вам.
             </p>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {contactDetails.map((d) => (
-                <div key={d.label} style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
-                  <span style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "var(--muted)", fontWeight: 600 }}>
-                    {d.label}
-                  </span>
-                  <span style={{ fontSize: "15px", color: "var(--text)", fontWeight: 400 }}>{d.value}</span>
+            {/* Contact items */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "14px", marginBottom: "32px" }}>
+              {[
+                {
+                  icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.5 3h3l1.5 3.5-1.75 1.05A9 9 0 0 0 9.45 10.75L10.5 9l3.5 1.5v3c0 .83-.67 1.5-1.5 1.5A12 12 0 0 1 2 3.5C2 2.67 2.67 2 3.5 2z" stroke="var(--sage)" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+                  text: "+380 (99) 123 45 67",
+                },
+                {
+                  icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="4" width="14" height="10" rx="2" stroke="var(--sage)" strokeWidth="1.3"/><path d="M2 6l7 5 7-5" stroke="var(--sage)" strokeWidth="1.3" strokeLinecap="round"/></svg>,
+                  text: "hello@psychologist.com",
+                },
+                {
+                  icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 9L15.5 3.5 10 15.5 8.5 10 2 9Z" stroke="var(--sage)" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/><path d="M8.5 10L15.5 3.5" stroke="var(--sage)" strokeWidth="1.3" strokeLinecap="round"/></svg>,
+                  text: "@your_therapist",
+                },
+                {
+                  icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="3" width="12" height="12" rx="3.5" stroke="var(--sage)" strokeWidth="1.3"/><circle cx="9" cy="9" r="3" stroke="var(--sage)" strokeWidth="1.3"/><circle cx="12.8" cy="5.2" r="0.8" fill="var(--sage)"/></svg>,
+                  text: "@your_therapist",
+                },
+                {
+                  icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6.5" stroke="var(--sage)" strokeWidth="1.3"/><path d="M9 5.5V9l2.5 2.5" stroke="var(--sage)" strokeWidth="1.3" strokeLinecap="round"/></svg>,
+                  text: "Відповідаю протягом дня",
+                },
+              ].map((item, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+                  <div style={{
+                    width: "44px", height: "44px", borderRadius: "50%",
+                    background: "var(--bg)", border: "1px solid var(--border)",
+                    display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+                  }}>
+                    {item.icon}
+                  </div>
+                  <span style={{ fontSize: "15px", color: "var(--text)", fontWeight: 400 }}>{item.text}</span>
                 </div>
               ))}
             </div>
 
+            {/* Format pill */}
             <div style={{
-              marginTop: "40px",
-              width: "100%",
-              height: "180px",
-              background: "var(--sand)",
-              borderRadius: "16px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "13px",
-              color: "var(--muted)",
-              opacity: 0.6,
+              display: "inline-flex", alignItems: "center", gap: "10px",
+              background: "var(--bg)", border: "1px solid var(--border)",
+              borderRadius: "12px", padding: "12px 20px",
             }}>
-              📍 Карта розташування кабінету
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M9 2C9 2 6 5 6 9C6 11.5 7.5 13.5 9 14.5C10.5 13.5 12 11.5 12 9C12 5 9 2 9 2Z" stroke="var(--sage)" strokeWidth="1.2" fill="none"/>
+                <path d="M9 14.5V9M6.5 6.5C7.5 7 8.5 7.5 9 9M11.5 6.5C10.5 7 9.5 7.5 9 9" stroke="var(--sage)" strokeWidth="1.2" strokeLinecap="round"/>
+              </svg>
+              <span style={{ fontSize: "14px", color: "var(--sage)", fontWeight: 400 }}>Онлайн та офлайн формат</span>
             </div>
           </div>
 
@@ -188,52 +206,41 @@ export default function Contact() {
           <div style={{ background: "var(--bg)", borderRadius: "24px", padding: "52px 48px" }}>
             <h3 style={{
               fontFamily: "var(--font-playfair), serif",
-              fontSize: "26px",
+              fontSize: "28px",
               fontWeight: 500,
-              marginBottom: "32px",
-              color: "var(--text)",
+              color: "var(--sage)",
+              marginBottom: "10px",
+              textAlign: "center",
             }}>
-              Залиш заявку
+              Напишіть мені
             </h3>
+            <div style={{ width: "40px", height: "2px", background: "var(--sand)", borderRadius: "1px", margin: "0 auto 36px" }} />
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {[
-                { label: "Ваше ім'я", type: "text", placeholder: "Як до вас звертатись?" },
-                { label: "Телефон або email", type: "text", placeholder: "+38 0__ ___ ____" },
-              ].map((f) => (
-                <div key={f.label}>
-                  <label style={{ display: "block", fontSize: "11px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "var(--muted)", marginBottom: "8px" }}>
-                    {f.label}
-                  </label>
-                  <input
-                    type={f.type}
-                    placeholder={f.placeholder}
-                    style={{ width: "100%", padding: "14px 18px", border: "1.5px solid var(--border)", borderRadius: "10px", fontSize: "15px", color: "var(--text)", background: "var(--bg)", outline: "none", fontFamily: "inherit", boxSizing: "border-box" as const }}
-                  />
-                </div>
-              ))}
+            <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+              <input
+                type="text"
+                placeholder="Ваше ім'я"
+                style={{ width: "100%", padding: "15px 18px", border: "1.5px solid var(--border)", borderRadius: "10px", fontSize: "15px", color: "var(--text)", background: "var(--bg)", outline: "none", fontFamily: "inherit", boxSizing: "border-box" as const }}
+              />
+              <input
+                type="text"
+                placeholder="Телефон або email"
+                style={{ width: "100%", padding: "15px 18px", border: "1.5px solid var(--border)", borderRadius: "10px", fontSize: "15px", color: "var(--text)", background: "var(--bg)", outline: "none", fontFamily: "inherit", boxSizing: "border-box" as const }}
+              />
+              <textarea
+                placeholder="Ваш запит"
+                rows={4}
+                style={{ width: "100%", padding: "15px 18px", border: "1.5px solid var(--border)", borderRadius: "10px", fontSize: "15px", color: "var(--text)", background: "var(--bg)", outline: "none", fontFamily: "inherit", resize: "vertical" as const, boxSizing: "border-box" as const }}
+              />
 
-              <div>
-                <label style={{ display: "block", fontSize: "11px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "var(--muted)", marginBottom: "8px" }}>
-                  Формат роботи
-                </label>
-                <select style={{ width: "100%", padding: "14px 18px", border: "1.5px solid var(--border)", borderRadius: "10px", fontSize: "15px", color: "var(--text)", background: "var(--bg)", outline: "none", fontFamily: "inherit" }}>
-                  <option>Індивідуальна терапія</option>
-                  <option>Робота з парою</option>
-                  <option>Онлайн-коучинг</option>
-                </select>
-              </div>
-
-              <div>
-                <label style={{ display: "block", fontSize: "11px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "var(--muted)", marginBottom: "8px" }}>
-                  Коротко про запит (необов&apos;язково)
-                </label>
-                <textarea
-                  placeholder="З чим ви хочете попрацювати?"
-                  rows={4}
-                  style={{ width: "100%", padding: "14px 18px", border: "1.5px solid var(--border)", borderRadius: "10px", fontSize: "15px", color: "var(--text)", background: "var(--bg)", outline: "none", fontFamily: "inherit", resize: "vertical" as const, boxSizing: "border-box" as const }}
-                />
-              </div>
+              {/* Checkbox */}
+              <label style={{ display: "flex", alignItems: "flex-start", gap: "10px", cursor: "pointer" }}>
+                <input type="checkbox" style={{ marginTop: "2px", flexShrink: 0, accentColor: "var(--sage)", width: "16px", height: "16px" }} />
+                <span style={{ fontSize: "12px", color: "var(--muted)", lineHeight: 1.6, fontWeight: 300 }}>
+                  Я погоджуюсь на обробку моїх персональних даних відповідно до{" "}
+                  <a href="#" style={{ color: "var(--sage)", textDecoration: "underline" }}>Політики конфіденційності</a>
+                </span>
+              </label>
 
               <button className="contact-submit" style={{
                 width: "100%",
@@ -249,8 +256,26 @@ export default function Contact() {
                 fontFamily: "inherit",
                 marginTop: "4px",
               }}>
-                Надіслати заявку
+                Записатися на консультацію
               </button>
+
+              {/* Or / Telegram */}
+              <div style={{ display: "flex", alignItems: "center", gap: "12px", margin: "4px 0" }}>
+                <div style={{ flex: 1, height: "1px", background: "var(--border)" }} />
+                <span style={{ fontSize: "13px", color: "var(--muted)", fontWeight: 300 }}>або</span>
+                <div style={{ flex: 1, height: "1px", background: "var(--border)" }} />
+              </div>
+
+              <a href="https://t.me/your_therapist" style={{
+                display: "flex", alignItems: "center", justifyContent: "center", gap: "8px",
+                textDecoration: "none", color: "var(--text)", fontSize: "14px", fontWeight: 400,
+              }}>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M2 10L17 4 11.5 17 10 11 2 10Z" stroke="var(--sage)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M10 11L17 4" stroke="var(--sage)" strokeWidth="1.4" strokeLinecap="round"/>
+                </svg>
+                Або напишіть у Telegram
+              </a>
             </div>
           </div>
 

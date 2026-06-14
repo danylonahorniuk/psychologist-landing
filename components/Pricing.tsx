@@ -148,16 +148,17 @@ export default function Pricing() {
 
               {/* Badge */}
               {p.badge && (
-                <div style={{ marginBottom: "20px" }}>
+                <div style={{ marginBottom: "20px", textAlign: "center", position: "relative", zIndex: 1 }}>
                   <span style={{
                     display: "inline-block",
-                    background: "var(--sand)",
-                    color: "var(--text)",
+                    background: "rgba(255,255,255,0.18)",
+                    color: "rgba(255,255,255,0.9)",
                     fontSize: "10px",
-                    fontWeight: 700,
-                    letterSpacing: "0.12em",
-                    padding: "6px 18px",
+                    fontWeight: 500,
+                    letterSpacing: "0.14em",
+                    padding: "6px 20px",
                     borderRadius: "20px",
+                    border: "1px solid rgba(255,255,255,0.3)",
                   }}>
                     {p.badge}
                   </span>

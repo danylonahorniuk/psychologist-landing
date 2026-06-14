@@ -53,7 +53,7 @@ const features = [
 
 export default function About() {
   return (
-    <section id="about" style={{ padding: "110px 80px", background: "var(--bg)" }}>
+    <section id="about" style={{ padding: "110px 80px", background: "var(--bg-warm)" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.15fr", gap: "80px", alignItems: "center" }}>
 
         {/* ── LEFT: Photo ── */}

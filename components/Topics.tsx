@@ -67,7 +67,7 @@ const topics = [
 
 export default function Topics() {
   return (
-    <section style={{ padding: "100px 80px", background: "var(--bg-warm)", position: "relative", overflow: "hidden" }}>
+    <section style={{ padding: "100px 80px", background: "var(--bg)", position: "relative", overflow: "hidden" }}>
 
       {/* Left branch */}
       <div style={{ position: "absolute", top: 0, left: 0, width: "220px", height: "420px", pointerEvents: "none" }}>

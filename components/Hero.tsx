@@ -12,7 +12,7 @@ export default function Hero() {
         background: "var(--bg-warm)",
         overflow: "hidden",
         display: "grid",
-        gridTemplateColumns: "55fr 45fr",
+        gridTemplateColumns: "48fr 52fr",
         alignItems: "center",
       }}
     >
@@ -129,7 +129,7 @@ export default function Hero() {
           src={PHOTO_URL}
           alt="Ірина Коваленко — психолог і коуч"
           fill
-          style={{ objectFit: "cover", objectPosition: "72% 22%" }}
+          style={{ objectFit: "cover", objectPosition: "62% 18%" }}
           sizes="(min-width: 1280px) 720px, 50vw"
           priority
         />

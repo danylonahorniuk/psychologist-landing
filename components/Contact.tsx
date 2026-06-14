@@ -47,7 +47,7 @@ export default function Contact() {
             </div>
 
             {/* Right branch */}
-            <div style={{ position: "absolute", top: "40px", right: "-20px", width: "160px", height: "100%", pointerEvents: "none", zIndex: 0 }}>
+            <div style={{ position: "absolute", top: "80px", right: "-20px", width: "160px", height: "100%", pointerEvents: "none", zIndex: 0 }}>
               <Image src="/cta-right.png" alt="" fill style={{ objectFit: "contain", objectPosition: "right center" }} sizes="160px" />
             </div>
 

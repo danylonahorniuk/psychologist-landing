@@ -131,7 +131,11 @@ export default function FAQ() {
                 <span className={`faq-toggle${open === i ? " open" : ""}`}>+</span>
               </button>
 
-              {open === i && (
+              <div style={{
+                maxHeight: open === i ? "400px" : "0",
+                overflow: "hidden",
+                transition: "max-height 0.4s ease",
+              }}>
                 <div style={{ padding: "0 0 24px 0" }}>
                   <div style={{
                     paddingLeft: "20px",
@@ -149,7 +153,7 @@ export default function FAQ() {
                     </p>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

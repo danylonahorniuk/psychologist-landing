@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 const plans = [
   {
     name: "Разова сесія",
-    price: "1 500 ₴",
+    price: "1 500",
     period: "50 хвилин · одноразово",
     features: [
       "Індивідуальна консультація",
@@ -10,12 +12,16 @@ const plans = [
       "Домашнє завдання та матеріали",
     ],
     featured: false,
+    branchTop: "/branch-single-top.png",
+    branchBottom: "/branch-single-bottom.png",
+    branchTopPos: { top: 0, right: 0, width: 120, height: 120 },
+    branchBottomPos: { bottom: 0, left: 0, width: 110, height: 110 },
   },
   {
     name: "Пакет 5 сесій",
-    price: "6 500 ₴",
+    price: "6 500",
     period: "50 хвилин · 5 зустрічей",
-    badge: "Найпопулярніше",
+    badge: "НАЙПОПУЛЯРНІШЕ",
     features: [
       "Економія 1 000 ₴",
       "Системна робота над запитом",
@@ -24,10 +30,14 @@ const plans = [
       "Гнучкий графік",
     ],
     featured: true,
+    branchTop: "/branch-popular-top.png",
+    branchBottom: "/branch-popular-bottom.png",
+    branchTopPos: { top: 0, right: 0, width: 130, height: 130 },
+    branchBottomPos: { bottom: 0, left: 0, width: 120, height: 120 },
   },
   {
     name: "Пакет 10 сесій",
-    price: "11 500 ₴",
+    price: "11 500",
     period: "50 хвилин · 10 зустрічей",
     features: [
       "Економія 3 500 ₴",
@@ -37,124 +47,198 @@ const plans = [
       "Підсумкова діагностика",
     ],
     featured: false,
+    branchTop: "/branch-ten-top.png",
+    branchBottom: "/branch-ten-bottom.png",
+    branchTopPos: { top: 0, right: 0, width: 120, height: 120 },
+    branchBottomPos: { bottom: 0, right: 0, width: 110, height: 110 },
   },
 ];
+
+const CheckIcon = ({ featured }: { featured: boolean }) => (
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" style={{ flexShrink: 0, marginTop: "1px" }}>
+    <circle cx="9" cy="9" r="8" stroke={featured ? "rgba(255,255,255,0.45)" : "var(--sand)"} strokeWidth="1.2" />
+    <path d="M5.5 9L7.8 11.3L12.5 6.7" stroke={featured ? "rgba(255,255,255,0.8)" : "var(--sage)"} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
 
 export default function Pricing() {
   return (
     <section id="pricing" style={{ padding: "100px 80px", background: "var(--bg)" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
-        {/* Section header */}
-        <div style={{ marginBottom: "64px" }}>
-          <span style={{ fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "var(--sage)", fontWeight: 500 }}>
-            Ціни
-          </span>
-          <div style={{ width: "32px", height: "2px", background: "var(--sage)", marginTop: "12px", marginBottom: "20px", borderRadius: "1px" }} />
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: "60px" }}>
           <h2 style={{
             fontFamily: "var(--font-playfair), serif",
-            fontSize: "clamp(36px, 3.5vw, 52px)",
+            fontSize: "clamp(36px, 4vw, 56px)",
             fontWeight: 500,
             lineHeight: 1.1,
-            letterSpacing: "-0.015em",
+            letterSpacing: "-0.02em",
             color: "var(--text)",
+            marginBottom: "16px",
           }}>
-            Оберіть свій<br /><em style={{ fontStyle: "italic", color: "var(--sage)" }}>формат</em>
+            Оберіть формат підтримки
           </h2>
+          <p style={{
+            fontSize: "15px",
+            color: "var(--muted)",
+            fontWeight: 300,
+            lineHeight: 1.6,
+          }}>
+            Професійна підтримка, що допомагає знайти опору, ясність і внутрішній баланс.
+          </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", alignItems: "start" }}>
+        {/* Cards */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: "20px",
+          alignItems: "center",
+        }}>
           {plans.map((p) => (
             <div
               key={p.name}
-              className="card-hover"
               style={{
                 position: "relative",
-                borderRadius: "24px",
-                padding: "48px 44px",
-                background: p.featured ? "var(--sage)" : "var(--bg-warm)",
+                borderRadius: "20px",
+                padding: p.featured ? "52px 40px 44px" : "44px 40px 40px",
+                background: p.featured ? "var(--sage)" : "#fff",
                 border: p.featured ? "none" : "1px solid var(--border)",
                 display: "flex",
                 flexDirection: "column",
+                overflow: "hidden",
+                boxShadow: p.featured ? "0 20px 60px rgba(143,168,135,0.25)" : "none",
               }}
             >
+              {/* Branch top */}
+              <div style={{
+                position: "absolute",
+                top: 0,
+                right: 0,
+                width: `${p.branchTopPos.width}px`,
+                height: `${p.branchTopPos.height}px`,
+                pointerEvents: "none",
+              }}>
+                <Image src={p.branchTop} alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="130px" />
+              </div>
+
+              {/* Branch bottom */}
+              <div style={{
+                position: "absolute",
+                bottom: 0,
+                ...(p.name === "Пакет 10 сесій" ? { right: 0 } : { left: 0 }),
+                width: `${p.branchBottomPos.width}px`,
+                height: `${p.branchBottomPos.height}px`,
+                pointerEvents: "none",
+              }}>
+                <Image
+                  src={p.branchBottom}
+                  alt=""
+                  fill
+                  style={{
+                    objectFit: "contain",
+                    objectPosition: p.name === "Пакет 10 сесій" ? "bottom right" : "bottom left",
+                  }}
+                  sizes="120px"
+                />
+              </div>
+
+              {/* Badge */}
               {p.badge && (
-                <span style={{
-                  position: "absolute",
-                  top: "-14px",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  background: "var(--text)",
-                  color: "#fff",
-                  fontSize: "10px",
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase" as const,
-                  padding: "6px 20px",
-                  borderRadius: "20px",
-                  whiteSpace: "nowrap" as const,
-                }}>
-                  {p.badge}
-                </span>
+                <div style={{ marginBottom: "20px" }}>
+                  <span style={{
+                    display: "inline-block",
+                    background: "var(--sand)",
+                    color: "var(--text)",
+                    fontSize: "10px",
+                    fontWeight: 700,
+                    letterSpacing: "0.12em",
+                    padding: "6px 18px",
+                    borderRadius: "20px",
+                  }}>
+                    {p.badge}
+                  </span>
+                </div>
               )}
 
+              {/* Name */}
               <div style={{
-                fontSize: "11px",
-                letterSpacing: "0.14em",
-                textTransform: "uppercase" as const,
-                fontWeight: 600,
-                color: p.featured ? "rgba(255,255,255,0.55)" : "var(--muted)",
-                marginBottom: "16px",
+                fontFamily: "var(--font-playfair), serif",
+                fontSize: "22px",
+                fontWeight: 500,
+                color: p.featured ? "#fff" : "var(--text)",
+                marginBottom: "12px",
+                lineHeight: 1.2,
               }}>
                 {p.name}
               </div>
 
+              {/* Divider */}
+              <div style={{
+                width: "36px",
+                height: "1.5px",
+                background: p.featured ? "rgba(255,255,255,0.35)" : "var(--sand)",
+                borderRadius: "1px",
+                marginBottom: "20px",
+              }} />
+
+              {/* Price */}
               <div style={{
                 fontFamily: "var(--font-playfair), serif",
-                fontSize: "48px",
+                fontSize: "clamp(40px, 3.5vw, 52px)",
                 fontWeight: 500,
                 lineHeight: 1,
                 color: p.featured ? "#fff" : "var(--text)",
                 marginBottom: "6px",
+                letterSpacing: "-0.01em",
               }}>
-                {p.price}
+                {p.price} <span style={{ fontSize: "28px" }}>₴</span>
               </div>
 
+              {/* Period */}
               <div style={{
                 fontSize: "13px",
-                color: p.featured ? "rgba(255,255,255,0.55)" : "var(--muted)",
-                marginBottom: "32px",
+                color: p.featured ? "rgba(255,255,255,0.6)" : "var(--muted)",
+                fontWeight: 300,
+                marginBottom: "28px",
               }}>
                 {p.period}
               </div>
 
-              <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "12px", margin: "0 0 36px 0", padding: 0, flex: 1 }}>
+              {/* Features */}
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 36px 0", display: "flex", flexDirection: "column", gap: "12px", flex: 1 }}>
                 {p.features.map((f) => (
                   <li key={f} style={{
                     display: "flex",
                     alignItems: "flex-start",
                     gap: "10px",
                     fontSize: "14px",
-                    color: p.featured ? "rgba(255,255,255,0.78)" : "var(--muted)",
+                    color: p.featured ? "rgba(255,255,255,0.82)" : "var(--muted)",
                     lineHeight: 1.5,
+                    fontWeight: 300,
                   }}>
-                    <span style={{ color: p.featured ? "rgba(255,255,255,0.55)" : "var(--sage)", fontSize: "12px", marginTop: "2px", flexShrink: 0 }}>✓</span>
+                    <CheckIcon featured={p.featured} />
                     {f}
                   </li>
                 ))}
               </ul>
 
+              {/* CTA */}
               <a href="#contact" style={{
                 display: "block",
-                textAlign: "center" as const,
+                textAlign: "center",
                 padding: "14px 32px",
-                borderRadius: "8px",
-                fontSize: "14px",
-                fontWeight: 500,
+                borderRadius: "10px",
+                fontSize: "15px",
+                fontWeight: 400,
                 textDecoration: "none",
                 background: p.featured ? "#fff" : "transparent",
                 color: p.featured ? "var(--sage)" : "var(--text)",
-                border: p.featured ? "none" : "1.5px solid var(--border)",
+                border: p.featured ? "none" : "1px solid var(--border)",
+                letterSpacing: "0.01em",
+                position: "relative",
+                zIndex: 1,
               }}>
                 Записатись
               </a>

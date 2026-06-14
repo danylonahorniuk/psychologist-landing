@@ -29,7 +29,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-[120px] px-20 bg-bg">
+    <section id="faq" className="py-[120px] px-20 bg-bg-warm">
       <div className="max-w-[1280px] mx-auto">
         <div className="text-center mb-0">
           <h2 className="font-serif text-[48px] font-medium leading-[1.12] tracking-[-0.01em]">

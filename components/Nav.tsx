@@ -82,7 +82,7 @@ export default function Nav() {
         style={{
           display: "inline-block",
           padding: "11px 24px",
-          borderRadius: "48px",
+          borderRadius: "10px",
           fontSize: "13px",
           fontWeight: 500,
           letterSpacing: "0.01em",

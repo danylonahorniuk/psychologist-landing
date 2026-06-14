@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const topics = [
   {
     title: "Тривожність і стрес",
@@ -65,32 +67,43 @@ const topics = [
 
 export default function Topics() {
   return (
-    <section style={{ padding: "100px 80px", background: "var(--bg)" }}>
-      <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+    <section style={{ padding: "100px 80px", background: "var(--bg-warm)", position: "relative", overflow: "hidden" }}>
+
+      {/* Left branch */}
+      <div style={{ position: "absolute", top: 0, left: 0, width: "220px", height: "420px", pointerEvents: "none" }}>
+        <Image src="/topics-left.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top left" }} sizes="220px" />
+      </div>
+
+      {/* Right branch */}
+      <div style={{ position: "absolute", bottom: 0, right: 0, width: "200px", height: "380px", pointerEvents: "none" }}>
+        <Image src="/topics-right.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="200px" />
+      </div>
+
+      <div style={{ maxWidth: "1280px", margin: "0 auto", position: "relative", zIndex: 1 }}>
 
         {/* Centered heading */}
         <div style={{ textAlign: "center", marginBottom: "72px" }}>
           <h2 style={{
             fontFamily: "var(--font-playfair), serif",
-            fontSize: "clamp(30px, 3vw, 44px)",
+            fontSize: "clamp(36px, 4vw, 56px)",
             fontWeight: 500,
-            lineHeight: 1.15,
-            letterSpacing: "-0.015em",
+            lineHeight: 1.1,
+            letterSpacing: "-0.02em",
             color: "var(--text)",
             marginBottom: "20px",
           }}>
             Як я можу вам допомогти
           </h2>
-          <div style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "12px",
+          <p style={{
+            fontSize: "15px",
+            color: "var(--muted)",
+            fontWeight: 300,
+            lineHeight: 1.7,
+            maxWidth: "540px",
+            margin: "0 auto",
           }}>
-            <div style={{ width: "40px", height: "1px", background: "var(--sand)" }} />
-            <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--sage)" }} />
-            <div style={{ width: "40px", height: "1px", background: "var(--sand)" }} />
-          </div>
+            Психологічна підтримка, що допомагає знайти опору всередині себе, подолати труднощі та повернути гармонію у життя.
+          </p>
         </div>
 
         {/* 6-column grid */}

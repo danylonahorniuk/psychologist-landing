@@ -10,13 +10,14 @@ export default function Contact() {
   return (
     <>
       {/* CTA card */}
-      <section style={{ padding: "100px 80px", background: "var(--bg-warm)" }}>
+      <section style={{ padding: "100px 80px", background: "var(--bg)" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
           <div style={{
             position: "relative",
             background: "#FFFFFF",
             borderRadius: "24px",
             border: "1px solid var(--border)",
+            boxShadow: "0 8px 48px rgba(44,44,44,0.07)",
             padding: "72px 80px 56px",
             textAlign: "center",
             overflow: "hidden",

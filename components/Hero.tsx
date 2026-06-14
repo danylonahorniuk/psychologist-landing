@@ -162,9 +162,15 @@ export default function Hero() {
           style={{ display: "block", width: "100%", height: "100px" }}
           aria-hidden="true"
         >
+          <defs>
+            <linearGradient id="waveGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9" />
+              <stop offset="100%" stopColor="#F0EBE3" stopOpacity="1" />
+            </linearGradient>
+          </defs>
           <path
             d="M0,100 L0,25 C360,5 720,90 1440,78 L1440,100 Z"
-            fill="var(--bg)"
+            fill="url(#waveGrad)"
           />
         </svg>
       </div>

@@ -9,6 +9,26 @@ const contactDetails = [
 export default function Contact() {
   return (
     <>
+      <style>{`
+        .cta-btn-primary {
+          transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+        }
+        .cta-btn-primary:hover {
+          background: #7a9870 !important;
+          box-shadow: 0 8px 28px rgba(143,168,135,0.35);
+          transform: translateY(-2px);
+        }
+        .cta-btn-secondary {
+          transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+        }
+        .cta-btn-secondary:hover {
+          background: var(--bg-warm) !important;
+          border-color: var(--sage) !important;
+          color: var(--sage) !important;
+          transform: translateY(-2px);
+        }
+      `}</style>
+
       {/* CTA card */}
       <section style={{ padding: "100px 80px", background: "var(--bg)" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
@@ -46,9 +66,6 @@ export default function Contact() {
                 Готові зробити перший<br />крок до змін?
               </h2>
 
-              {/* Divider */}
-              <div style={{ width: "48px", height: "1.5px", background: "var(--sand)", borderRadius: "1px", margin: "0 auto 24px" }} />
-
               <p style={{
                 fontSize: "15px",
                 color: "var(--muted)",
@@ -62,31 +79,30 @@ export default function Contact() {
               </p>
 
               {/* Buttons */}
-              <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" as const, marginBottom: "32px" }}>
-                <a href="#contact" style={{
+              <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" as const, marginBottom: "32px" }}>
+                <a href="#contact" className="cta-btn-primary" style={{
                   display: "inline-block",
                   background: "var(--sage)",
                   color: "#fff",
-                  padding: "16px 40px",
-                  borderRadius: "10px",
+                  padding: "16px 44px",
+                  borderRadius: "60px",
                   fontSize: "15px",
                   fontWeight: 400,
                   textDecoration: "none",
                   letterSpacing: "0.01em",
-                  transition: "opacity 0.2s ease",
                 }}>
                   Записатися на консультацію
                 </a>
-                <a href="#faq" style={{
+                <a href="#faq" className="cta-btn-secondary" style={{
                   display: "inline-block",
                   background: "transparent",
                   color: "var(--text)",
-                  padding: "16px 40px",
-                  borderRadius: "10px",
+                  padding: "16px 44px",
+                  borderRadius: "60px",
                   fontSize: "15px",
                   fontWeight: 400,
                   textDecoration: "none",
-                  border: "1px solid var(--sand)",
+                  border: "1.5px solid var(--sand)",
                   letterSpacing: "0.01em",
                 }}>
                   Поставити запитання

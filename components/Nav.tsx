@@ -29,17 +29,17 @@ export default function Nav() {
         alignItems: "center",
         justifyContent: "space-between",
         padding: "18px 80px 18px 140px",
-        background: scrolled ? "rgba(250,248,245,0.94)" : "transparent",
-        backdropFilter: scrolled ? "blur(14px)" : "none",
-        borderBottom: scrolled ? "1px solid var(--border)" : "none",
+        background: scrolled ? "rgba(240,235,227,0.92)" : "transparent",
+        backdropFilter: scrolled ? "blur(16px)" : "none",
+        boxShadow: scrolled ? "0 2px 24px rgba(44,44,44,0.07)" : "none",
         transition: "background 0.35s ease, border-color 0.35s ease",
       }}
     >
-      {/* Logo — circular sage badge */}
-      <a href="#" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
+      {/* Logo */}
+      <a href="#" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}>
         <div style={{
-          width: "48px",
-          height: "48px",
+          width: "40px",
+          height: "40px",
           borderRadius: "50%",
           background: "var(--sage)",
           display: "flex",
@@ -47,11 +47,21 @@ export default function Nav() {
           justifyContent: "center",
           flexShrink: 0,
         }}>
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
             <path d="M9 2C5.5 2 3 5 3 8.5C3 12 6 15 9 16C12 15 15 12 15 8.5C15 5 12.5 2 9 2Z" stroke="white" strokeWidth="1.2" fill="none"/>
             <path d="M9 16V8M9 8C9 8 6 6 6 4M9 8C9 8 12 6 12 4" stroke="white" strokeWidth="1.2" strokeLinecap="round"/>
           </svg>
         </div>
+        <span style={{
+          fontFamily: "var(--font-playfair), serif",
+          fontSize: "17px",
+          fontWeight: 500,
+          color: "var(--text)",
+          letterSpacing: "-0.01em",
+          lineHeight: 1,
+        }}>
+          Ірина Коваленко
+        </span>
       </a>
 
       {/* Nav links — centered */}

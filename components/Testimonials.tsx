@@ -75,7 +75,7 @@ export default function Testimonials() {
       </div>
 
       {/* Branch — bottom-left */}
-      <div style={{ position: "absolute", bottom: "-80px", left: "0", width: "320px", height: "380px", pointerEvents: "none", zIndex: 10 }}>
+      <div style={{ position: "absolute", bottom: "-55px", left: "0", width: "320px", height: "380px", pointerEvents: "none", zIndex: 10 }}>
         <Image src="/testimonials-branch-bottom.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom left" }} sizes="260px" />
       </div>
 

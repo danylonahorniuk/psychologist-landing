@@ -45,7 +45,7 @@ const LeafDivider = () => (
 
 export default function Gallery() {
   return (
-    <section style={{ background: "var(--bg)", padding: "100px 80px 0" }}>
+    <section style={{ background: "var(--bg)", padding: "100px 80px 100px" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Main grid: left text + right photos */}

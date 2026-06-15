@@ -67,10 +67,10 @@ const topics = [
 
 export default function Topics() {
   return (
-    <section style={{ padding: "100px 80px", background: "var(--bg-warm)", position: "relative", overflow: "hidden" }}>
+    <section style={{ padding: "100px 80px", background: "var(--bg-warm)", position: "relative" }}>
 
       {/* Left branch */}
-      <div style={{ position: "absolute", top: 0, left: 0, width: "220px", height: "420px", pointerEvents: "none" }}>
+      <div style={{ position: "absolute", top: "60px", left: "-30px", width: "220px", height: "420px", pointerEvents: "none" }}>
         <Image src="/topics-left.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top left" }} sizes="220px" />
       </div>
 

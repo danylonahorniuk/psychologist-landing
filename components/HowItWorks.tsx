@@ -67,8 +67,7 @@ const items = [
 
 export default function HowItWorks() {
   return (
-    <>
-      <section
+    <section
         id="how"
         style={{ position: "relative", overflow: "hidden", minHeight: "640px" }}
       >
@@ -177,66 +176,5 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      {/* CTA card */}
-      <section style={{ background: "var(--bg-warm)", padding: "0 80px 64px" }}>
-        <div style={{
-          maxWidth: "1280px",
-          margin: "0 auto",
-          background: "var(--bg)",
-          borderRadius: "24px",
-          padding: "36px 48px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "40px",
-          border: "1px solid var(--border)",
-        }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
-            {/* Decorative botanical illustration */}
-            <svg width="72" height="88" viewBox="0 0 72 88" fill="none" aria-hidden="true" style={{ flexShrink: 0, opacity: 0.85 }}>
-              <path d="M36 82V30" stroke="var(--sage)" strokeWidth="1.5" strokeLinecap="round"/>
-              <path d="M36 55C36 55 22 46 18 32C28 30 38 38 36 55Z" fill="var(--sage)" fillOpacity="0.18" stroke="var(--sage)" strokeWidth="1.3"/>
-              <path d="M36 45C36 45 50 36 54 22C44 20 34 28 36 45Z" fill="var(--sage)" fillOpacity="0.25" stroke="var(--sage)" strokeWidth="1.3"/>
-              <path d="M36 68C36 68 24 60 20 48C30 46 40 54 36 68Z" fill="var(--sage)" fillOpacity="0.13" stroke="var(--sage)" strokeWidth="1.3"/>
-              <path d="M36 72C36 72 46 64 50 52C40 50 30 58 36 72Z" fill="var(--sage)" fillOpacity="0.1" stroke="var(--sage)" strokeWidth="1.3"/>
-            </svg>
-            <div>
-              <div style={{
-                fontFamily: "var(--font-playfair), serif",
-                fontSize: "22px",
-                fontWeight: 500,
-                color: "var(--text)",
-                marginBottom: "8px",
-                letterSpacing: "-0.01em",
-              }}>
-                Не знаєте, з чого почати?
-              </div>
-              <div style={{ fontSize: "14px", color: "var(--muted)", fontWeight: 300, lineHeight: 1.65, maxWidth: "480px" }}>
-                Напишіть мені — і ми разом розберемось, з чого почати і який формат роботи підійде саме вам.
-              </div>
-            </div>
-          </div>
-
-          <a
-            href="#contact"
-            className="btn-sage"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "10px",
-              padding: "15px 32px",
-              borderRadius: "48px",
-              fontSize: "14px",
-              fontWeight: 500,
-              letterSpacing: "0.01em",
-              whiteSpace: "nowrap" as const,
-            }}
-          >
-            Записатися на консультацію
-            <span style={{ fontSize: "16px" }}>→</span>
-          </a>
-        </div>
-      </section>
-    </>
   );
 }

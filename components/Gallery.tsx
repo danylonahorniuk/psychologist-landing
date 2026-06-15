@@ -77,24 +77,19 @@ export default function Gallery() {
               Кабінет створений для того, щоб ви відчували себе у безпеці, комфорті та довірі.
             </p>
 
-            {/* Feature icons */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+            {/* Features as text */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
               {features.map((f) => (
-                <div key={f.label} style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-                  <div style={{
-                    width: "44px",
-                    height: "44px",
-                    borderRadius: "50%",
-                    border: "1px solid var(--border)",
-                    background: "var(--bg-warm)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
+                <div key={f.label} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <span style={{ color: "var(--sage)", fontSize: "18px", lineHeight: 1 }}>—</span>
+                  <span style={{
+                    fontFamily: "var(--font-playfair), serif",
+                    fontSize: "16px",
+                    fontWeight: 400,
+                    fontStyle: "italic",
+                    color: "var(--text)",
+                    letterSpacing: "-0.01em",
                   }}>
-                    {f.icon}
-                  </div>
-                  <span style={{ fontSize: "13.5px", color: "var(--muted)", fontWeight: 400, letterSpacing: "0.01em" }}>
                     {f.label}
                   </span>
                 </div>

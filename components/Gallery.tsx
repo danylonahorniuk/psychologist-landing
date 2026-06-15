@@ -77,24 +77,17 @@ export default function Gallery() {
               Кабінет створений для того, щоб ви відчували себе у безпеці, комфорті та довірі.
             </p>
 
-            {/* Features as text */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            {/* Features as bullet list */}
+            <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "10px" }}>
               {features.map((f) => (
-                <div key={f.label} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <span style={{ color: "var(--sage)", fontSize: "18px", lineHeight: 1 }}>—</span>
-                  <span style={{
-                    fontFamily: "var(--font-playfair), serif",
-                    fontSize: "16px",
-                    fontWeight: 400,
-                    fontStyle: "italic",
-                    color: "var(--text)",
-                    letterSpacing: "-0.01em",
-                  }}>
+                <li key={f.label} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--sage)", flexShrink: 0 }} />
+                  <span style={{ fontSize: "14.5px", color: "var(--muted)", fontWeight: 400 }}>
                     {f.label}
                   </span>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           {/* RIGHT: photo layout — large left + 2 small right */}

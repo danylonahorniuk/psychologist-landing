@@ -147,7 +147,10 @@ body {
     transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
   }
   .topic-card {
-    transition: opacity 0.22s ease;
+    transition: transform 0.22s ease;
+  }
+  .topic-card:hover {
+    transform: translateY(-4px);
   }
   .topic-card:hover svg {
     opacity: 1;

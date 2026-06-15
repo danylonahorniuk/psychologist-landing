@@ -171,7 +171,7 @@ export default function HowItWorks() {
         {/* Bottom wave */}
         <div style={{ position: "absolute", bottom: -1, left: 0, right: 0, lineHeight: 0, zIndex: 2 }}>
           <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style={{ display: "block", width: "100%", height: "100px" }} aria-hidden="true">
-            <path d="M0,100 L0,45 C300,100 700,10 1440,55 L1440,100 Z" fill="var(--bg-warm)" />
+            <path d="M0,100 L0,45 C300,100 700,10 1440,55 L1440,100 Z" fill="var(--bg)" />
           </svg>
         </div>
       </section>

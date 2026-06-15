@@ -139,39 +139,6 @@ export default function Gallery() {
           </div>
         </div>
 
-        {/* Quote section below */}
-        <div style={{
-          marginTop: "80px",
-          paddingTop: "60px",
-          paddingBottom: "80px",
-          borderTop: "1px solid var(--border)",
-          textAlign: "center",
-        }}>
-          <div style={{
-            fontFamily: "var(--font-playfair), serif",
-            fontSize: "56px",
-            color: "var(--sage)",
-            lineHeight: 0.7,
-            marginBottom: "28px",
-            opacity: 0.5,
-          }}>
-            "
-          </div>
-          <blockquote style={{
-            fontFamily: "var(--font-playfair), serif",
-            fontSize: "clamp(18px, 2.2vw, 26px)",
-            fontWeight: 400,
-            fontStyle: "italic",
-            color: "var(--text)",
-            lineHeight: 1.5,
-            letterSpacing: "-0.01em",
-            margin: "0 auto",
-            maxWidth: "760px",
-          }}>
-            Це простір, де вас чують, приймають і підтримують на вашому шляху до внутрішніх змін.
-          </blockquote>
-          <LeafDivider />
-        </div>
 
       </div>
     </section>

@@ -6,9 +6,9 @@ const topics = [
     text: "Допомагаю впоратися з тривогою, напруженням і нав'язливими думками",
     icon: (
       <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
-        <path d="M19 33C19 19 9 10 5 8C5 8 19 8 27 16C35 24 33 33 19 33Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
-        <path d="M19 33L19 20" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
-        <path d="M19 20C16 17 12 15 9 14" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+        <path d="M19 5C13.5 5 9 9.8 9 15.5C9 19.8 11.4 23.5 14.8 25.5V31H23.2V25.5C26.6 23.5 29 19.8 29 15.5C29 9.8 24.5 5 19 5Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+        <path d="M14 16C15.2 14.2 16.4 16 18 16C19.6 16 20.8 14.2 22 14.2C23.2 14.2 23.8 15.4 24 16" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+        <path d="M14.5 19.5C15.7 17.7 16.9 19.5 18.5 19.5C20.1 19.5 21.3 17.7 22.5 17.7" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -57,9 +57,10 @@ const topics = [
     text: "Підтримую у пошуку власного шляху, цінностей і призначення",
     icon: (
       <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
-        <circle cx="19" cy="19" r="12" stroke="currentColor" strokeWidth="1.4"/>
-        <circle cx="19" cy="19" r="4.5" stroke="currentColor" strokeWidth="1.4"/>
-        <path d="M19 7V10M19 28V31M7 19H10M28 19H31" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+        <circle cx="16.5" cy="16.5" r="9.5" stroke="currentColor" strokeWidth="1.4"/>
+        <path d="M23.5 23.5L31 31" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+        <circle cx="16.5" cy="13.5" r="2" stroke="currentColor" strokeWidth="1.3"/>
+        <path d="M12 23C12 19.7 14 18 16.5 18C19 18 21 19.7 21 23" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
       </svg>
     ),
   },

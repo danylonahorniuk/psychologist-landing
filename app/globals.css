@@ -147,11 +147,7 @@ body {
     transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
   }
   .topic-card {
-    transition: background 0.22s ease, transform 0.22s ease;
-  }
-  .topic-card:hover {
-    background: var(--bg-warm);
-    transform: translateY(-4px);
+    transition: opacity 0.22s ease;
   }
   .topic-card:hover svg {
     opacity: 1;

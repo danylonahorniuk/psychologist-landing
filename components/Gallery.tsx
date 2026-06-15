@@ -70,24 +70,9 @@ export default function Gallery() {
               Простір<br />для змін
             </h2>
 
-            <p style={{ marginTop: "24px", fontSize: "14.5px", color: "var(--muted)", lineHeight: 1.75, fontWeight: 300, marginBottom: "14px" }}>
-              Тут ви можете зупинитися, видихнути та повернутися до себе.
+            <p style={{ marginTop: "24px", fontSize: "14.5px", color: "var(--muted)", lineHeight: 1.75, fontWeight: 300 }}>
+              Тут ви можете зупинитися, видихнути та повернутися до себе. Кабінет створений для того, щоб ви відчували себе у безпеці, комфорті та довірі — у затишній атмосфері, де панує спокій, приватність і справжня підтримка.
             </p>
-            <p style={{ fontSize: "14.5px", color: "var(--muted)", lineHeight: 1.75, fontWeight: 300, marginBottom: "40px" }}>
-              Кабінет створений для того, щоб ви відчували себе у безпеці, комфорті та довірі.
-            </p>
-
-            {/* Features as bullet list */}
-            <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "10px" }}>
-              {features.map((f) => (
-                <li key={f.label} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--sage)", flexShrink: 0 }} />
-                  <span style={{ fontSize: "14.5px", color: "var(--muted)", fontWeight: 400 }}>
-                    {f.label}
-                  </span>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* RIGHT: photo layout — large left + 2 small right */}

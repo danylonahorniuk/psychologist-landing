@@ -74,9 +74,9 @@ export default function Testimonials() {
         <Image src="/herb.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="340px" />
       </div>
 
-      {/* Candle — bottom-right */}
-      <div style={{ position: "absolute", bottom: "30px", right: "0", width: "240px", height: "220px", pointerEvents: "none", zIndex: 10 }}>
-        <Image src="/candle.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="220px" />
+      {/* Branch — bottom-left */}
+      <div style={{ position: "absolute", bottom: "0", left: "0", width: "260px", height: "300px", pointerEvents: "none", zIndex: 10 }}>
+        <Image src="/testimonials-branch-bottom.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom left" }} sizes="260px" />
       </div>
 
       <div style={{ position: "relative", zIndex: 2, maxWidth: "1280px", margin: "0 auto" }}>

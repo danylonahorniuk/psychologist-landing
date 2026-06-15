@@ -75,7 +75,7 @@ export default function Topics() {
       </div>
 
       {/* Right branch */}
-      <div style={{ position: "absolute", bottom: 0, right: 0, width: "200px", height: "380px", pointerEvents: "none" }}>
+      <div style={{ position: "absolute", bottom: 0, right: "-30px", width: "200px", height: "380px", pointerEvents: "none" }}>
         <Image src="/topics-right.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="200px" />
       </div>
 

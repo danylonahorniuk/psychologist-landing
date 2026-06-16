@@ -45,16 +45,11 @@ const LeafDivider = () => (
 
 export default function Gallery() {
   return (
-    <section style={{ background: "var(--bg)", padding: "100px 80px 100px" }}>
+    <section className="s-pad" style={{ background: "var(--bg)" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Main grid: left text + right photos */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "360px 1fr",
-          gap: "64px",
-          alignItems: "center",
-        }}>
+        <div className="gallery-grid">
 
           {/* LEFT: text content */}
           <div>

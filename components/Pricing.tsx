@@ -75,7 +75,7 @@ const CheckIcon = ({ featured }: { featured: boolean }) => (
 
 export default function Pricing() {
   return (
-    <section id="pricing" style={{ padding: "100px 80px", background: "var(--bg-warm)" }}>
+    <section id="pricing" className="s-pad" style={{ background: "var(--bg-warm)" }}>
       <style>{`
         .pricing-btn {
           transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -117,12 +117,7 @@ export default function Pricing() {
         </div>
 
         {/* Cards */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "20px",
-          alignItems: "center",
-        }}>
+        <div className="pricing-grid" style={{ alignItems: "center" }}>
           {plans.map((p) => (
             <div
               key={p.name}

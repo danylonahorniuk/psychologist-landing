@@ -68,7 +68,7 @@ const topics = [
 
 export default function Topics() {
   return (
-    <section style={{ padding: "100px 80px", background: "var(--bg-warm)", position: "relative" }}>
+    <section className="s-pad" style={{ background: "var(--bg-warm)", position: "relative" }}>
 
       {/* Left branch */}
       <div style={{ position: "absolute", top: "60px", left: "-30px", width: "220px", height: "420px", pointerEvents: "none" }}>
@@ -108,11 +108,7 @@ export default function Topics() {
         </div>
 
         {/* 6-column grid */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(6, 1fr)",
-          gap: "8px",
-        }}>
+        <div className="topics-grid">
           {topics.map((t) => (
             <div
               key={t.title}

@@ -6,25 +6,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      style={{
-        minHeight: "100vh",
-        position: "relative",
-        background: "var(--bg-warm)",
-        overflow: "hidden",
-        display: "grid",
-        gridTemplateColumns: "55fr 45fr",
-        alignItems: "center",
-      }}
+      style={{ minHeight: "100vh", position: "relative", background: "var(--bg-warm)", overflow: "hidden" }}
     >
+      <div className="hero-grid">
       {/* ── LEFT: Text — paddingTop accounts for transparent nav ── */}
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          padding: "160px 64px 140px 140px",
-        }}
-      >
+      <div className="hero-text-col">
         {/* H1 */}
         <h1
           className="animate-fade-up-1"
@@ -116,15 +102,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── RIGHT: Photo — fills full viewport height to touch nav ── */}
-      <div
-        className="animate-scale-in"
-        style={{
-          position: "relative",
-          height: "100vh",
-          alignSelf: "stretch",
-        }}
-      >
+      {/* ── RIGHT: Photo ── */}
+      <div className="animate-scale-in hero-photo-col">
         <Image
           src={PHOTO_URL}
           alt="Ірина Коваленко — психолог і коуч"
@@ -144,6 +123,7 @@ export default function Hero() {
           }}
         />
       </div>
+      </div>{/* end hero-grid */}
 
       {/* ── Bottom wave curve ── */}
       <div

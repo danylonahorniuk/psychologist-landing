@@ -85,17 +85,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Content */}
-        <div style={{
-          position: "relative",
-          zIndex: 1,
-          maxWidth: "1280px",
-          margin: "0 auto",
-          padding: "60px 80px 80px",
-          display: "grid",
-          gridTemplateColumns: "1fr 1.1fr",
-          gap: "80px",
-          alignItems: "center",
-        }}>
+        <div className="how-content-pad how-grid" style={{ position: "relative", zIndex: 1, maxWidth: "1280px", margin: "0 auto" }}>
 
           {/* LEFT: heading */}
           <div style={{ paddingBottom: "40px" }}>

@@ -57,7 +57,7 @@ const QuoteIcon = () => (
 
 export default function Testimonials() {
   return (
-    <section id="reviews" style={{ position: "relative", padding: "100px 80px 160px", background: "var(--bg)" }}>
+    <section id="reviews" className="s-pad" style={{ position: "relative", paddingBottom: "160px", background: "var(--bg)" }}>
       <style>{`
         .testimonial-card {
           transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -108,11 +108,7 @@ export default function Testimonials() {
         </div>
 
         {/* 3×2 cards grid */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "20px",
-        }}>
+        <div className="testimonials-grid">
           {testimonials.map((t) => (
             <div
               key={t.name + t.age}

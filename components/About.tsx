@@ -4,7 +4,7 @@ const features = [
   {
     title: "7+ років практики, 200+ клієнтів",
     text: "Працюю з людьми різного віку та запитів — від тривоги й самооцінки до стосункових криз і пошуку себе.",
-    stats: null,
+    stats: null as null | { label: string; value: string }[],
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <path d="M3 15V10M7 15V7M11 15V9M15 15V5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
@@ -14,7 +14,7 @@ const features = [
   {
     title: "Індивідуальний підхід",
     text: "Немає двох однакових людей і двох однакових терапій. Темп, методи та формат роботи я завжди підбираю під вас.",
-    stats: null,
+    stats: null as null | { label: string; value: string }[],
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <circle cx="10" cy="6.5" r="2.8" stroke="currentColor" strokeWidth="1.3"/>
@@ -26,7 +26,7 @@ const features = [
   {
     title: "Конфіденційність та довіра",
     text: "Все, що відбувається між нами — залишається між нами. Це не просто правило, це основа нашої роботи.",
-    stats: null,
+    stats: null as null | { label: string; value: string }[],
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <rect x="5.5" y="9" width="9" height="7.5" rx="1.8" stroke="currentColor" strokeWidth="1.3"/>
@@ -39,7 +39,7 @@ const features = [
   {
     title: "Власна терапія та супервізія",
     text: "Регулярно проходжу супервізії та власну терапію — щоб бути для вас максимально присутньою і ресурсною.",
-    stats: null,
+    stats: null as null | { label: string; value: string }[],
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <path d="M16 5v4h-4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>

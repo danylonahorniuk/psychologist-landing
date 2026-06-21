@@ -14,11 +14,18 @@ export default function Hero() {
           src={PHOTO_URL}
           alt=""
           fill
-          style={{ objectFit: "cover", objectPosition: "25% 45%" }}
+          style={{ objectFit: "cover", objectPosition: "25% 15%" }}
           sizes="100vw"
           priority
         />
-        {/* Wide gradient: text area fully opaque, fades to transparent on right */}
+        {/* Top gradient: fades photo into nav background so head doesn't clash with nav button */}
+        <div style={{
+          position: "absolute", top: 0, left: 0, right: 0,
+          height: "130px",
+          background: "linear-gradient(to bottom, var(--bg-warm) 0%, transparent 100%)",
+          pointerEvents: "none",
+        }} />
+        {/* Wide gradient: text area readable, fades to transparent on right */}
         <div style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(to right, rgba(240,235,227,0.82) 0%, rgba(240,235,227,0.72) 30%, rgba(240,235,227,0.45) 52%, transparent 72%)",

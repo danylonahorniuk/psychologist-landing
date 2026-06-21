@@ -111,13 +111,13 @@ export default function Footer() {
           src="/footer-mountains.png"
           alt=""
           fill
-          style={{ objectFit: "cover", objectPosition: "center bottom", opacity: 0.18 }}
+          style={{ objectFit: "cover", objectPosition: "center bottom", opacity: 0.38 }}
           sizes="100vw"
         />
         {/* Fade from left so text columns stay readable */}
         <div style={{
           position: "absolute", inset: 0,
-          background: "linear-gradient(to right, var(--bg) 0%, var(--bg) 25%, rgba(250,248,245,0.55) 55%, transparent 100%)",
+          background: "linear-gradient(to right, var(--bg) 0%, var(--bg) 15%, rgba(250,248,245,0.4) 45%, transparent 100%)",
         }} />
       </div>
 

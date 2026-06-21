@@ -18,13 +18,6 @@ export default function Hero() {
           sizes="100vw"
           priority
         />
-        {/* Top gradient: fades photo into nav background so head doesn't clash with nav button */}
-        <div style={{
-          position: "absolute", top: 0, left: 0, right: 0,
-          height: "130px",
-          background: "linear-gradient(to bottom, var(--bg-warm) 0%, transparent 100%)",
-          pointerEvents: "none",
-        }} />
         {/* Wide gradient: text area readable, fades to transparent on right */}
         <div style={{
           position: "absolute", inset: 0,

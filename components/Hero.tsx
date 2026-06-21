@@ -14,7 +14,7 @@ export default function Hero() {
           src={PHOTO_URL}
           alt=""
           fill
-          style={{ objectFit: "cover", objectPosition: "25% 15%" }}
+          style={{ objectFit: "cover", objectPosition: "25% 45%" }}
           sizes="100vw"
           priority
         />

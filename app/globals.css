@@ -383,9 +383,9 @@ body {
 /* Footer */
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 56px;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 48px;
 }
-@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: 1.2fr 1fr 1fr; gap: 36px; } }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
 @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }

@@ -69,17 +69,17 @@ export default function Testimonials() {
         }
       `}</style>
 
-      <div style={{ position: "relative", zIndex: 2, maxWidth: "1280px", margin: "0 auto" }}>
-
-        {/* Herb — top-right, relative to content box */}
-        <div style={{ position: "absolute", top: "80px", right: "-60px", width: "340px", height: "310px", pointerEvents: "none", zIndex: 10 }}>
+      {/* Decorative branches — centered max-width wrapper keeps them near content on any screen */}
+      <div className="decor-wrap">
+        <div style={{ position: "absolute", top: "80px", right: "0", width: "340px", height: "310px", pointerEvents: "none", zIndex: 10 }}>
           <Image src="/herb.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top right" }} sizes="340px" />
         </div>
-
-        {/* Branch — bottom-left, relative to content box */}
-        <div style={{ position: "absolute", bottom: "-55px", left: "-60px", width: "320px", height: "380px", pointerEvents: "none", zIndex: 10 }}>
+        <div style={{ position: "absolute", bottom: "-55px", left: "0", width: "320px", height: "380px", pointerEvents: "none", zIndex: 10 }}>
           <Image src="/testimonials-branch-bottom.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom left" }} sizes="260px" />
         </div>
+      </div>
+
+      <div style={{ position: "relative", zIndex: 2, maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "64px" }}>

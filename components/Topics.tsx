@@ -70,17 +70,17 @@ export default function Topics() {
   return (
     <section className="s-pad" style={{ background: "var(--bg-warm)", position: "relative" }}>
 
-      <div style={{ maxWidth: "1280px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-
-        {/* Left branch — relative to content box, not section */}
-        <div style={{ position: "absolute", top: "60px", left: "-60px", width: "220px", height: "420px", pointerEvents: "none" }}>
+      {/* Decorative branches — centered max-width wrapper keeps them near content on any screen */}
+      <div className="decor-wrap">
+        <div style={{ position: "absolute", top: "60px", left: "-30px", width: "220px", height: "420px", pointerEvents: "none" }}>
           <Image src="/topics-left.png" alt="" fill style={{ objectFit: "contain", objectPosition: "top left" }} sizes="220px" />
         </div>
-
-        {/* Right branch — relative to content box, not section */}
-        <div style={{ position: "absolute", bottom: "-20px", right: "-50px", width: "200px", height: "380px", pointerEvents: "none" }}>
+        <div style={{ position: "absolute", bottom: "-20px", right: "-10px", width: "200px", height: "380px", pointerEvents: "none" }}>
           <Image src="/topics-right.png" alt="" fill style={{ objectFit: "contain", objectPosition: "bottom right" }} sizes="200px" />
         </div>
+      </div>
+
+      <div style={{ maxWidth: "1280px", margin: "0 auto", position: "relative", zIndex: 1 }}>
 
         {/* Centered heading */}
         <div style={{ textAlign: "center", marginBottom: "72px" }}>

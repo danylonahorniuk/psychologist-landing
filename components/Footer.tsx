@@ -23,6 +23,15 @@ const socials = [
   },
   {
     href: "#",
+    label: "Facebook",
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M10.5 9H12.5L13 6.5H10.5V5C10.5 4.17 11 3.5 12 3.5H13V1.5C12.72 1.47 11.7 1.4 10.6 1.4C8.57 1.4 7.5 2.66 7.5 4.9V6.5H5.5V9H7.5V16.5H10.5V9Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+  },
+  {
+    href: "#",
     label: "Telegram",
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -56,8 +65,7 @@ export default function Footer() {
         }
         .footer-social:hover {
           border-color: var(--sage);
-          color: #fff;
-          background: var(--sage);
+          color: var(--sage);
         }
       `}</style>
 

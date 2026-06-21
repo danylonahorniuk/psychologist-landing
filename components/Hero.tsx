@@ -8,8 +8,26 @@ export default function Hero() {
       id="hero"
       style={{ minHeight: "100vh", position: "relative", background: "var(--bg-warm)", overflow: "hidden" }}
     >
-      <div className="hero-grid">
-      {/* ── LEFT: Text — paddingTop accounts for transparent nav ── */}
+      {/* Full-bleed background photo */}
+      <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+        <Image
+          src={PHOTO_URL}
+          alt=""
+          fill
+          style={{ objectFit: "cover", objectPosition: "25% 15%" }}
+          sizes="100vw"
+          priority
+        />
+        {/* Wide gradient: text area fully opaque, fades to transparent on right */}
+        <div style={{
+          position: "absolute", inset: 0,
+          background: "linear-gradient(to right, rgba(240,235,227,0.82) 0%, rgba(240,235,227,0.72) 30%, rgba(240,235,227,0.45) 52%, transparent 72%)",
+          pointerEvents: "none",
+        }} />
+      </div>
+
+      <div className="hero-grid" style={{ position: "relative", zIndex: 1 }}>
+      {/* ── LEFT: Text ── */}
       <div className="hero-text-col">
         {/* H1 */}
         <h1
@@ -102,27 +120,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── RIGHT: Photo ── */}
-      <div className="animate-scale-in hero-photo-col">
-        <Image
-          src={PHOTO_URL}
-          alt="Ірина Коваленко — психолог і коуч"
-          fill
-          style={{ objectFit: "cover", objectPosition: "72% 22%" }}
-          sizes="(min-width: 1280px) 720px, 50vw"
-          priority
-        />
-        {/* Gradient: blends photo left edge into hero background */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(to right, var(--bg-warm) 0%, transparent 32%)",
-            pointerEvents: "none",
-          }}
-        />
-      </div>
       </div>{/* end hero-grid */}
 
       {/* ── Bottom wave curve ── */}

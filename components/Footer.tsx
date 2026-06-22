@@ -42,24 +42,24 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: "rgba(250,248,245,0.55)", borderTop: "1px solid rgba(44,44,44,0.1)", backdropFilter: "blur(4px)" }}>
+    <footer style={{ borderTop: "1px solid rgba(44,44,44,0.15)" }}>
       <style>{`
         .footer-nav-link {
           font-size: 13px;
-          color: var(--muted);
+          color: var(--text);
           text-decoration: none;
           transition: color 0.2s ease;
-          font-weight: 300;
+          font-weight: 400;
         }
-        .footer-nav-link:hover { color: var(--text); }
+        .footer-nav-link:hover { color: var(--sage); }
         .footer-social {
           width: 40px; height: 40px;
           border-radius: 50%;
-          border: 1px solid var(--border);
+          border: 1px solid rgba(44,44,44,0.3);
           display: flex; align-items: center; justify-content: center;
-          color: var(--muted);
+          color: var(--text);
           text-decoration: none;
-          transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+          transition: border-color 0.2s ease, color 0.2s ease;
         }
         .footer-social:hover {
           border-color: var(--sage);
@@ -76,7 +76,7 @@ export default function Footer() {
             <a href="#" style={{ fontFamily: "var(--font-playfair), serif", fontSize: "22px", color: "var(--text)", textDecoration: "none", fontWeight: 500, letterSpacing: "-0.01em", display: "block", marginBottom: "16px" }}>
               Ірина Коваленко
             </a>
-            <p style={{ fontSize: "13px", color: "var(--muted)", lineHeight: 1.75, fontWeight: 300, maxWidth: "260px", marginBottom: "28px" }}>
+            <p style={{ fontSize: "13px", color: "var(--text)", lineHeight: 1.75, fontWeight: 300, maxWidth: "260px", marginBottom: "28px" }}>
               Психолог і коуч. Допомагаю знайти опору, ясність і рухатись вперед із внутрішньою свободою.
             </p>
             <div style={{ display: "flex", gap: "10px" }}>
@@ -90,7 +90,7 @@ export default function Footer() {
 
           {/* Col 2 — Navigation */}
           <div>
-            <span style={{ fontSize: "10px", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--muted)", fontWeight: 500, display: "block", marginBottom: "20px" }}>
+            <span style={{ fontSize: "10px", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--text)", fontWeight: 500, display: "block", marginBottom: "20px" }}>
               Навігація
             </span>
             <nav style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
@@ -102,7 +102,7 @@ export default function Footer() {
 
           {/* Col 3 — Contacts */}
           <div>
-            <span style={{ fontSize: "10px", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--muted)", fontWeight: 500, display: "block", marginBottom: "20px" }}>
+            <span style={{ fontSize: "10px", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--text)", fontWeight: 500, display: "block", marginBottom: "20px" }}>
               Контакти
             </span>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
@@ -113,7 +113,7 @@ export default function Footer() {
                 { label: "Графік",   value: "Пн–Пт, 10:00–20:00" },
               ].map((c) => (
                 <div key={c.label}>
-                  <div style={{ fontSize: "10px", color: "var(--muted)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "2px" }}>{c.label}</div>
+                  <div style={{ fontSize: "10px", color: "var(--text)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "2px" }}>{c.label}</div>
                   <div style={{ fontSize: "13px", color: "var(--text)", fontWeight: 300 }}>{c.value}</div>
                 </div>
               ))}
@@ -127,10 +127,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <p style={{ fontSize: "12px", color: "var(--muted)", fontWeight: 300 }}>
+          <p style={{ fontSize: "12px", color: "var(--text)", fontWeight: 300 }}>
             © 2026 · Ірина Коваленко · Психолог і Коуч · Київ, Україна
           </p>
-          <a href="#" style={{ fontSize: "12px", color: "var(--muted)", textDecoration: "none", fontWeight: 300, transition: "color 0.2s ease" }}>
+          <a href="#" style={{ fontSize: "12px", color: "var(--text)", textDecoration: "none", fontWeight: 300, transition: "color 0.2s ease" }}>
             Політика конфіденційності
           </a>
         </div>

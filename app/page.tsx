@@ -33,14 +33,9 @@ export default function Home() {
             src="/footer-mountains.png"
             alt=""
             fill
-            style={{ objectFit: "cover", objectPosition: "center bottom", opacity: 0.38 }}
+            style={{ objectFit: "cover", objectPosition: "center 60%", opacity: 0.38 }}
             sizes="100vw"
           />
-          {/* Fade in from top so mountain appears gradually */}
-          <div style={{
-            position: "absolute", inset: 0,
-            background: "linear-gradient(to bottom, var(--bg) 0%, transparent 18%)",
-          }} />
         </div>
         <div style={{ position: "relative", zIndex: 1 }}>
           <Contact />

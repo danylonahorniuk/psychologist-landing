@@ -42,7 +42,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer>
+    <footer style={{ background: "rgba(250,248,245,0.55)", borderTop: "1px solid rgba(44,44,44,0.1)", backdropFilter: "blur(4px)" }}>
       <style>{`
         .footer-nav-link {
           font-size: 13px;

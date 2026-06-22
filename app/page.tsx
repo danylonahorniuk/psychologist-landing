@@ -33,7 +33,7 @@ export default function Home() {
             src="/footer-mountains.png"
             alt=""
             fill
-            style={{ objectFit: "cover", objectPosition: "center 35%", opacity: 0.38 }}
+            style={{ objectFit: "cover", objectPosition: "center 35%", opacity: 0.55 }}
             sizes="100vw"
           />
         </div>

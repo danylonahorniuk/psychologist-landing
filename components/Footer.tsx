@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const navLinks = [
   { href: "#about",    label: "Про мене" },
   { href: "#services", label: "Послуги" },
@@ -44,7 +42,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)", position: "relative", overflow: "hidden" }}>
+    <footer style={{ borderTop: "1px solid var(--border)" }}>
       <style>{`
         .footer-nav-link {
           font-size: 13px;
@@ -69,23 +67,8 @@ export default function Footer() {
         }
       `}</style>
 
-      {/* Mountain background */}
-      <div style={{ position: "absolute", inset: 0, zIndex: 0, pointerEvents: "none" }}>
-        <Image
-          src="/footer-mountains.png"
-          alt=""
-          fill
-          style={{ objectFit: "cover", objectPosition: "center bottom", opacity: 0.38 }}
-          sizes="100vw"
-        />
-        <div style={{
-          position: "absolute", inset: 0,
-          background: "linear-gradient(to right, var(--bg) 0%, var(--bg) 15%, rgba(250,248,245,0.4) 45%, transparent 100%)",
-        }} />
-      </div>
-
       {/* Main footer */}
-      <div style={{ position: "relative", zIndex: 1, padding: "64px 80px 48px", maxWidth: "1280px", margin: "0 auto" }}>
+      <div style={{ padding: "64px 80px 48px", maxWidth: "1280px", margin: "0 auto" }}>
         <div className="footer-grid">
 
           {/* Col 1 — Brand */}

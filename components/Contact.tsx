@@ -38,7 +38,7 @@ export default function Contact() {
       `}</style>
 
       {/* CTA card */}
-      <section className="s-pad" style={{ background: "var(--bg)" }}>
+      <section className="s-pad" style={{ background: "rgba(250,248,245,0.82)" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
           <div style={{
             position: "relative",
@@ -131,7 +131,7 @@ export default function Contact() {
       </section>
 
       {/* Contact form section */}
-      <section id="contact" className="s-pad" style={{ background: "var(--bg-warm)" }}>
+      <section id="contact" className="s-pad" style={{ background: "rgba(240,235,227,0.85)" }}>
         <div className="contact-grid" style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
           {/* Left */}

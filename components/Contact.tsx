@@ -38,7 +38,7 @@ export default function Contact() {
       `}</style>
 
       {/* CTA card */}
-      <section className="s-pad" style={{ background: "transparent" }}>
+      <section className="s-pad" style={{ background: "var(--bg)" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
           <div style={{
             position: "relative",

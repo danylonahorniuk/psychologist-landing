@@ -42,7 +42,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer style={{ borderTop: "1px solid var(--border)" }}>
+    <footer>
       <style>{`
         .footer-nav-link {
           font-size: 13px;

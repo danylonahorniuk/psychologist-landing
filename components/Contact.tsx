@@ -46,9 +46,9 @@ export default function Contact() {
             borderRadius: "24px",
             border: "1px solid var(--border)",
             boxShadow: "0 8px 48px rgba(44,44,44,0.07)",
-            padding: "72px 80px 56px",
             textAlign: "center",
-          }}>
+          }}
+          className="cta-card-pad">
             {/* Left branch — overflows outside card */}
             <div style={{ position: "absolute", top: "-40px", left: "-30px", width: "180px", height: "100%", pointerEvents: "none", zIndex: 0 }}>
               <Image src="/cta-left.png" alt="" fill style={{ objectFit: "contain", objectPosition: "left center" }} sizes="180px" />
@@ -191,7 +191,7 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <div style={{ background: "var(--bg)", borderRadius: "24px", padding: "52px 48px" }}>
+          <div className="contact-form-card">
             <h3 style={{
               fontFamily: "var(--font-playfair), serif",
               fontSize: "28px",

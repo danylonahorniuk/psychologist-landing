@@ -23,11 +23,11 @@ export default function Nav() {
   return (
     <>
       <nav
+        className="nav-bar"
         style={{
           position: "fixed",
           top: 0, left: 0, right: 0,
           zIndex: 50,
-          padding: "18px 80px",
           background: scrolled ? "rgba(240,235,227,0.92)" : "transparent",
           backdropFilter: scrolled ? "blur(16px)" : "none",
           boxShadow: scrolled ? "0 2px 24px rgba(44,44,44,0.07)" : "none",

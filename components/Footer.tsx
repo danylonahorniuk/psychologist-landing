@@ -68,7 +68,7 @@ export default function Footer() {
       `}</style>
 
       {/* Main footer */}
-      <div style={{ padding: "64px 80px 48px", maxWidth: "1280px", margin: "0 auto" }}>
+      <div className="footer-inner">
         <div className="footer-grid">
 
           {/* Col 1 — Brand */}

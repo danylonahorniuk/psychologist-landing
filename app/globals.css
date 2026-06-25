@@ -389,3 +389,22 @@ body {
 }
 @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
 @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+/* Nav responsive padding */
+.nav-bar { padding: 18px 80px; }
+@media (max-width: 1024px) { .nav-bar { padding: 18px 40px; } }
+@media (max-width: 640px)  { .nav-bar { padding: 16px 20px; } }
+
+/* Footer inner responsive padding */
+.footer-inner { padding: 64px 80px 48px; max-width: 1280px; margin: 0 auto; }
+@media (max-width: 1024px) { .footer-inner { padding: 56px 40px 40px; } }
+@media (max-width: 640px)  { .footer-inner { padding: 48px 20px 36px; } }
+
+/* Contact CTA card inner padding */
+.cta-card-pad { padding: 72px 80px 56px; }
+@media (max-width: 1024px) { .cta-card-pad { padding: 56px 48px 44px; } }
+@media (max-width: 640px)  { .cta-card-pad { padding: 40px 24px 36px; } }
+
+/* Contact form card */
+.contact-form-card { background: var(--bg); border-radius: 24px; padding: 52px 48px; }
+@media (max-width: 640px)  { .contact-form-card { padding: 36px 24px; } }

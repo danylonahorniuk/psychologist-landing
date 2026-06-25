@@ -35,15 +35,9 @@ export default function Nav() {
         }}
       >
         <div className="nav-inner">
-          {/* Logo */}
-          <a href="#" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}>
-            <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "var(--sage)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-                <path d="M9 2C5.5 2 3 5 3 8.5C3 12 6 15 9 16C12 15 15 12 15 8.5C15 5 12.5 2 9 2Z" stroke="white" strokeWidth="1.2" fill="none"/>
-                <path d="M9 16V8M9 8C9 8 6 6 6 4M9 8C9 8 12 6 12 4" stroke="white" strokeWidth="1.2" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <span style={{ fontFamily: "var(--font-playfair), serif", fontSize: "17px", fontWeight: 500, color: "var(--text)", letterSpacing: "-0.01em", lineHeight: 1 }}>
+          {/* Name */}
+          <a href="#" style={{ textDecoration: "none" }}>
+            <span style={{ fontFamily: "var(--font-playfair), serif", fontSize: "18px", fontWeight: 500, color: "var(--text)", letterSpacing: "-0.01em", lineHeight: 1 }}>
               Ірина Коваленко
             </span>
           </a>

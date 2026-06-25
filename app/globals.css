@@ -286,9 +286,10 @@ body {
   .hero-photo-col { display: none; }
   .hero-text-col { padding: 120px 24px 60px !important; }
   .hero-cta-row { flex-direction: column; align-items: flex-start; gap: 14px; }
-  .hero-gradient { background: linear-gradient(to bottom, rgba(240,235,227,0.97) 0%, rgba(240,235,227,0.97) 42%, rgba(240,235,227,0.45) 62%, transparent 76%) !important; }
+  .hero-gradient { background: linear-gradient(to bottom, rgba(240,235,227,0.97) 0%, rgba(240,235,227,0.97) 32%, rgba(240,235,227,0.25) 50%, transparent 60%) !important; }
   .hero-img-mobile { display: block !important; }
   .hero-img-desktop { display: none !important; }
+  .hero-text-col { padding: 100px 24px 12px !important; }
 }
 
 /* Section padding */

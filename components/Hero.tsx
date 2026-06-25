@@ -9,6 +9,13 @@ export default function Hero() {
       id="hero"
       style={{ minHeight: "100vh", position: "relative", background: "var(--bg-warm)", overflow: "hidden" }}
     >
+      <style>{`
+        @media (max-width: 900px) {
+          .hero-bg-wrap { display: none !important; }
+          .hero-secondary-cta { display: none !important; }
+          .hero-mobile-photo { display: block !important; }
+        }
+      `}</style>
       {/* Desktop: full-bleed background photo */}
       <div className="hero-bg-wrap" style={{ position: "absolute", inset: 0, zIndex: 0 }}>
         <Image

@@ -283,12 +283,12 @@ body {
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; min-height: auto; }
   .hero-photo-col { display: none; }
-  .hero-text-col { padding: 80px 24px 28px !important; }
+  .hero-text-col { padding: 76px 24px 24px !important; }
   .hero-cta-row { flex-direction: column; align-items: flex-start; gap: 12px; }
   .hero-bg-wrap { display: none !important; }
-  .hero-mobile-photo { display: block; position: relative; height: 340px; }
-  .hero-secondary-cta { display: none; }
-  .hero-description { font-size: 14px !important; line-height: 1.6 !important; margin-bottom: 28px !important; }
+  .hero-mobile-photo { display: block; position: relative; height: 400px; }
+  .hero-secondary-cta { display: none !important; }
+  .hero-description { font-size: 14px !important; line-height: 1.6 !important; margin-bottom: 24px !important; }
 }
 
 /* Section padding */

@@ -73,7 +73,7 @@ export default function Footer() {
 
           {/* Col 1 — Brand */}
           <div>
-            <a href="#" style={{ fontFamily: "var(--font-playfair), serif", fontSize: "22px", color: "var(--text)", textDecoration: "none", fontWeight: 500, letterSpacing: "-0.01em", display: "block", marginBottom: "16px" }}>
+            <a href="#" style={{ fontFamily: "var(--font-playfair), serif", fontSize: "20px", color: "var(--text)", textDecoration: "none", fontWeight: 500, letterSpacing: "-0.01em", display: "block", marginBottom: "16px" }}>
               Ірина Коваленко
             </a>
             <p style={{ fontSize: "13px", color: "var(--text)", lineHeight: 1.75, fontWeight: 300, maxWidth: "260px", marginBottom: "28px" }}>

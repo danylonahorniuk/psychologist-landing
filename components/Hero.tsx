@@ -13,7 +13,7 @@ export default function Hero() {
         @media (max-width: 900px) {
           .hero-bg-wrap { display: none !important; }
           .hero-secondary-cta { display: none !important; }
-          .hero-mobile-photo { display: block !important; }
+          .hero-mobile-photo { display: none !important; }
         }
       `}</style>
       {/* Desktop: full-bleed background photo */}

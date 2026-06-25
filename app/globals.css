@@ -281,14 +281,14 @@ body {
   gap: 20px;
 }
 @media (max-width: 900px) {
-  .hero-grid { grid-template-columns: 1fr; min-height: auto; }
+  .hero-grid { grid-template-columns: 1fr; min-height: 100svh; }
   .hero-photo-col { display: none; }
-  .hero-text-col { padding: 76px 24px 24px !important; }
+  .hero-text-col { padding: 88px 28px 60px !important; justify-content: center; }
   .hero-cta-row { flex-direction: column; align-items: flex-start; gap: 12px; }
   .hero-bg-wrap { display: none !important; }
-  .hero-mobile-photo { display: block; position: relative; height: 400px; }
+  .hero-mobile-photo { display: none !important; }
   .hero-secondary-cta { display: none !important; }
-  .hero-description { font-size: 14px !important; line-height: 1.6 !important; margin-bottom: 24px !important; }
+  .hero-description { font-size: 15px !important; line-height: 1.7 !important; margin-bottom: 36px !important; }
 }
 
 /* Section padding */

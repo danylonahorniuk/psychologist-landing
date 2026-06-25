@@ -46,7 +46,7 @@ export default function Nav() {
           <ul className="nav-links-list">
             {links.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="nav-link" style={{ fontSize: "13px", color: "var(--text)", textDecoration: "none", letterSpacing: "0.01em", fontWeight: 400 }}>
+                <a href={l.href} className="nav-link" style={{ fontSize: "14px", color: "var(--text)", textDecoration: "none", letterSpacing: "0.01em", fontWeight: 400 }}>
                   {l.label}
                 </a>
               </li>

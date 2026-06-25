@@ -19,7 +19,7 @@ export default function Hero() {
           priority
         />
         {/* Wide gradient: text area readable, fades to transparent on right */}
-        <div style={{
+        <div className="hero-gradient" style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(to right, rgba(240,235,227,0.82) 0%, rgba(240,235,227,0.72) 30%, rgba(240,235,227,0.45) 52%, transparent 72%)",
           pointerEvents: "none",
@@ -67,10 +67,7 @@ export default function Hero() {
         </p>
 
         {/* CTAs */}
-        <div
-          className="animate-fade-up-3"
-          style={{ display: "flex", alignItems: "center", gap: "20px" }}
-        >
+        <div className="animate-fade-up-3 hero-cta-row">
           <a
             href="#contact"
             className="btn-sage"

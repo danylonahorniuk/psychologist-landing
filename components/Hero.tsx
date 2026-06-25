@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 const PHOTO_URL = "/hiro2.png";
+const PHOTO_MOBILE_URL = "/hero-mobile.png";
 
 export default function Hero() {
   return (
@@ -10,11 +11,23 @@ export default function Hero() {
     >
       {/* Full-bleed background photo */}
       <div className="hero-bg-wrap" style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+        {/* Desktop photo */}
         <Image
           src={PHOTO_URL}
           alt=""
           fill
+          className="hero-img-desktop"
           style={{ objectFit: "cover", objectPosition: "25% 15%" }}
+          sizes="100vw"
+          priority
+        />
+        {/* Mobile photo */}
+        <Image
+          src={PHOTO_MOBILE_URL}
+          alt=""
+          fill
+          className="hero-img-mobile"
+          style={{ objectFit: "cover", objectPosition: "center top" }}
           sizes="100vw"
           priority
         />

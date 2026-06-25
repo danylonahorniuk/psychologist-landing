@@ -5,37 +5,37 @@ const testimonials = [
     quote: "З першої зустрічі відчула безпеку й прийняття. Тут можна говорити про все без страху осуду. З часом стало легше розуміти себе і свої почуття.",
     name: "Олена",
     age: 32,
-    avatar: null,
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
   },
   {
     quote: "Довго не наважувався звернутися по допомогу. Радий, що зробив цей крок. Поступово знайшов опору всередині себе і навчився справлятися з тривогою.",
     name: "Андрій",
     age: 28,
-    avatar: null,
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     quote: "Терапія допомогла мені відновити впевненість у собі та встановити здорові межі. Це було не просто, але результат вартий кожної зустрічі.",
     name: "Марія",
     age: 37,
-    avatar: null,
+    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
   },
   {
     quote: "Особливо ціную підтримку між сесіями та увагу до деталей. Відчуваю, що мене дійсно чують і допомагають глибше розібратися у собі.",
     name: "Юлія",
     age: 24,
-    avatar: null,
+    avatar: "https://randomuser.me/api/portraits/women/17.jpg",
   },
   {
     quote: "Завдяки нашій роботі я навчилася справлятися з емоціями, відпускати минуле і жити в гармонії із собою. Дуже вдячна за цей шлях.",
     name: "Ірина",
     age: 41,
-    avatar: null,
+    avatar: "https://randomuser.me/api/portraits/women/52.jpg",
   },
   {
     quote: "Сподобалася глибина і делікатність підходу. На сесіях завжди спокійно, структуровано і по суті. Відчуваю реальні зміни у своєму житті.",
     name: "Тарас",
     age: 35,
-    avatar: null,
+    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
   },
 ];
 
@@ -146,18 +146,12 @@ export default function Testimonials() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  background: "var(--bg-warm)",
                   border: "1px solid var(--border)",
                   flexShrink: 0,
                   overflow: "hidden",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  position: "relative",
                 }}>
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-                    <circle cx="11" cy="8" r="3.5" stroke="var(--muted)" strokeWidth="1.2"/>
-                    <path d="M4 19C4 15.7 7.1 13 11 13C14.9 13 18 15.7 18 19" stroke="var(--muted)" strokeWidth="1.2" strokeLinecap="round"/>
-                  </svg>
+                  <Image src={t.avatar!} alt={t.name} fill style={{ objectFit: "cover" }} sizes="40px" />
                 </div>
                 <span style={{ fontSize: "13.5px", fontWeight: 500, color: "var(--text)", letterSpacing: "-0.01em" }}>
                   {t.name}, {t.age}

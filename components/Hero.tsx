@@ -9,30 +9,17 @@ export default function Hero() {
       id="hero"
       style={{ minHeight: "100vh", position: "relative", background: "var(--bg-warm)", overflow: "hidden" }}
     >
-      {/* Full-bleed background photo */}
+      {/* Desktop: full-bleed background photo */}
       <div className="hero-bg-wrap" style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-        {/* Desktop photo */}
         <Image
           src={PHOTO_URL}
           alt=""
           fill
-          className="hero-img-desktop"
           style={{ objectFit: "cover", objectPosition: "25% 15%" }}
           sizes="100vw"
           priority
         />
-        {/* Mobile photo */}
-        <Image
-          src={PHOTO_MOBILE_URL}
-          alt=""
-          fill
-          className="hero-img-mobile"
-          style={{ objectFit: "cover", objectPosition: "center top" }}
-          sizes="100vw"
-          priority
-        />
-        {/* Wide gradient: text area readable, fades to transparent on right */}
-        <div className="hero-gradient" style={{
+        <div style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(to right, rgba(240,235,227,0.82) 0%, rgba(240,235,227,0.72) 30%, rgba(240,235,227,0.45) 52%, transparent 72%)",
           pointerEvents: "none",
@@ -40,99 +27,106 @@ export default function Hero() {
       </div>
 
       <div className="hero-grid" style={{ position: "relative", zIndex: 1 }}>
-      {/* ── LEFT: Text ── */}
-      <div className="hero-text-col">
-        {/* H1 */}
-        <h1
-          className="animate-fade-up-1"
-          style={{
-            fontFamily: "var(--font-playfair), serif",
-            fontSize: "clamp(44px, 5.2vw, 80px)",
-            fontWeight: 500,
-            lineHeight: 1.08,
-            letterSpacing: "-0.03em",
-            color: "var(--text)",
-            marginBottom: "24px",
-          }}
-        >
-          Знайди себе.
-          <br />
-          <em style={{ fontStyle: "italic", color: "var(--slate)" }}>
-            Живи повніше.
-          </em>
-        </h1>
-
-        {/* Body text */}
-        <p
-          className="animate-fade-up-3 hero-description"
-          style={{
-            fontSize: "16px",
-            color: "var(--muted)",
-            lineHeight: 1.72,
-            fontWeight: 300,
-            marginBottom: "48px",
-            maxWidth: "400px",
-          }}
-        >
-          Мене звуть Ірина Коваленко — я психолог та гештальт-терапевт
-          з 7-річним досвідом. Допомагаю знайти внутрішню опору,
-          розібратися в собі та побудувати стосунки, які наповнюють.
-        </p>
-
-        {/* CTAs */}
-        <div className="animate-fade-up-3 hero-cta-row">
-          <a
-            href="#contact"
-            className="btn-sage"
+        <div className="hero-text-col">
+          <h1
+            className="animate-fade-up-1"
             style={{
-              display: "inline-block",
-              padding: "15px 36px",
-              borderRadius: "48px",
-              fontSize: "14px",
+              fontFamily: "var(--font-playfair), serif",
+              fontSize: "clamp(44px, 5.2vw, 80px)",
               fontWeight: 500,
-              letterSpacing: "0.02em",
+              lineHeight: 1.08,
+              letterSpacing: "-0.03em",
+              color: "var(--text)",
+              marginBottom: "24px",
             }}
           >
-            Записатись на сесію
-          </a>
-          <a
-            href="#about"
-            className="btn-ghost-circle hero-secondary-cta"
+            Знайди себе.
+            <br />
+            <em style={{ fontStyle: "italic", color: "var(--slate)" }}>
+              Живи повніше.
+            </em>
+          </h1>
+
+          <p
+            className="animate-fade-up-3 hero-description"
             style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "12px",
-              fontSize: "13px",
+              fontSize: "16px",
               color: "var(--muted)",
-              textDecoration: "none",
-              fontWeight: 400,
+              lineHeight: 1.72,
+              fontWeight: 300,
+              marginBottom: "48px",
+              maxWidth: "400px",
             }}
           >
-            <span
-              className="circle-icon"
+            Мене звуть Ірина Коваленко — я психолог та гештальт-терапевт
+            з 7-річним досвідом. Допомагаю знайти внутрішню опору,
+            розібратися в собі та побудувати стосунки, які наповнюють.
+          </p>
+
+          <div className="animate-fade-up-3 hero-cta-row">
+            <a
+              href="#contact"
+              className="btn-sage"
               style={{
-                width: "36px",
-                height: "36px",
-                borderRadius: "50%",
-                border: "1.5px solid var(--border)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "10px",
-                color: "var(--text)",
-                flexShrink: 0,
+                display: "inline-block",
+                padding: "15px 36px",
+                borderRadius: "48px",
+                fontSize: "14px",
+                fontWeight: 500,
+                letterSpacing: "0.02em",
               }}
             >
-              ▶
-            </span>
-            Дізнатись більше про підхід
-          </a>
+              Записатись на сесію
+            </a>
+            <a
+              href="#about"
+              className="btn-ghost-circle hero-secondary-cta"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "12px",
+                fontSize: "13px",
+                color: "var(--muted)",
+                textDecoration: "none",
+                fontWeight: 400,
+              }}
+            >
+              <span
+                className="circle-icon"
+                style={{
+                  width: "36px",
+                  height: "36px",
+                  borderRadius: "50%",
+                  border: "1.5px solid var(--border)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "10px",
+                  color: "var(--text)",
+                  flexShrink: 0,
+                }}
+              >
+                ▶
+              </span>
+              Дізнатись більше про підхід
+            </a>
+          </div>
         </div>
       </div>
 
-      </div>{/* end hero-grid */}
+      {/* Mobile-only photo below text */}
+      <div className="hero-mobile-photo">
+        <Image
+          src={PHOTO_MOBILE_URL}
+          alt="Ірина Коваленко"
+          fill
+          style={{ objectFit: "cover", objectPosition: "center top" }}
+          sizes="100vw"
+          priority
+        />
+      </div>
 
-      {/* ── Bottom wave curve ── */}
+      {/* Bottom wave */}
       <div
         style={{
           position: "absolute",

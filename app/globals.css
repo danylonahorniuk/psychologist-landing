@@ -251,9 +251,8 @@ body {
   .nav-burger { display: flex !important; }
 }
 
-/* Hero images — show/hide per breakpoint */
-.hero-img-mobile { display: none !important; }
-.hero-img-desktop { display: block !important; }
+/* Hero mobile photo — hidden by default, shown on mobile */
+.hero-mobile-photo { display: none; }
 
 /* Hero */
 .hero-grid {
@@ -282,15 +281,14 @@ body {
   gap: 20px;
 }
 @media (max-width: 900px) {
-  .hero-grid { grid-template-columns: 1fr; min-height: 100svh; }
+  .hero-grid { grid-template-columns: 1fr; min-height: auto; }
   .hero-photo-col { display: none; }
-  .hero-text-col { padding: 80px 24px 12px !important; }
-  .hero-cta-row { flex-direction: column; align-items: flex-start; gap: 14px; }
-  .hero-gradient { background: linear-gradient(to bottom, rgba(240,235,227,0.98) 0%, rgba(240,235,227,0.98) 70%, rgba(240,235,227,0.15) 80%, transparent 88%) !important; }
-  .hero-img-mobile { display: block !important; }
-  .hero-img-desktop { display: none !important; }
+  .hero-text-col { padding: 80px 24px 28px !important; }
+  .hero-cta-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .hero-bg-wrap { display: none !important; }
+  .hero-mobile-photo { display: block; position: relative; height: 340px; }
   .hero-secondary-cta { display: none; }
-  .hero-description { font-size: 14px !important; line-height: 1.65 !important; margin-bottom: 28px !important; }
+  .hero-description { font-size: 14px !important; line-height: 1.6 !important; margin-bottom: 28px !important; }
 }
 
 /* Section padding */

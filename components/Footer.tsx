@@ -51,7 +51,7 @@ export default function Footer() {
           transition: color 0.2s ease;
           font-weight: 400;
         }
-        .footer-nav-link:hover { color: #fff; }
+        .footer-nav-link:hover { color: rgba(255,255,255,0.75); }
         .footer-social {
           width: 40px; height: 40px;
           border-radius: 50%;
@@ -62,8 +62,8 @@ export default function Footer() {
           transition: border-color 0.2s ease, color 0.2s ease;
         }
         .footer-social:hover {
-          border-color: #fff;
-          color: #fff;
+          border-color: rgba(255,255,255,0.75);
+          color: rgba(255,255,255,0.75);
         }
       `}</style>
 

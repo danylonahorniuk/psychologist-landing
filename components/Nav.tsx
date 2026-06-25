@@ -54,7 +54,7 @@ export default function Nav() {
           </ul>
 
           {/* CTA */}
-          <a href="#contact" className="btn-sage nav-cta-btn" style={{ display: "inline-block", padding: "8px 20px", borderRadius: "10px", fontSize: "12px", fontWeight: 500, letterSpacing: "0.01em", whiteSpace: "nowrap" }}>
+          <a href="#contact" className="btn-sage nav-cta-btn" style={{ display: "inline-block", padding: "10px 24px", borderRadius: "10px", fontSize: "13px", fontWeight: 500, letterSpacing: "0.01em", whiteSpace: "nowrap" }}>
             Записатись на консультацію
           </a>
 

@@ -9,7 +9,7 @@ export default function Hero() {
       style={{ minHeight: "100vh", position: "relative", background: "var(--bg-warm)", overflow: "hidden" }}
     >
       {/* Full-bleed background photo */}
-      <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+      <div className="hero-bg-wrap" style={{ position: "absolute", inset: 0, zIndex: 0 }}>
         <Image
           src={PHOTO_URL}
           alt=""

@@ -37,7 +37,7 @@ export default function Nav() {
         <div className="nav-inner">
           {/* Name */}
           <a href="#" style={{ textDecoration: "none" }}>
-            <span style={{ fontFamily: "var(--font-playfair), serif", fontSize: "16px", fontWeight: 400, color: "var(--text)", letterSpacing: "0em", lineHeight: 1 }}>
+            <span style={{ fontFamily: "var(--font-playfair), serif", fontSize: "20px", fontWeight: 500, color: "var(--text)", letterSpacing: "-0.01em", lineHeight: 1 }}>
               Ірина Коваленко
             </span>
           </a>

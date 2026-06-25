@@ -64,7 +64,7 @@ export default function Hero() {
 
         {/* Body text */}
         <p
-          className="animate-fade-up-3"
+          className="animate-fade-up-3 hero-description"
           style={{
             fontSize: "16px",
             color: "var(--muted)",
@@ -97,7 +97,7 @@ export default function Hero() {
           </a>
           <a
             href="#about"
-            className="btn-ghost-circle"
+            className="btn-ghost-circle hero-secondary-cta"
             style={{
               display: "flex",
               alignItems: "center",

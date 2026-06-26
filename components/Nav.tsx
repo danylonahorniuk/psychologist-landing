@@ -114,7 +114,7 @@ export default function Nav() {
         <a
           href="#contact"
           className="btn-sage"
-          style={{ display: "block", textAlign: "center", padding: "16px 24px", borderRadius: "10px", fontSize: "15px", fontWeight: 500, letterSpacing: "0.01em", marginTop: "28px" }}
+          style={{ display: "block", textAlign: "center", padding: "11px 24px", borderRadius: "10px", fontSize: "14px", fontWeight: 500, letterSpacing: "0.01em", marginTop: "28px" }}
           onClick={() => setMenuOpen(false)}
         >
           Записатись на консультацію

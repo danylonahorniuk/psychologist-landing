@@ -17,31 +17,33 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Topics />
-        <About />
-        <HowItWorks />
-        <Gallery />
-        <Pricing />
-        <Testimonials />
-        <FAQ />
-      </main>
+        <div className="mobile-page-layer">
+          <Topics />
+          <About />
+          <HowItWorks />
+          <Gallery />
+          <Pricing />
+          <Testimonials />
+          <FAQ />
 
-      {/* Shared mountain background for Contact + Footer */}
-      <div style={{ position: "relative" }}>
-        <div style={{ position: "absolute", inset: 0, zIndex: 0, pointerEvents: "none", overflow: "hidden" }}>
-          <Image
-            src="/footer-mountains.png"
-            alt=""
-            fill
-            style={{ objectFit: "cover", objectPosition: "center 35%", opacity: 0.55 }}
-            sizes="100vw"
-          />
+          {/* Shared mountain background for Contact + Footer */}
+          <div style={{ position: "relative" }}>
+            <div style={{ position: "absolute", inset: 0, zIndex: 0, pointerEvents: "none", overflow: "hidden" }}>
+              <Image
+                src="/footer-mountains.png"
+                alt=""
+                fill
+                style={{ objectFit: "cover", objectPosition: "center 35%", opacity: 0.55 }}
+                sizes="100vw"
+              />
+            </div>
+            <div style={{ position: "relative", zIndex: 1 }}>
+              <Contact />
+              <Footer />
+            </div>
+          </div>
         </div>
-        <div style={{ position: "relative", zIndex: 1 }}>
-          <Contact />
-          <Footer />
-        </div>
-      </div>
+      </main>
     </>
   );
 }

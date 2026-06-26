@@ -375,52 +375,7 @@ body {
   gap: 8px;
 }
 @media (max-width: 1200px) { .topics-grid { grid-template-columns: repeat(3, 1fr); } }
-
-/* Mobile: horizontal scroll carousel */
-@media (max-width: 640px) {
-  .topics-grid {
-    display: flex !important;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: 14px;
-    padding: 4px 20px 8px;
-    margin: 0 -20px;
-  }
-  .topics-grid::-webkit-scrollbar { display: none; }
-
-  .topic-card {
-    min-width: 44vw !important;
-    max-width: 44vw !important;
-    height: 196px !important;
-    scroll-snap-align: start;
-    flex-shrink: 0 !important;
-    background: var(--bg) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 16px !important;
-    box-shadow: 0 2px 12px rgba(44,44,44,0.05) !important;
-    padding: 20px 16px !important;
-    overflow: hidden !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-
-  .topic-icon-wrap {
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 10px !important;
-    background: rgba(143,168,135,0.12) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin-bottom: 12px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .topics-swipe-hint { display: flex !important; }
-}
+@media (max-width: 640px) { .topics-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; } }
 
 /* About */
 .about-grid {

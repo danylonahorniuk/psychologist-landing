@@ -334,7 +334,7 @@ body {
   padding: 96px 80px 112px;
 }
 @media (max-width: 1024px) { .how-content-pad { padding: 96px 40px 112px; } }
-@media (max-width: 640px) { .how-content-pad { padding: 96px 20px 112px; } }
+@media (max-width: 640px) { .how-content-pad { padding: 130px 20px 112px; } }
 
 /* HowItWorks bg photo — hidden on mobile */
 @media (max-width: 900px) { .how-bg { display: none !important; } }

@@ -219,7 +219,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1.5px solid rgba(44, 44, 44, 0.18);
+  border: none;
   background: none;
   cursor: pointer;
   align-items: center;

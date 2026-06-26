@@ -87,8 +87,8 @@ export default function Nav() {
             aria-label="Закрити меню"
             style={{ background: "none", border: "none", cursor: "pointer", padding: "6px", color: "var(--text)", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "8px" }}
           >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M4 4L18 18M18 4L4 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
           </button>
         </div>

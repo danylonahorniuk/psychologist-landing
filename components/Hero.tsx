@@ -125,7 +125,7 @@ export default function Hero() {
           src={PHOTO_MOBILE_URL}
           alt="Ірина Коваленко"
           fill
-          style={{ objectFit: "cover", objectPosition: "center top" }}
+          style={{ objectFit: "cover", objectPosition: "center 65%" }}
           sizes="100vw"
           priority
         />

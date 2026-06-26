@@ -318,12 +318,14 @@ body {
   gap: 20px;
 }
 @media (max-width: 900px) {
-  .hero-grid { grid-template-columns: 1fr; min-height: auto; }
+  /* Section fills exactly the viewport — text shrinks to content, photo fills the rest */
+  #hero { display: flex !important; flex-direction: column !important; height: 100svh !important; min-height: 100svh !important; }
+  .hero-grid { grid-template-columns: 1fr; min-height: auto; flex-shrink: 0; }
   .hero-photo-col { display: none; }
-  .hero-text-col { padding: 88px 28px 28px !important; justify-content: flex-start; }
+  .hero-text-col { padding: 88px 28px 20px !important; justify-content: flex-start; }
   .hero-cta-row { flex-direction: column; align-items: flex-start; gap: 10px; }
   .hero-bg-wrap { display: none !important; }
-  .hero-mobile-photo { display: block !important; position: relative !important; width: 100%; height: 64vh; min-height: 320px; }
+  .hero-mobile-photo { display: flex !important; position: relative !important; width: 100%; flex: 1 !important; height: auto !important; min-height: 240px !important; }
   .hero-mobile-photo::before {
     content: '';
     position: absolute;
@@ -334,7 +336,7 @@ body {
     pointer-events: none;
   }
   .hero-secondary-cta { display: flex !important; }
-  .hero-description { font-size: 14px !important; line-height: 1.65 !important; margin-bottom: 24px !important; max-width: 100% !important; }
+  .hero-description { font-size: 14px !important; line-height: 1.65 !important; margin-bottom: 20px !important; max-width: 100% !important; }
 }
 
 /* Section padding */

@@ -69,10 +69,10 @@ export default function HowItWorks() {
   return (
     <section
         id="how"
-        style={{ position: "relative", overflow: "hidden", minHeight: "640px" }}
+        style={{ position: "relative", overflow: "hidden", minHeight: "640px", background: "var(--bg-warm)" }}
       >
-        {/* Background image */}
-        <div style={{ position: "absolute", inset: 0 }}>
+        {/* Background image — hidden on mobile via .how-bg */}
+        <div className="how-bg" style={{ position: "absolute", inset: 0 }}>
           <Image
             src="/how-bg.jpg"
             alt=""

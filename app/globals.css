@@ -331,10 +331,13 @@ body {
   z-index: 1;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 60px 80px 80px;
+  padding: 96px 80px 112px;
 }
-@media (max-width: 1024px) { .how-content-pad { padding: 60px 40px 80px; } }
-@media (max-width: 640px) { .how-content-pad { padding: 60px 20px 80px; } }
+@media (max-width: 1024px) { .how-content-pad { padding: 96px 40px 112px; } }
+@media (max-width: 640px) { .how-content-pad { padding: 96px 20px 112px; } }
+
+/* HowItWorks bg photo — hidden on mobile */
+@media (max-width: 900px) { .how-bg { display: none !important; } }
 
 /* Gallery */
 .gallery-grid {

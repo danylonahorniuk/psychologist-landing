@@ -436,6 +436,22 @@ body {
 /* Topics decor branches — hide on mobile to prevent overflow */
 @media (max-width: 900px) { .decor-wrap { display: none !important; } }
 
+/* Topics cards — reduce padding on mobile */
+@media (max-width: 640px) { .topic-card { padding: 18px 14px 20px !important; } }
+
+/* Pricing cards — reduce horizontal padding on mobile */
+@media (max-width: 640px) { .pricing-card { padding: 32px 20px 28px !important; } }
+
+/* Testimonials — reduce bottom spacing on mobile */
+@media (max-width: 640px) { #reviews { padding-bottom: 72px !important; } }
+
+/* Gallery inner photo grid — stack on mobile */
+.gallery-photos { display: grid; grid-template-columns: 1fr 0.6fr; gap: 14px; }
+@media (max-width: 640px) { .gallery-photos { grid-template-columns: 1fr; } }
+.gallery-photos-stack { display: flex; flex-direction: column; gap: 14px; }
+@media (max-width: 640px) { .gallery-photos-stack { flex-direction: row; } }
+@media (max-width: 640px) { .gallery-photos-stack > div { flex: 1; aspect-ratio: 1 !important; } }
+
 /* CTA card decorative branches */
 @media (max-width: 768px) { .cta-branch { display: none !important; } }
 

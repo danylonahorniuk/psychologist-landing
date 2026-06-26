@@ -121,6 +121,7 @@ export default function Pricing() {
           {plans.map((p) => (
             <div
               key={p.name}
+              className="pricing-card"
               style={{
                 position: "relative",
                 borderRadius: "20px",

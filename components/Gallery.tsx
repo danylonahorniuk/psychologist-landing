@@ -71,7 +71,7 @@ export default function Gallery() {
           </div>
 
           {/* RIGHT: photo layout — large left + 2 small right */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 0.6fr", gap: "14px" }}>
+          <div className="gallery-photos">
             {/* Main big photo */}
             <div style={{ borderRadius: "20px", overflow: "hidden", position: "relative", aspectRatio: "3/2.5" }}>
               <Image
@@ -84,7 +84,7 @@ export default function Gallery() {
             </div>
 
             {/* Two small photos stacked */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+            <div className="gallery-photos-stack">
               <div style={{ borderRadius: "20px", overflow: "hidden", position: "relative", flex: 1 }}>
                 <Image
                   src="/space2.png"

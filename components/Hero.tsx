@@ -52,8 +52,9 @@ export default function Hero() {
             </em>
           </h1>
 
+          {/* Desktop */}
           <p
-            className="animate-fade-up-3 hero-description"
+            className="animate-fade-up-3 hero-description hero-desc-desktop"
             style={{
               fontSize: "16px",
               color: "var(--muted)",
@@ -66,6 +67,21 @@ export default function Hero() {
             Мене звуть Ірина Коваленко — я психолог та гештальт-терапевт
             з 7-річним досвідом. Допомагаю знайти внутрішню опору,
             розібратися в собі та побудувати стосунки, які наповнюють.
+          </p>
+          {/* Mobile */}
+          <p
+            className="animate-fade-up-3 hero-description hero-desc-mobile"
+            style={{
+              fontSize: "15px",
+              color: "var(--muted)",
+              lineHeight: 1.65,
+              fontWeight: 300,
+              marginBottom: "28px",
+              maxWidth: "100%",
+            }}
+          >
+            Допомагаю знайти внутрішню опору, зрозуміти себе та будувати
+            гармонійні стосунки з собою й навколишнім світом.
           </p>
 
           <div className="animate-fade-up-3 hero-cta-row">
@@ -125,7 +141,7 @@ export default function Hero() {
           src={PHOTO_MOBILE_URL}
           alt="Ірина Коваленко"
           fill
-          style={{ objectFit: "cover", objectPosition: "center 57%" }}
+          style={{ objectFit: "cover", objectPosition: "center 72%" }}
           sizes="100vw"
           priority
         />

@@ -412,7 +412,15 @@ body {
   margin-bottom: 56px;
 }
 @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
-@media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 24px;
+  }
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
 
 /* Nav responsive padding */
 .nav-bar { padding: 18px 80px; }

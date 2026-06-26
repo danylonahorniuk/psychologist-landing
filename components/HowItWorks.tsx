@@ -114,11 +114,10 @@ export default function HowItWorks() {
           </div>
 
           {/* RIGHT: card with items */}
-          <div style={{
+          <div className="how-card" style={{
             background: "rgba(250,248,245,0.90)",
             backdropFilter: "blur(12px)",
             borderRadius: "20px",
-            padding: "36px 40px",
             display: "flex",
             flexDirection: "column",
             gap: "20px",

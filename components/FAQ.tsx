@@ -29,7 +29,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" style={{ padding: "100px 80px", background: "var(--bg-warm)" }}>
+    <section id="faq" className="s-pad" style={{ background: "var(--bg-warm)" }}>
       <style>{`
         .faq-item {
           background: var(--bg);
@@ -107,13 +107,12 @@ export default function FAQ() {
         </div>
 
         {/* Accordion */}
-        <div style={{
+        <div className="faq-accordion" style={{
           maxWidth: "780px",
           margin: "0 auto",
           background: "var(--bg)",
           borderRadius: "20px",
           border: "1px solid var(--border)",
-          padding: "0 40px",
           boxShadow: "0 4px 32px rgba(44,44,44,0.05)",
         }}>
           {faqs.map((f, i) => (

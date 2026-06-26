@@ -421,3 +421,17 @@ body {
 /* Contact form card */
 .contact-form-card { background: var(--bg); border-radius: 24px; padding: 52px 48px; }
 @media (max-width: 640px)  { .contact-form-card { padding: 36px 24px; } }
+
+/* Topics decor branches — hide on mobile to prevent overflow */
+@media (max-width: 900px) { .decor-wrap { display: none !important; } }
+
+/* CTA card decorative branches */
+@media (max-width: 768px) { .cta-branch { display: none !important; } }
+
+/* HowItWorks right card */
+.how-card { padding: 36px 40px; }
+@media (max-width: 640px) { .how-card { padding: 28px 20px; } }
+
+/* FAQ accordion container */
+.faq-accordion { padding: 0 40px; }
+@media (max-width: 640px) { .faq-accordion { padding: 0 20px; } }

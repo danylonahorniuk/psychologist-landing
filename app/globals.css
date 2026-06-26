@@ -231,7 +231,7 @@ body {
 }
 .nav-burger span {
   display: block;
-  width: 20px;
+  width: 22px;
   height: 1.5px;
   background: var(--text);
   border-radius: 2px;

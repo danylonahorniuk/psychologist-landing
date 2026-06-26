@@ -62,9 +62,9 @@ export default function Nav() {
 
           {/* Burger — circular button, 3 equal lines */}
           <button className="nav-burger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Меню">
-            <span style={{ transform: menuOpen ? "translateY(5.5px) rotate(45deg)" : "none" }} />
+            <span style={{ transform: menuOpen ? "translateY(6px) rotate(45deg)" : "none" }} />
             <span style={{ opacity: menuOpen ? 0 : 1 }} />
-            <span style={{ transform: menuOpen ? "translateY(-5.5px) rotate(-45deg)" : "none" }} />
+            <span style={{ transform: menuOpen ? "translateY(-6px) rotate(-45deg)" : "none" }} />
           </button>
         </div>
       </nav>

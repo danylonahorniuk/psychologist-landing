@@ -122,7 +122,7 @@ export default function Topics() {
                 cursor: "default",
               }}
             >
-              <div style={{
+              <div className="topic-icon-wrap" style={{
                 color: "var(--sage)",
                 marginBottom: "18px",
                 opacity: 0.85,
@@ -149,6 +149,25 @@ export default function Topics() {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Mobile swipe hint */}
+        <div className="topics-swipe-hint" style={{
+          display: "none",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "6px",
+          marginTop: "20px",
+          color: "var(--muted)",
+          fontSize: "12px",
+          fontWeight: 300,
+          letterSpacing: "0.03em",
+          opacity: 0.6,
+        }}>
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true">
+            <path d="M1 5H15M10 1L15 5L10 9" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          гортайте
         </div>
 
       </div>

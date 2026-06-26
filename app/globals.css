@@ -375,7 +375,44 @@ body {
   gap: 8px;
 }
 @media (max-width: 1200px) { .topics-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 640px) { .topics-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; } }
+
+/* Mobile: horizontal scroll carousel */
+@media (max-width: 640px) {
+  .topics-grid {
+    display: flex !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 14px;
+    padding: 4px 20px 8px;
+    margin: 0 -20px;
+  }
+  .topics-grid::-webkit-scrollbar { display: none; }
+
+  .topic-card {
+    min-width: 72vw !important;
+    scroll-snap-align: start;
+    flex-shrink: 0 !important;
+    background: rgba(255,255,255,0.82) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 24px rgba(44,44,44,0.09) !important;
+    padding: 26px 22px 30px !important;
+  }
+
+  .topic-icon-wrap {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 14px !important;
+    background: rgba(143,168,135,0.13) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 18px !important;
+  }
+
+  .topics-swipe-hint { display: flex !important; }
+}
 
 /* About */
 .about-grid {

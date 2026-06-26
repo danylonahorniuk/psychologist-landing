@@ -20,6 +20,11 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
   return (
     <>
       <nav
@@ -35,14 +40,12 @@ export default function Nav() {
         }}
       >
         <div className="nav-inner">
-          {/* Name */}
           <a href="#" style={{ textDecoration: "none" }}>
             <span style={{ fontFamily: "var(--font-playfair), serif", fontSize: "20px", fontWeight: 500, color: "var(--text)", letterSpacing: "-0.01em", lineHeight: 1 }}>
               Ірина Коваленко
             </span>
           </a>
 
-          {/* Nav links */}
           <ul className="nav-links-list">
             {links.map((l) => (
               <li key={l.href}>
@@ -53,28 +56,67 @@ export default function Nav() {
             ))}
           </ul>
 
-          {/* CTA */}
           <a href="#contact" className="btn-sage nav-cta-btn" style={{ display: "inline-block", padding: "10px 24px", borderRadius: "10px", fontSize: "13px", fontWeight: 500, letterSpacing: "0.01em", whiteSpace: "nowrap" }}>
             Записатись на консультацію
           </a>
 
-          {/* Burger */}
+          {/* Burger — middle line shorter for refined look */}
           <button className="nav-burger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Меню">
-            <span style={{ transform: menuOpen ? "translateY(6.5px) rotate(45deg)" : "none", transition: "transform 0.25s ease" }} />
-            <span style={{ opacity: menuOpen ? 0 : 1, transition: "opacity 0.25s ease" }} />
-            <span style={{ transform: menuOpen ? "translateY(-6.5px) rotate(-45deg)" : "none", transition: "transform 0.25s ease" }} />
+            <span style={{ transform: menuOpen ? "translateY(6.5px) rotate(45deg)" : "none", transition: "transform 0.28s ease" }} />
+            <span style={{ opacity: menuOpen ? 0 : 1, width: menuOpen ? "22px" : "13px", transition: "opacity 0.2s ease, width 0.28s ease" }} />
+            <span style={{ transform: menuOpen ? "translateY(-6.5px) rotate(-45deg)" : "none", transition: "transform 0.28s ease" }} />
           </button>
         </div>
       </nav>
 
-      {/* Mobile menu */}
-      <div className={`nav-mobile-menu${menuOpen ? " open" : ""}`}>
-        {links.map((l) => (
-          <a key={l.href} href={l.href} className="nav-mobile-link" onClick={() => setMenuOpen(false)}>
-            {l.label}
-          </a>
-        ))}
-        <a href="#contact" className="btn-sage" style={{ display: "block", padding: "13px 24px", borderRadius: "10px", fontSize: "14px", fontWeight: 500, textAlign: "center", marginTop: "8px" }} onClick={() => setMenuOpen(false)}>
+      {/* Backdrop */}
+      <div
+        className={`nav-backdrop${menuOpen ? " open" : ""}`}
+        onClick={() => setMenuOpen(false)}
+      />
+
+      {/* Sidebar drawer */}
+      <div className={`nav-sidebar${menuOpen ? " open" : ""}`}>
+        {/* Header */}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "44px" }}>
+          <span style={{ fontFamily: "var(--font-playfair), serif", fontSize: "18px", fontWeight: 500, color: "var(--text)", letterSpacing: "-0.01em" }}>
+            Ірина Коваленко
+          </span>
+          <button
+            onClick={() => setMenuOpen(false)}
+            aria-label="Закрити меню"
+            style={{ background: "none", border: "none", cursor: "pointer", padding: "6px", color: "var(--text)", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "8px" }}
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Links */}
+        <nav style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="sidebar-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              {l.label}
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0, opacity: 0.3 }}>
+                <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          ))}
+        </nav>
+
+        {/* CTA at bottom */}
+        <a
+          href="#contact"
+          className="btn-sage"
+          style={{ display: "block", textAlign: "center", padding: "16px 24px", borderRadius: "10px", fontSize: "15px", fontWeight: 500, letterSpacing: "0.01em", marginTop: "28px" }}
+          onClick={() => setMenuOpen(false)}
+        >
           Записатись на консультацію
         </a>
       </div>

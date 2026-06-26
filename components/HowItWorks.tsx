@@ -69,7 +69,7 @@ export default function HowItWorks() {
   return (
     <section
         id="how"
-        style={{ position: "relative", overflow: "hidden", minHeight: "640px", background: "var(--bg-warm)" }}
+        style={{ position: "relative", overflow: "hidden", minHeight: "640px" }}
       >
         {/* Background image — hidden on mobile via .how-bg */}
         <div className="how-bg" style={{ position: "absolute", inset: 0 }}>
@@ -81,7 +81,7 @@ export default function HowItWorks() {
             sizes="100vw"
           />
           {/* subtle warm overlay so left text is readable */}
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(250,245,238,0.55) 0%, rgba(250,245,238,0.15) 50%, transparent 100%)" }} />
+          <div className="how-overlay" style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(250,245,238,0.55) 0%, rgba(250,245,238,0.15) 50%, transparent 100%)" }} />
         </div>
 
         {/* Content */}

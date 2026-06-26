@@ -7,15 +7,10 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      style={{ minHeight: "100vh", position: "relative", background: "var(--bg-warm)", overflow: "hidden" }}
+      style={{ minHeight: "100svh", position: "relative", background: "var(--bg-warm)", overflow: "hidden" }}
     >
-      <style>{`
-        @media (max-width: 900px) {
-          .hero-bg-wrap { display: none !important; }
-        }
-      `}</style>
       {/* Desktop: full-bleed background photo */}
-      <div className="hero-bg-wrap" style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+      <div className="hero-bg-wrap hero-bg-desktop" style={{ position: "absolute", inset: 0, zIndex: 0 }}>
         <Image
           src={PHOTO_URL}
           alt=""
@@ -27,6 +22,23 @@ export default function Hero() {
         <div style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(to right, rgba(240,235,227,0.82) 0%, rgba(240,235,227,0.72) 30%, rgba(240,235,227,0.45) 52%, transparent 72%)",
+          pointerEvents: "none",
+        }} />
+      </div>
+
+      {/* Mobile: full-bleed background photo with top-to-bottom gradient */}
+      <div className="hero-bg-mobile" style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+        <Image
+          src={PHOTO_MOBILE_URL}
+          alt=""
+          fill
+          style={{ objectFit: "cover", objectPosition: "center 30%" }}
+          sizes="100vw"
+          priority
+        />
+        <div style={{
+          position: "absolute", inset: 0,
+          background: "linear-gradient(to bottom, var(--bg-warm) 0%, var(--bg-warm) 38%, rgba(240,235,227,0.75) 55%, transparent 75%)",
           pointerEvents: "none",
         }} />
       </div>
@@ -133,18 +145,6 @@ export default function Hero() {
             </a>
           </div>
         </div>
-      </div>
-
-      {/* Mobile-only photo below text */}
-      <div className="hero-mobile-photo">
-        <Image
-          src={PHOTO_MOBILE_URL}
-          alt="Ірина Коваленко"
-          fill
-          style={{ objectFit: "cover", objectPosition: "center 45%" }}
-          sizes="100vw"
-          priority
-        />
       </div>
 
       {/* Bottom wave */}

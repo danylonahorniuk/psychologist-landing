@@ -216,20 +216,26 @@ body {
 .nav-cta-btn { display: inline-block; }
 .nav-burger {
   display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(44, 44, 44, 0.18);
   background: none;
-  border: none;
   cursor: pointer;
-  color: var(--text);
-  padding: 4px;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
+  padding: 0;
+  flex-shrink: 0;
 }
 .nav-burger span {
   display: block;
-  width: 22px;
+  width: 16px;
   height: 1.5px;
   background: var(--text);
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  border-radius: 2px;
+  transition: transform 0.26s ease, opacity 0.2s ease;
 }
 /* Sidebar backdrop — sits above nav (50) to cover it */
 .nav-backdrop {

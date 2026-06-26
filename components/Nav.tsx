@@ -60,11 +60,11 @@ export default function Nav() {
             Записатись на консультацію
           </a>
 
-          {/* Burger — middle line shorter for refined look */}
+          {/* Burger — circular button, 3 equal lines */}
           <button className="nav-burger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Меню">
-            <span style={{ transform: menuOpen ? "translateY(6.5px) rotate(45deg)" : "none", transition: "transform 0.28s ease" }} />
-            <span style={{ opacity: menuOpen ? 0 : 1, width: menuOpen ? "22px" : "13px", transition: "opacity 0.2s ease, width 0.28s ease" }} />
-            <span style={{ transform: menuOpen ? "translateY(-6.5px) rotate(-45deg)" : "none", transition: "transform 0.28s ease" }} />
+            <span style={{ transform: menuOpen ? "translateY(5.5px) rotate(45deg)" : "none" }} />
+            <span style={{ opacity: menuOpen ? 0 : 1 }} />
+            <span style={{ transform: menuOpen ? "translateY(-5.5px) rotate(-45deg)" : "none" }} />
           </button>
         </div>
       </nav>

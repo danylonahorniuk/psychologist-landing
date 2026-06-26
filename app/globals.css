@@ -288,12 +288,15 @@ body {
   .nav-burger { display: flex !important; }
 }
 
-/* Hero bg variants */
-.hero-bg-desktop { display: block; }
-.hero-mobile-photo { display: none; position: relative; }
-.hero-desc-mobile { display: none; }
+/* Hero — desktop elements */
+.hero-bg-desktop        { display: block; }
+.hero-desktop-content   { display: grid; }
+.hero-wave-desktop      { display: block; }
+/* Hero — mobile elements (hidden on desktop) */
+.hero-mobile-photo-top  { display: none; }
+.hero-mobile-card       { display: none; }
 
-/* Hero */
+/* Hero desktop grid */
 .hero-grid {
   max-width: 1600px;
   margin: 0 auto;
@@ -301,7 +304,6 @@ body {
   grid-template-columns: 55fr 45fr;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
 }
 .hero-text-col {
   display: flex;
@@ -319,20 +321,42 @@ body {
   align-items: center;
   gap: 20px;
 }
+
+/* ── MOBILE HERO ───────────────────────────────────── */
 @media (max-width: 900px) {
-  #hero { display: flex !important; flex-direction: column !important; height: 100svh !important; min-height: 100svh !important; }
-  .hero-bg-desktop { display: none !important; }
-  .hero-grid { grid-template-columns: 1fr; min-height: auto; flex-shrink: 0; }
-  .hero-photo-col { display: none; }
-  .hero-text-col { padding: 80px 24px 12px !important; justify-content: flex-start; }
-  .hero-cta-row { flex-direction: column; align-items: flex-start; gap: 10px; }
-  .hero-mobile-photo { display: flex !important; position: relative !important; width: 100%; flex: 1 !important; height: 0 !important; min-height: 0 !important; }
-  .hero-mobile-photo::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 72px; background: linear-gradient(to bottom, var(--bg-warm), transparent); z-index: 1; pointer-events: none; }
-  .hero-secondary-cta { display: flex !important; }
-  .hero-description { font-size: 14px !important; line-height: 1.65 !important; margin-bottom: 20px !important; max-width: 100% !important; }
-  .hero-desc-desktop { display: none !important; }
-  .hero-desc-mobile { display: block !important; }
-  #hero h1 { margin-bottom: 16px !important; }
+  #hero {
+    min-height: auto !important;
+    overflow: visible !important;
+    background: var(--bg-warm) !important;
+  }
+
+  /* Hide all desktop-only elements */
+  #hero .hero-bg-desktop    { display: none !important; }
+  #hero .hero-grid          { display: none !important; }
+  #hero .hero-wave-desktop  { display: none !important; }
+
+  /* Sticky photo — takes 58% of viewport */
+  #hero .hero-mobile-photo-top {
+    display: block !important;
+    position: sticky;
+    top: 0;
+    height: 58svh;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 0 0 24px 24px;
+  }
+
+  /* Content card — slides over photo on scroll */
+  #hero .hero-mobile-card {
+    display: block !important;
+    position: relative;
+    z-index: 1;
+    background: var(--bg-warm);
+    border-radius: 24px 24px 0 0;
+    margin-top: -24px;
+    padding: 32px 24px 48px;
+    box-shadow: 0 -8px 32px rgba(44,44,44,0.06);
+  }
 }
 
 /* Section padding */

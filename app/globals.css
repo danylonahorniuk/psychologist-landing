@@ -252,7 +252,7 @@ body {
 }
 
 /* Hero mobile photo — hidden by default, shown on mobile */
-.hero-mobile-photo { display: none; }
+.hero-mobile-photo { display: none; position: relative; }
 
 /* Hero */
 .hero-grid {

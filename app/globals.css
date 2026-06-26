@@ -359,15 +359,6 @@ body {
   }
 }
 
-/* Mobile page layer — slides over sticky hero photo */
-@media (max-width: 900px) {
-  .mobile-page-layer {
-    position: relative;
-    z-index: 2;
-    background: var(--bg-warm);
-  }
-}
-
 /* Section padding */
 .s-pad { padding: 100px 80px; }
 @media (max-width: 1024px) { .s-pad { padding: 80px 40px; } }

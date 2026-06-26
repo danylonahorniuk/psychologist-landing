@@ -391,25 +391,32 @@ body {
   .topics-grid::-webkit-scrollbar { display: none; }
 
   .topic-card {
-    min-width: 58vw !important;
+    min-width: 44vw !important;
+    max-width: 44vw !important;
+    height: 196px !important;
     scroll-snap-align: start;
     flex-shrink: 0 !important;
     background: var(--bg) !important;
     border: 1px solid var(--border) !important;
     border-radius: 16px !important;
     box-shadow: 0 2px 12px rgba(44,44,44,0.05) !important;
-    padding: 22px 18px 26px !important;
+    padding: 20px 16px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
   }
 
   .topic-icon-wrap {
-    width: 44px !important;
-    height: 44px !important;
-    border-radius: 12px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
     background: rgba(143,168,135,0.12) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 12px !important;
+    flex-shrink: 0 !important;
   }
 
   .topics-swipe-hint { display: flex !important; }

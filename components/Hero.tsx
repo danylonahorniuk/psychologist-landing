@@ -122,7 +122,9 @@ export default function Hero() {
                   flexShrink: 0,
                 }}
               >
-                ▶
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                  <path d="M2.5 1.5L8 5L2.5 8.5V1.5Z" fill="currentColor"/>
+                </svg>
               </span>
               Дізнатись більше про підхід
             </a>

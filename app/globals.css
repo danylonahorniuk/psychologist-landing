@@ -330,7 +330,7 @@ body {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 80px;
+    height: 48px;
     background: linear-gradient(to bottom, var(--bg-warm) 0%, transparent 100%);
     z-index: 1;
     pointer-events: none;

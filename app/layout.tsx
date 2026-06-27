@@ -25,6 +25,7 @@ export const metadata: Metadata = {
       "Психолог і гештальт-терапевт із 7-річним досвідом. Допомагаю знайти внутрішню опору, розібратися в собі та побудувати гармонійні стосунки. Київ та онлайн.",
     type: "website",
     locale: "uk_UA",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",

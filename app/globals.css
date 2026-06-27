@@ -569,3 +569,14 @@ body {
 /* FAQ accordion container */
 .faq-accordion { padding: 0 40px; }
 @media (max-width: 640px) { .faq-accordion { padding: 0 20px; } }
+
+/* TEMP: figma export — stretch all content to full width */
+[style*="max-width: 1280px"],
+[style*="max-width: 1440px"],
+[style*="max-width: 1600px"],
+[style*="max-width: 900px"] {
+  max-width: none !important;
+  width: 100% !important;
+}
+.s-pad { padding: 100px 120px !important; }
+.hero-text-col { padding: 160px 80px 140px 160px !important; }

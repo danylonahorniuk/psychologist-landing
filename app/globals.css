@@ -321,7 +321,7 @@ body {
 }
 
 /* ── MOBILE HERO ───────────────────────────────────── */
-@media (max-width: 900px) {
+@media (max-width: 640px) {
   #hero {
     min-height: auto !important;
     overflow: visible !important;
@@ -454,8 +454,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-@media (max-width: 1024px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 640px) { .pricing-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; } }
 
 /* Testimonials */
 .testimonials-grid {

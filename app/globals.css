@@ -571,18 +571,10 @@ body {
 @media (max-width: 640px) { .faq-accordion { padding: 0 20px; } }
 
 /* TEMP: figma export — stretch all content to full width */
-[style*="max-width:1280px"],
 [style*="max-width: 1280px"],
-[style*="max-width:1440px"],
 [style*="max-width: 1440px"],
-[style*="max-width:1600px"],
 [style*="max-width: 1600px"],
-[style*="max-width:900px"],
-[style*="max-width: 900px"],
-[style*="max-width:480px"],
-[style*="max-width: 480px"],
-[style*="max-width:780px"],
-[style*="max-width: 780px"] {
+[style*="max-width: 900px"] {
   max-width: none !important;
   width: 100% !important;
 }

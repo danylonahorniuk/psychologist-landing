@@ -113,40 +113,31 @@ export default function Topics() {
             <div
               key={t.title}
               className="topic-card"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                padding: "28px 20px 32px",
-                borderRadius: "16px",
-                cursor: "default",
-              }}
+              style={{ padding: "28px 20px 32px", borderRadius: "16px", cursor: "default" }}
             >
-              <div style={{
-                color: "var(--sage)",
-                marginBottom: "18px",
-                opacity: 0.85,
-              }}>
+              <div className="topic-icon-wrap" style={{ color: "var(--sage)", marginBottom: "18px", opacity: 0.85 }}>
                 {t.icon}
               </div>
-              <h3 style={{
-                fontSize: "14.5px",
-                fontWeight: 600,
-                color: "var(--text)",
-                lineHeight: 1.35,
-                marginBottom: "10px",
-                letterSpacing: "-0.01em",
-              }}>
-                {t.title}
-              </h3>
-              <p style={{
-                fontSize: "13px",
-                color: "var(--muted)",
-                lineHeight: 1.65,
-                fontWeight: 300,
-              }}>
-                {t.text}
-              </p>
+              <div className="topic-text">
+                <h3 style={{
+                  fontSize: "14.5px",
+                  fontWeight: 600,
+                  color: "var(--text)",
+                  lineHeight: 1.35,
+                  marginBottom: "10px",
+                  letterSpacing: "-0.01em",
+                }}>
+                  {t.title}
+                </h3>
+                <p style={{ fontSize: "13px", color: "var(--muted)", lineHeight: 1.65, fontWeight: 300 }}>
+                  {t.text}
+                </p>
+              </div>
+              <div className="topic-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
             </div>
           ))}
         </div>

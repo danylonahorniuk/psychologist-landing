@@ -52,7 +52,7 @@ export default function Gallery() {
         <div className="gallery-grid">
 
           {/* LEFT: text content */}
-          <div>
+          <div data-animate>
             <h2 style={{
               fontFamily: "var(--font-playfair), serif",
               fontSize: "clamp(42px, 4.5vw, 64px)",
@@ -71,7 +71,7 @@ export default function Gallery() {
           </div>
 
           {/* RIGHT: photo layout — large left + 2 small right */}
-          <div className="gallery-photos">
+          <div data-animate data-delay="200" className="gallery-photos">
             {/* Main big photo */}
             <div style={{ borderRadius: "20px", overflow: "hidden", position: "relative", aspectRatio: "3/2.5" }}>
               <Image

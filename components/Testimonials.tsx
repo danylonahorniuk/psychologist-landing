@@ -82,7 +82,7 @@ export default function Testimonials() {
       <div style={{ position: "relative", zIndex: 2, maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: "64px" }}>
+        <div data-animate style={{ textAlign: "center", marginBottom: "64px" }}>
           <h2 style={{
             fontFamily: "var(--font-playfair), serif",
             fontSize: "clamp(44px, 5vw, 68px)",
@@ -108,7 +108,7 @@ export default function Testimonials() {
         </div>
 
         {/* 3×2 cards grid */}
-        <div className="testimonials-grid">
+        <div data-animate data-delay="200" className="testimonials-grid">
           {testimonials.map((t) => (
             <div
               key={t.name + t.age}

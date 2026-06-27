@@ -94,7 +94,7 @@ export default function Pricing() {
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: "60px" }}>
+        <div data-animate style={{ textAlign: "center", marginBottom: "60px" }}>
           <h2 style={{
             fontFamily: "var(--font-playfair), serif",
             fontSize: "clamp(36px, 4vw, 56px)",
@@ -117,7 +117,7 @@ export default function Pricing() {
         </div>
 
         {/* Cards */}
-        <div className="pricing-grid" style={{ alignItems: "center" }}>
+        <div data-animate data-delay="200" className="pricing-grid" style={{ alignItems: "center" }}>
           {plans.map((p) => (
             <div
               key={p.name}

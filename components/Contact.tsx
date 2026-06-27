@@ -40,7 +40,7 @@ export default function Contact() {
       {/* CTA card */}
       <section className="s-pad" style={{ background: "var(--bg)" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <div style={{
+          <div data-animate style={{
             position: "relative",
             background: "#FFFFFF",
             borderRadius: "24px",
@@ -135,7 +135,7 @@ export default function Contact() {
         <div className="contact-grid" style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
           {/* Left */}
-          <div>
+          <div data-animate>
             <h2 style={{
               fontFamily: "var(--font-playfair), serif",
               fontSize: "clamp(40px, 4vw, 60px)",
@@ -191,7 +191,7 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <div className="contact-form-card">
+          <div data-animate data-delay="150" className="contact-form-card">
             <h3 style={{
               fontFamily: "var(--font-playfair), serif",
               fontSize: "28px",

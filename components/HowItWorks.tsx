@@ -88,7 +88,7 @@ export default function HowItWorks() {
         <div className="how-content-pad how-grid" style={{ position: "relative", zIndex: 1, maxWidth: "1280px", margin: "0 auto" }}>
 
           {/* LEFT: heading */}
-          <div style={{ paddingBottom: "40px" }}>
+          <div data-animate style={{ paddingBottom: "40px" }}>
 
             <h2 style={{
               fontFamily: "var(--font-playfair), serif",
@@ -114,7 +114,7 @@ export default function HowItWorks() {
           </div>
 
           {/* RIGHT: card with items */}
-          <div className="how-card" style={{
+          <div data-animate data-delay="200" className="how-card" style={{
             background: "rgba(250,248,245,0.90)",
             backdropFilter: "blur(12px)",
             borderRadius: "20px",

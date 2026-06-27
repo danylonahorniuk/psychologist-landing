@@ -82,7 +82,7 @@ export default function FAQ() {
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: "60px" }}>
+        <div data-animate style={{ textAlign: "center", marginBottom: "60px" }}>
           <h2 style={{
             fontFamily: "var(--font-playfair), serif",
             fontSize: "clamp(40px, 4.5vw, 60px)",
@@ -107,7 +107,7 @@ export default function FAQ() {
         </div>
 
         {/* Accordion */}
-        <div className="faq-accordion" style={{
+        <div data-animate data-delay="200" className="faq-accordion" style={{
           maxWidth: "780px",
           margin: "0 auto",
           background: "var(--bg)",

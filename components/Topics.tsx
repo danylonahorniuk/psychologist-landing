@@ -83,7 +83,7 @@ export default function Topics() {
       <div style={{ maxWidth: "1280px", margin: "0 auto", position: "relative", zIndex: 1 }}>
 
         {/* Centered heading */}
-        <div style={{ textAlign: "center", marginBottom: "72px" }}>
+        <div data-animate style={{ textAlign: "center", marginBottom: "72px" }}>
           <h2 style={{
             fontFamily: "var(--font-playfair), serif",
             fontSize: "clamp(36px, 4vw, 56px)",
@@ -108,7 +108,7 @@ export default function Topics() {
         </div>
 
         {/* 6-column grid */}
-        <div className="topics-grid">
+        <div data-animate data-delay="200" className="topics-grid">
           {topics.map((t) => (
             <div
               key={t.title}

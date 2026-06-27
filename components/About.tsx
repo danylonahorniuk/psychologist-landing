@@ -57,7 +57,7 @@ export default function About() {
       <div style={{ maxWidth: "1280px", margin: "0 auto" }} className="about-grid">
 
         {/* ── LEFT: Photo ── */}
-        <div style={{ position: "relative" }}>
+        <div data-animate style={{ position: "relative" }}>
           <div style={{ borderRadius: "20px", overflow: "hidden", aspectRatio: "4/5", position: "relative" }}>
             <Image
               src="/about2.png"
@@ -70,7 +70,7 @@ export default function About() {
         </div>
 
         {/* ── RIGHT: Content ── */}
-        <div>
+        <div data-animate data-delay="150">
           <h2 style={{
             fontFamily: "var(--font-playfair), serif",
             fontSize: "clamp(32px, 3.2vw, 46px)",

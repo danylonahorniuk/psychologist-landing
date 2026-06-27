@@ -291,7 +291,7 @@ body {
 .hero-desktop-content   { display: grid; }
 .hero-wave-desktop      { display: block; }
 /* Hero — mobile elements (hidden on desktop) */
-.hero-mobile-photo-top  { display: none; }
+.hero-mobile-photo-top  { display: none; position: relative; }
 .hero-mobile-card       { display: none; }
 
 /* Hero desktop grid */

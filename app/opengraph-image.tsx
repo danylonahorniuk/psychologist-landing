@@ -14,12 +14,12 @@ export default function OGImage() {
           fontFamily: "serif",
         }}
       >
-        {/* LEFT — sage green panel */}
+        {/* LEFT — dark panel */}
         <div
           style={{
-            width: 420,
+            width: 400,
             height: 630,
-            background: "#8FA887",
+            background: "#2C2C2C",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -27,14 +27,11 @@ export default function OGImage() {
             flexShrink: 0,
           }}
         >
-          {/* Big decorative initials */}
-          <div style={{ fontSize: 160, fontWeight: 600, color: "rgba(255,255,255,0.18)", lineHeight: 1, letterSpacing: "-8px", display: "flex" }}>
+          <div style={{ fontSize: 140, fontWeight: 700, color: "rgba(255,255,255,0.08)", lineHeight: 1, letterSpacing: "-4px", display: "flex" }}>
             ІК
           </div>
-          {/* Thin line */}
-          <div style={{ width: 40, height: 2, background: "rgba(255,255,255,0.5)", margin: "24px 0", display: "flex" }} />
-          {/* Small label */}
-          <div style={{ fontSize: 14, color: "rgba(255,255,255,0.75)", letterSpacing: "0.18em", textTransform: "uppercase", display: "flex" }}>
+          <div style={{ width: 36, height: 3, background: "#8FA887", margin: "28px 0", display: "flex" }} />
+          <div style={{ fontSize: 13, color: "#8FA887", letterSpacing: "0.22em", textTransform: "uppercase", display: "flex" }}>
             Психологія
           </div>
         </div>
@@ -43,44 +40,39 @@ export default function OGImage() {
         <div
           style={{
             flex: 1,
-            background: "#F0EBE3",
+            background: "#FAF8F5",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            padding: "64px 72px",
+            padding: "60px 68px",
           }}
         >
-          {/* Tag */}
-          <div style={{ fontSize: 13, color: "#8FA887", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: 32, display: "flex" }}>
+          <div style={{ fontSize: 12, color: "#8FA887", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: 28, display: "flex", fontWeight: 600 }}>
             Психолог · Гештальт-терапевт
           </div>
 
-          {/* Name */}
-          <div style={{ fontSize: 64, fontWeight: 500, color: "#2C2C2C", lineHeight: 1.05, letterSpacing: "-2px", marginBottom: 28, display: "flex" }}>
+          <div style={{ fontSize: 58, fontWeight: 700, color: "#1a1a1a", lineHeight: 1.05, letterSpacing: "-1.5px", marginBottom: 24, display: "flex" }}>
             Ірина Коваленко
           </div>
 
-          {/* Divider */}
-          <div style={{ width: 48, height: 2, background: "#D4C5B0", marginBottom: 28, display: "flex" }} />
+          <div style={{ width: 44, height: 3, background: "#8FA887", marginBottom: 24, display: "flex" }} />
 
-          {/* Tagline */}
-          <div style={{ fontSize: 26, color: "#6B6B6B", fontWeight: 300, fontStyle: "italic", lineHeight: 1.5, marginBottom: 40, display: "flex" }}>
+          <div style={{ fontSize: 24, color: "#444", fontStyle: "italic", lineHeight: 1.5, marginBottom: 44, display: "flex" }}>
             Знайди себе. Живи повніше.
           </div>
 
-          {/* Stats row */}
-          <div style={{ display: "flex", gap: 40 }}>
+          <div style={{ display: "flex", gap: 44 }}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <div style={{ fontSize: 32, fontWeight: 500, color: "#8FA887", lineHeight: 1, display: "flex" }}>7+</div>
-              <div style={{ fontSize: 13, color: "#6B6B6B", marginTop: 6, letterSpacing: "0.05em", display: "flex" }}>років практики</div>
+              <div style={{ fontSize: 34, fontWeight: 700, color: "#2C2C2C", lineHeight: 1, display: "flex" }}>7+</div>
+              <div style={{ fontSize: 12, color: "#888", marginTop: 6, letterSpacing: "0.06em", display: "flex" }}>років практики</div>
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <div style={{ fontSize: 32, fontWeight: 500, color: "#8FA887", lineHeight: 1, display: "flex" }}>200+</div>
-              <div style={{ fontSize: 13, color: "#6B6B6B", marginTop: 6, letterSpacing: "0.05em", display: "flex" }}>клієнтів</div>
+              <div style={{ fontSize: 34, fontWeight: 700, color: "#2C2C2C", lineHeight: 1, display: "flex" }}>200+</div>
+              <div style={{ fontSize: 12, color: "#888", marginTop: 6, letterSpacing: "0.06em", display: "flex" }}>клієнтів</div>
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <div style={{ fontSize: 32, fontWeight: 500, color: "#8FA887", lineHeight: 1, display: "flex" }}>Київ</div>
-              <div style={{ fontSize: 13, color: "#6B6B6B", marginTop: 6, letterSpacing: "0.05em", display: "flex" }}>та онлайн</div>
+              <div style={{ fontSize: 34, fontWeight: 700, color: "#2C2C2C", lineHeight: 1, display: "flex" }}>Київ</div>
+              <div style={{ fontSize: 12, color: "#888", marginTop: 6, letterSpacing: "0.06em", display: "flex" }}>та онлайн</div>
             </div>
           </div>
         </div>

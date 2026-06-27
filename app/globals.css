@@ -524,7 +524,8 @@ body {
 
 /* Nav responsive padding */
 .nav-bar { padding: 18px 80px; }
-@media (max-width: 900px) { .nav-bar { padding: 18px 40px; } }
+@media (max-width: 1280px) { .nav-bar { padding: 18px 40px; } .nav-links-list { gap: 24px; } }
+@media (max-width: 900px)  { .nav-bar { padding: 18px 40px; } }
 @media (max-width: 640px)  { .nav-bar { padding: 16px 20px; } }
 
 /* Footer inner responsive padding */

@@ -10,63 +10,79 @@ export default function OGImage() {
         style={{
           width: 1200,
           height: 630,
-          background: "#F0EBE3",
           display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
           fontFamily: "serif",
-          position: "relative",
         }}
       >
-        {/* Top accent line */}
-        <div style={{ width: 48, height: 2, background: "#8FA887", marginBottom: 48, display: "flex" }} />
-
-        {/* Name */}
+        {/* LEFT — sage green panel */}
         <div
           style={{
-            fontSize: 72,
-            fontWeight: 500,
-            color: "#2C2C2C",
-            letterSpacing: "-2px",
-            lineHeight: 1.1,
-            marginBottom: 20,
+            width: 420,
+            height: 630,
+            background: "#8FA887",
             display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            flexShrink: 0,
           }}
         >
-          Ірина Коваленко
+          {/* Big decorative initials */}
+          <div style={{ fontSize: 160, fontWeight: 600, color: "rgba(255,255,255,0.18)", lineHeight: 1, letterSpacing: "-8px", display: "flex" }}>
+            ІК
+          </div>
+          {/* Thin line */}
+          <div style={{ width: 40, height: 2, background: "rgba(255,255,255,0.5)", margin: "24px 0", display: "flex" }} />
+          {/* Small label */}
+          <div style={{ fontSize: 14, color: "rgba(255,255,255,0.75)", letterSpacing: "0.18em", textTransform: "uppercase", display: "flex" }}>
+            Психологія
+          </div>
         </div>
 
-        {/* Role */}
+        {/* RIGHT — content */}
         <div
           style={{
-            fontSize: 26,
-            color: "#8FA887",
-            fontWeight: 400,
-            letterSpacing: "0.08em",
-            textTransform: "uppercase",
-            marginBottom: 48,
+            flex: 1,
+            background: "#F0EBE3",
             display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            padding: "64px 72px",
           }}
         >
-          Психолог · Гештальт-терапевт
-        </div>
+          {/* Tag */}
+          <div style={{ fontSize: 13, color: "#8FA887", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: 32, display: "flex" }}>
+            Психолог · Гештальт-терапевт
+          </div>
 
-        {/* Divider */}
-        <div style={{ width: 64, height: 1, background: "#D4C5B0", marginBottom: 48, display: "flex" }} />
+          {/* Name */}
+          <div style={{ fontSize: 64, fontWeight: 500, color: "#2C2C2C", lineHeight: 1.05, letterSpacing: "-2px", marginBottom: 28, display: "flex" }}>
+            Ірина Коваленко
+          </div>
 
-        {/* Tagline */}
-        <div
-          style={{
-            fontSize: 32,
-            color: "#6B6B6B",
-            fontWeight: 300,
-            fontStyle: "italic",
-            letterSpacing: "-0.5px",
-            display: "flex",
-          }}
-        >
-          Знайди себе. Живи повніше.
+          {/* Divider */}
+          <div style={{ width: 48, height: 2, background: "#D4C5B0", marginBottom: 28, display: "flex" }} />
+
+          {/* Tagline */}
+          <div style={{ fontSize: 26, color: "#6B6B6B", fontWeight: 300, fontStyle: "italic", lineHeight: 1.5, marginBottom: 40, display: "flex" }}>
+            Знайди себе. Живи повніше.
+          </div>
+
+          {/* Stats row */}
+          <div style={{ display: "flex", gap: 40 }}>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ fontSize: 32, fontWeight: 500, color: "#8FA887", lineHeight: 1, display: "flex" }}>7+</div>
+              <div style={{ fontSize: 13, color: "#6B6B6B", marginTop: 6, letterSpacing: "0.05em", display: "flex" }}>років практики</div>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ fontSize: 32, fontWeight: 500, color: "#8FA887", lineHeight: 1, display: "flex" }}>200+</div>
+              <div style={{ fontSize: 13, color: "#6B6B6B", marginTop: 6, letterSpacing: "0.05em", display: "flex" }}>клієнтів</div>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ fontSize: 32, fontWeight: 500, color: "#8FA887", lineHeight: 1, display: "flex" }}>Київ</div>
+              <div style={{ fontSize: 13, color: "#6B6B6B", marginTop: 6, letterSpacing: "0.05em", display: "flex" }}>та онлайн</div>
+            </div>
+          </div>
         </div>
       </div>
     ),

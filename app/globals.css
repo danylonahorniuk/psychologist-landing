@@ -320,6 +320,13 @@ body {
   gap: 20px;
 }
 
+/* ── TABLET HERO (641–900px) ───────────────────────── */
+@media (min-width: 641px) and (max-width: 900px) {
+  .hero-grid { grid-template-columns: 52fr 48fr; }
+  .hero-text-col { padding: 80px 32px 80px 48px; }
+  .hero-bg-desktop img { object-position: 60% 10% !important; }
+}
+
 /* ── MOBILE HERO ───────────────────────────────────── */
 @media (max-width: 640px) {
   #hero {
